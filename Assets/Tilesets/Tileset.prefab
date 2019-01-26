@@ -122,6 +122,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 8, y: -6, z: 0}
+    second:
+      m_TileIndex: 241
+      m_TileSpriteIndex: 241
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 252
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 9, y: -6, z: 0}
     second:
       m_TileIndex: 245
@@ -624,8 +633,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: e9a776ea09715407ead1cb85d43e7249, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: a059a69999b204508a6b06c0077a69d4, type: 2}
   - m_RefCount: 1
@@ -1131,8 +1140,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300068, guid: b569d426f7aad488c80659ac827c6baa, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300086, guid: 571bf493b99984adfbfec4a8575fbfcf, type: 3}
   - m_RefCount: 1
@@ -1156,7 +1165,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300270, guid: 429b85237a0ec41a38bd41ad574c2ecc, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 11
+  - m_RefCount: 12
     m_Data:
       e00: 1
       e01: 0
@@ -1679,7 +1688,7 @@ Tilemap:
     m_Data: {r: 0.94376326, g: 0.453042, b: 0.6115323, a: 1}
   - m_RefCount: 0
     m_Data: {r: 0.7917663, g: 0.48504114, b: 0.5038133, a: 1}
-  - m_RefCount: 11
+  - m_RefCount: 12
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1760,7 +1769,7 @@ GameObject:
   - component: {fileID: 1811346475916105102}
   - component: {fileID: 5732740051160753959}
   m_Layer: 31
-  m_Name: Bedroom
+  m_Name: Tileset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
