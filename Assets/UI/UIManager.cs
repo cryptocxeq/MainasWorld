@@ -83,14 +83,15 @@ public class UIManager : MonoBehaviour
     private Sprite TORCH_LIGHT_SPRITE_IMAGINARY = null;
 
     // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
         inventoryManager = GameObject.FindObjectOfType<InventoryManager>();
-
-        eventManager = EventManager.Instance;
-        //eventManager.OnItemClick += AddObject;
-
         HideDialog();
+    }
+
+    private void Start()
+    {
+        eventManager = EventManager.Instance;
     }
 
     public void ShowInventory()
@@ -103,7 +104,7 @@ public class UIManager : MonoBehaviour
         inventoryPanel.SetActive(false);
     }
 
-    public void ShowDialog()
+    private void ShowDialog()
     {
         dialogPanel.SetActive(true);
 
@@ -117,13 +118,16 @@ public class UIManager : MonoBehaviour
         if(inventoryManager.switchAsked)
         {
             inventoryManager.switchAsked = false;
-            GameManager.Instance.swaper.ChangeWorld();
+            GameManager.Instance.swapper.ChangeWorld();
             OnWorldSwap();
         }
 
-        eventManager.CloseDialog();
+        if (eventManager)
+        {
+            eventManager.CloseDialog();   
+        }
 
-        PlayerController player = GameManager.Instance.player;
+        var player = GameManager.Instance.player;
         player.LockMovement(false);
     }
 
@@ -139,7 +143,7 @@ public class UIManager : MonoBehaviour
         switch (dialogSpeaker)
         {
             case DialogSpeaker.MOTHER:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     avatarImage.sprite = MOTHER_SPRITE_REAL;
                 }
@@ -149,7 +153,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case DialogSpeaker.MAINA:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     avatarImage.sprite = MAINA_SPRITE_REAL;
                 }
@@ -159,7 +163,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case DialogSpeaker.TEDDY:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     avatarImage.sprite = TEDDY_BEAR_SPRITE_REAL;
                 }
@@ -169,7 +173,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case DialogSpeaker.PAPER_CLIP:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     avatarImage.sprite = PAPER_CLIP_KEY_SPRITE_REAL;
                 }
@@ -179,7 +183,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case DialogSpeaker.BOX_SHIP:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     avatarImage.sprite = BOX_SHIP_SPRITE_REAL;
                 }
@@ -189,7 +193,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case DialogSpeaker.SWORD_RULER:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     avatarImage.sprite = SWORD_RULER_SPRITE_REAL;
                 }
@@ -199,7 +203,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case DialogSpeaker.RAZOR_STONE:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     avatarImage.sprite = RAZOR_STONE_SPRITE_REAL;
                 }
@@ -209,7 +213,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case DialogSpeaker.BOSS_KEY:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     avatarImage.sprite = BOSS_KEY_SPRITE_REAL;
                 }
@@ -219,7 +223,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case DialogSpeaker.TORCH_LIGHT:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     avatarImage.sprite = TORCH_LIGHT_SPRITE_REAL;
                 }
@@ -271,7 +275,7 @@ public class UIManager : MonoBehaviour
         switch(name)
         {
             case InventoryManager.TEDDY_BEAR_GO_NAME:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     modifiedImage.sprite = TEDDY_BEAR_SPRITE_REAL;
                 }
@@ -281,7 +285,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case InventoryManager.PAPER_CLIP_KEY_GO_NAME:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     modifiedImage.sprite = PAPER_CLIP_KEY_SPRITE_REAL;
                 }
@@ -291,7 +295,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case InventoryManager.BOX_SHIP_GO_NAME:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     modifiedImage.sprite = BOX_SHIP_SPRITE_REAL;
                 }
@@ -301,7 +305,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case InventoryManager.SWORD_RULER_GO_NAME:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     modifiedImage.sprite = SWORD_RULER_SPRITE_REAL;
                 }
@@ -311,7 +315,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case InventoryManager.RAZOR_STONE_GO_NAME:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     modifiedImage.sprite = RAZOR_STONE_SPRITE_REAL;
                 }
@@ -321,7 +325,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case InventoryManager.BOSS_KEY_GO_NAME:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     modifiedImage.sprite = BOSS_KEY_SPRITE_REAL;
                 }
@@ -331,7 +335,7 @@ public class UIManager : MonoBehaviour
                 }
                 break;
             case InventoryManager.TORCH_LIGHT_GO_NAME:
-                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
                 {
                     modifiedImage.sprite = TORCH_LIGHT_SPRITE_REAL;
                 }
@@ -346,7 +350,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void OnWorldSwap()
+    private void OnWorldSwap()
     {
         inventoryManager.OnWorldSwap();
     }
