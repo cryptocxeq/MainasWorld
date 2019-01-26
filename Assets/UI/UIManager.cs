@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     public enum DialogSpeaker
     {
+        MOTHER,
         MAINA,
         TEDDY,
         PAPER_CLIP,
@@ -45,6 +46,10 @@ public class UIManager : MonoBehaviour
     private Image inventoryImage6 = null;
 
     [SerializeField]
+    private Sprite MOTHER_SPRITE_REAL = null;
+    [SerializeField]
+    private Sprite MOTHER_SPRITE_IMAGINARY = null;
+    [SerializeField]
     private Sprite MAINA_SPRITE_REAL = null;
     [SerializeField]
     private Sprite MAINA_SPRITE_IMAGINARY = null;
@@ -78,7 +83,7 @@ public class UIManager : MonoBehaviour
     private Sprite TORCH_LIGHT_SPRITE_IMAGINARY = null;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         inventoryManager = GameObject.FindObjectOfType<InventoryManager>();
 
@@ -86,12 +91,6 @@ public class UIManager : MonoBehaviour
         //eventManager.OnItemClick += AddObject;
 
         HideDialog();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void ShowInventory()
@@ -139,6 +138,16 @@ public class UIManager : MonoBehaviour
 
         switch (dialogSpeaker)
         {
+            case DialogSpeaker.MOTHER:
+                if (GameManager.Instance.swaper.World.Equals(World.Real))
+                {
+                    avatarImage.sprite = MOTHER_SPRITE_REAL;
+                }
+                else
+                {
+                    avatarImage.sprite = MOTHER_SPRITE_IMAGINARY;
+                }
+                break;
             case DialogSpeaker.MAINA:
                 if (GameManager.Instance.swaper.World.Equals(World.Real))
                 {
