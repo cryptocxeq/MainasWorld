@@ -8,4 +8,9 @@ public class RoomDoor : Interaction
     {
         print("The door is initialy locked. Send an answer depending of the inventory.");
     }
+
+    protected override bool CanInteract()
+    {
+        return base.CanInteract();
+    }
 }
