@@ -7,7 +7,7 @@ public enum World
     Real, Imaginary
 }
 
-public class WorldSwaper : MonoBehaviour
+public class WorldSwapper : MonoBehaviour
 {
     [SerializeField] private GameObject imaginaryMask = null;
     [SerializeField] private float transitionDuration = 1f;

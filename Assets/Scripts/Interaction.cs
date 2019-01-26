@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer defaultSprite = null;
     [SerializeField] SpriteRenderer mouseOverSprite = null;
 
     bool playerIsNear;
