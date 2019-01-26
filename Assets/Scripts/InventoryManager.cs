@@ -297,4 +297,15 @@ public class InventoryManager : MonoBehaviour
         uiManager.SetInventoryItemAtPosition(inventoryPosition, TORCH_LIGHT_GO_NAME);
     }
     #endregion
+    
+
+    public void OnWorldSwap()
+    {
+        foreach (int currentKey in objectPositionInInventory.Keys)
+        {
+            string name = "";
+            objectPositionInInventory.TryGetValue(currentKey, out name);
+            uiManager.SetInventoryItemAtPosition(currentKey, name);
+        }
+    }
 }
