@@ -36,22 +36,39 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void showDialog()
+    public void ShowInventory()
+    {
+        inventoryPanel.SetActive(true);
+    }
+
+    public void HideInventory()
+    {
+        inventoryPanel.SetActive(false);
+    }
+
+    public void ShowDialog()
     {
         dialogPanel.SetActive(true);
     }
 
-    public void hideDialog()
+    public void HideDialog()
     {
         dialogPanel.SetActive(false);
     }
 
+    public void CleanDialogText()
+    {
+        dialogText.text = "";
+    }
+
     public void UpdateDialog(DialogSpeaker dialogSpeaker, string text)
     {
-        switch(dialogSpeaker)
+        CleanDialogText();
+
+        switch (dialogSpeaker)
         {
             case DialogSpeaker.MAINA:
                 avatarImage.sprite = mainaAvatarSprite;
@@ -61,6 +78,8 @@ public class UIManager : MonoBehaviour
                 break;
         }
         dialogText.text = text;
+
+        ShowDialog();
     }
 
     public void ActionInventoryManager(int inventoryPosition)
