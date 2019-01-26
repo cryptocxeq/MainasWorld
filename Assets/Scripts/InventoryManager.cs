@@ -23,7 +23,7 @@ public class InventoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentObjectIndex = 0;
+        currentObjectIndex = 1;
         objectPositionInInventory = new Dictionary<int, string>();
 
         uiManager = GameObject.FindObjectOfType<UIManager>();
@@ -44,7 +44,7 @@ public class InventoryManager : MonoBehaviour
     public void AddObject(string name)
     {
         int objectPosition = InventoryHasObject(name);
-        if (objectPosition < 0)
+        if (objectPosition < 1)
         {
             Debug.Log("Adding object " + name + " in inventory in position " + objectPosition);
             objectPositionInInventory.Add(currentObjectIndex, name);
@@ -62,7 +62,7 @@ public class InventoryManager : MonoBehaviour
      */
     public bool InventoryObjectOwned(string name)
     {
-        if(InventoryHasObject(name) >= 0)
+        if(InventoryHasObject(name) >= 1)
         {
             return true;
         }
@@ -76,16 +76,30 @@ public class InventoryManager : MonoBehaviour
      * Return if we have the object in inventory as its position in inventory
      */
     public int InventoryHasObject(string name)
-    {        
-        if (objectPositionInInventory.ContainsValue(name))
+    {
+        int value = 0;
+        string objectName = "";
+        foreach(int currentKey in objectPositionInInventory.Keys)
         {
-            int value = objectPositionInInventory.Values.ToList().IndexOf(name);
-            return value;
+            objectName = "";
+            objectPositionInInventory.TryGetValue(currentKey, out objectName);
+            if (objectName.Equals(name))
+            {
+                value = currentKey;
+                break;
+            }
         }
-        else
-        {
-            return -1;
-        }
+        //if (objectPositionInInventory.ContainsValue(name))
+        //{
+        //    int value = objectPositionInInventory.Values.ToList().IndexOf(name);
+        //    return value;
+        //}
+        //else
+        //{
+        //    return 0;
+        //}
+
+        return value;
     }
 
     /*
@@ -186,37 +200,37 @@ public class InventoryManager : MonoBehaviour
     #region ClickOnInventory
     private void ActionTeddyBearClickOnInventory()
     {
-        throw new NotImplementedException();
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, "Salut je m'appelle toujours Teddy");
     }
 
     private void ActionPaperClipKeyClickOnInventory()
     {
-        throw new NotImplementedException();
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP, "Voulez-vous toujours mon assistance?");
     }
 
     private void ActionBoxShipClickOnInventory()
     {
-        throw new NotImplementedException();
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP, "Metal Gear??!");
     }
 
     private void ActionSwordRulerClickOnInventory()
     {
-        throw new NotImplementedException();
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER, "Not suitable for children");
     }
 
     private void ActionRazorStoneClickOnInventory()
     {
-        throw new NotImplementedException();
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Stone!!! Le monde est stone!!!");
     }
 
     private void ActionBossKeyClickOnInventory()
     {
-        throw new NotImplementedException();
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY, "Tadaaadaaadaaa!");
     }
 
     private void ActionTorchLightClickOnInventory()
     {
-        throw new NotImplementedException();
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Ma maman m'a toujours dit que je n'étais pas une lumière...");
     }
     #endregion
 
@@ -224,36 +238,51 @@ public class InventoryManager : MonoBehaviour
     private void ActionTeddyBearOnAdd()
     {
         uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY,"Salut je m'appelle Teddy");
+        int inventoryPosition = InventoryHasObject(TEDDY_BEAR_GO_NAME);
+        uiManager.SetInventoryItemAtPosition(inventoryPosition, TEDDY_BEAR_GO_NAME);
+
     }
 
     private void ActionPaperClipKeyOnAdd()
     {
-        throw new NotImplementedException();
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP, "Voulez-vous mon assistance?");
+        int inventoryPosition = InventoryHasObject(PAPER_CLIP_KEY_GO_NAME);
+        uiManager.SetInventoryItemAtPosition(inventoryPosition, PAPER_CLIP_KEY_GO_NAME);
     }
 
     private void ActionBoxShipOnAdd()
     {
-        throw new NotImplementedException();
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP, "Maman les petits bateaux qui vont sur l'eau ont ils des jambes?");
+        int inventoryPosition = InventoryHasObject(BOX_SHIP_GO_NAME);
+        uiManager.SetInventoryItemAtPosition(inventoryPosition, BOX_SHIP_GO_NAME);
     }
 
     private void ActionSwordRulerOnAdd()
     {
-        throw new NotImplementedException();
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER, "One ruler to sword them all.");
+        int inventoryPosition = InventoryHasObject(SWORD_RULER_GO_NAME);
+        uiManager.SetInventoryItemAtPosition(inventoryPosition, SWORD_RULER_GO_NAME);
     }
 
     private void ActionRazorStoneOnAdd()
     {
-        throw new NotImplementedException();
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Des cailloux, des cailloux");
+        int inventoryPosition = InventoryHasObject(RAZOR_STONE_GO_NAME);
+        uiManager.SetInventoryItemAtPosition(inventoryPosition, RAZOR_STONE_GO_NAME);
     }
 
     private void ActionBossKeyOnAdd()
     {
-        throw new NotImplementedException();
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY, "La clé!");
+        int inventoryPosition = InventoryHasObject(BOSS_KEY_GO_NAME);
+        uiManager.SetInventoryItemAtPosition(inventoryPosition, BOSS_KEY_GO_NAME);
     }
 
     private void ActionTorchLightOnAdd()
     {
-        throw new NotImplementedException();
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Le pouvoir de la lumière!");
+        int inventoryPosition = InventoryHasObject(TORCH_LIGHT_GO_NAME);
+        uiManager.SetInventoryItemAtPosition(inventoryPosition, TORCH_LIGHT_GO_NAME);
     }
     #endregion
 }

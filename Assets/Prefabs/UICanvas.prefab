@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8205257143388182167
 RectTransform:
   m_ObjectHideFlags: 0
@@ -272,9 +272,22 @@ MonoBehaviour:
   dialogPanel: {fileID: 8205257143388182164}
   inventoryPanel: {fileID: 8205257143818811476}
   avatarImage: {fileID: 8205257145113645535}
-  mainaAvatarSprite: {fileID: 0}
-  teddyAvatarSprite: {fileID: 0}
+  mainaAvatarSprite: {fileID: 21300000, guid: 38f4832a48c980c46bdf28b767457c3c, type: 3}
   dialogText: {fileID: 8205257145011337138}
+  inventoryImage1: {fileID: 8205257144032417668}
+  inventoryImage2: {fileID: 8205257143492921907}
+  inventoryImage3: {fileID: 8205257144659191854}
+  inventoryImage4: {fileID: 8205257143703565947}
+  inventoryImage5: {fileID: 8205257145254122850}
+  inventoryImage6: {fileID: 8205257144293987842}
+  TEDDY_BEAR_SPRITE: {fileID: 21300000, guid: 94e6f3e14def41a4f8a6c153b4739e71, type: 3}
+  PAPER_CLIP_KEY_SPRITE: {fileID: 21300000, guid: 07840eebb27278346ba0748b2b50b21d,
+    type: 3}
+  BOX_SHIP_SPRITE: {fileID: 21300000, guid: dc63b201e0d68c24780b51c252a0c165, type: 3}
+  SWORD_RULER_SPRITE: {fileID: 21300000, guid: 7713f01b3e19be842b43e93f63d84ea2, type: 3}
+  RAZOR_STONE_SPRITE: {fileID: 21300000, guid: 6bb08e1ada42d0d4d9da6ada608a3e64, type: 3}
+  BOSS_KEY_SPRITE: {fileID: 21300000, guid: 0955cb2b3de99354a9a5ca80523aa8f8, type: 3}
+  TORCH_LIGHT_SPRITE: {fileID: 21300000, guid: 20d755c1002286f4685265e628b6c24b, type: 3}
 --- !u!1 &8205257143492921910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,7 +1763,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 272
+  m_textAlignment: 264
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1868,7 +1881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
