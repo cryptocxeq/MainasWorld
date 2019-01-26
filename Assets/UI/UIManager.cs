@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject dialogPanel;
     [SerializeField]
+    private GameObject inventoryPanel;
+    [SerializeField]
     private Image avatarImage;
     [SerializeField]
     private Sprite mainaAvatarSprite;
@@ -63,12 +65,6 @@ public class UIManager : MonoBehaviour
 
     public void ActionInventoryManager(int inventoryPosition)
     {
-        string objectName = inventoryManager.GetInventoryObjectName(inventoryPosition);
-        switch(objectName)
-        {
-            //TODO
-            default:
-                break;
-        }
+        inventoryManager.ActionInventoryManager(inventoryPosition);
     }
 }
