@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class BedroomDoor : Interaction
 {
-    protected override void PerformAction()
+    protected override bool PerformAction()
     {
-        this.gameObject.SetActive(false);
-        EventManager.Instance.RevealRoom("Corridor");
+        if (GameManager.Instance.inventory.InventoryObjectOwned(InventoryManager.PAPER_CLIP_KEY_GO_NAME) &&
+            GameManager.Instance.swaper.World == World.Imaginary)
+        {
+            this.gameObject.SetActive(false);
+            EventManager.Instance.RevealRoom("Corridor");
+            return true;
+        }
+        else
+        {
+            GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA, "Maman m'a enformée dans ma chambre.");
+            return false;
+        }
     }
 }
