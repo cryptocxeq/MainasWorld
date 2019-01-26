@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class MainPanelManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject mainPanel;
+    private GameObject mainPanel = null;
     [SerializeField]
-    private GameObject creditsPanel;
+    private GameObject creditsPanel = null;
 
     public void DisplayMainPanel()
     {

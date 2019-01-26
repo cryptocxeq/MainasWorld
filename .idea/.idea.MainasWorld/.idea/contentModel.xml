@@ -83,6 +83,7 @@
           <e p="ReadMe.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="MainPanelManager.cs" t="Include" />
           <e p="Misc" t="Include">
             <e p="BedroomDoor.cs" t="Include" />
             <e p="CursorManager.cs" t="Include" />
@@ -93,7 +94,6 @@
             <e p="Interaction.cs" t="Include" />
             <e p="Intro.cs" t="Include" />
             <e p="InventoryManager.cs" t="Include" />
-            <e p="LoadScene.cs" t="Include" />
             <e p="MouseHandler.cs" t="Include" />
             <e p="NoSwapArea.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
