@@ -93,13 +93,13 @@ public class PlayerController : MonoBehaviour
 
         anim.SetBool("walking", body.velocity != Vector2.zero);
         Vector2 dir = body.velocity.normalized;
-        if (dir.y > 0.7f)
+        if (dir.y > 0.5f)
         {
             anim.SetBool("top", true);
             anim.SetBool("down", false);
             anim.SetBool("leftright", false);
         }
-        if (dir.y < -0.7f)
+        else if (dir.y < -0.5f)
         {
             anim.SetBool("top", false);
             anim.SetBool("down", true);
