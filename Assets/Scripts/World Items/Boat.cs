@@ -25,7 +25,7 @@ public class Boat : Interaction
 
     protected override bool CanInteract()
     {
-        return GameManager.Instance.swaper.isImaginaryWorld;
+        return GameManager.Instance.swaper.IsImaginaryWorld;
     }
 
     public void ResetParent()
