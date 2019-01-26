@@ -75,6 +75,16 @@ public class PlayerController : MonoBehaviour
                 body.velocity = Vector2.zero;
             }
         }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            Vector3 mousePosition = Input.mousePosition;
+            if(mousePosition.x < 0 || mousePosition.y < 0 || mousePosition.x > Screen.width || mousePosition.y > Screen.height)
+            {
+                transform.position = target;
+                body.velocity = Vector2.zero;
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
