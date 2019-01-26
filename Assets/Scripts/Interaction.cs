@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Interaction : MonoBehaviour
 {
+    static Color highlightTint = new Color(1f, 1f, 0.5f);
+
     [SerializeField] private bool interactsOnce = true;
     [SerializeField] private bool debugMode = false;
     private bool playerIsNear;
@@ -91,6 +93,6 @@ public class Interaction : MonoBehaviour
 
     private void SetHighlighted(bool isHighlighted)
     {
-        this.GetComponent<SpriteRenderer>().color = isHighlighted ? Color.red : Color.white;
+        this.GetComponent<SpriteRenderer>().color = isHighlighted ? Interaction.highlightTint : Color.white;
     }
 }

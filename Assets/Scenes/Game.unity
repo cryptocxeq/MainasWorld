@@ -4285,7 +4285,7 @@ PrefabInstance:
     - target: {fileID: 9058285746653313327, guid: 4dc2e2cc485a0438b95fe6c695164a3a,
         type: 3}
       propertyPath: m_Name
-      value: Carpet
+      value: Rug
       objectReference: {fileID: 0}
     - target: {fileID: 7856395451995202741, guid: 4dc2e2cc485a0438b95fe6c695164a3a,
         type: 3}
@@ -4538,7 +4538,7 @@ PrefabInstance:
     - target: {fileID: 7856395451995202741, guid: 4dc2e2cc485a0438b95fe6c695164a3a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.23
+      value: 2.65
       objectReference: {fileID: 0}
     - target: {fileID: 7856395451995202741, guid: 4dc2e2cc485a0438b95fe6c695164a3a,
         type: 3}
@@ -4609,7 +4609,17 @@ PrefabInstance:
     - target: {fileID: 7017028864325620227, guid: 4dc2e2cc485a0438b95fe6c695164a3a,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017028864325620227, guid: 4dc2e2cc485a0438b95fe6c695164a3a,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017028864325620227, guid: 4dc2e2cc485a0438b95fe6c695164a3a,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2706687406543190511, guid: 4dc2e2cc485a0438b95fe6c695164a3a, type: 3}
@@ -5565,12 +5575,12 @@ PrefabInstance:
     - target: {fileID: 3915564562702764824, guid: 70aedf7e2075d644490ac98cb056859c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.58
+      value: -1.16
       objectReference: {fileID: 0}
     - target: {fileID: 3915564562702764824, guid: 70aedf7e2075d644490ac98cb056859c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 4.23
       objectReference: {fileID: 0}
     - target: {fileID: 3915564562702764824, guid: 70aedf7e2075d644490ac98cb056859c,
         type: 3}
@@ -5627,6 +5637,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 802517595, guid: 70aedf7e2075d644490ac98cb056859c, type: 3}
       propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915564562464948172, guid: 70aedf7e2075d644490ac98cb056859c,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915564562464948172, guid: 70aedf7e2075d644490ac98cb056859c,
+        type: 3}
+      propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -9854,6 +9874,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017028864325620227, guid: 4dc2e2cc485a0438b95fe6c695164a3a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017028864325620227, guid: 4dc2e2cc485a0438b95fe6c695164a3a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017028864325620227, guid: 4dc2e2cc485a0438b95fe6c695164a3a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc2e2cc485a0438b95fe6c695164a3a, type: 3}
