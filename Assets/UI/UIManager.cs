@@ -107,6 +107,9 @@ public class UIManager : MonoBehaviour
     public void ShowDialog()
     {
         dialogPanel.SetActive(true);
+
+        PlayerController player = GameManager.Instance.player;
+        player.LockMovement(true);
     }
 
     public void HideDialog()
@@ -118,6 +121,9 @@ public class UIManager : MonoBehaviour
             GameManager.Instance.swaper.ChangeWorld();
             OnWorldSwap();
         }
+
+        PlayerController player = GameManager.Instance.player;
+        player.LockMovement(false);
     }
 
     public void CleanDialogText()
