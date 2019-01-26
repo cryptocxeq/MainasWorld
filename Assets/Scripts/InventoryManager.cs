@@ -13,12 +13,23 @@ public class InventoryManager : MonoBehaviour
     public const string PAPER_CLIP_KEY_GO_NAME = "PaperClipKey";
     public const string BOX_SHIP_GO_NAME = "BoxShip";
     public const string SWORD_RULER_GO_NAME = "SwordRuler";
+    public const string RAZOR_STONE_GO_NAME = "RazorStone";
+    public const string BOSS_KEY_GO_NAME = "BossKey";
+    public const string TORCH_LIGHT_GO_NAME = "TorchLight";
+
+    private UIManager uiManager;
+    private EventManager eventManager;
 
     // Start is called before the first frame update
     void Start()
     {
         currentObjectIndex = 0;
         objectPositionInInventory = new Dictionary<int, string>();
+
+        uiManager = GameObject.FindObjectOfType<UIManager>();
+
+        eventManager = EventManager.Instance;
+        eventManager.OnItemPickUp += AddObject;
     }
 
     // Update is called once per frame
@@ -38,6 +49,7 @@ public class InventoryManager : MonoBehaviour
             Debug.Log("Adding object " + name + " in inventory in position " + objectPosition);
             objectPositionInInventory.Add(currentObjectIndex, name);
             currentObjectIndex++;
+            AddObjectFeedback(name);
         }
         else
         {
@@ -92,7 +104,12 @@ public class InventoryManager : MonoBehaviour
     public void ActionInventoryManager(int inventoryPosition)
     {
         string objectName = GetInventoryObjectName(inventoryPosition);
-        if(objectName != null)
+        ActionInventoryManager( objectName);
+    }
+
+    private void ActionInventoryManager(string objectName)
+    {
+        if (objectName != null)
         {
             switch (objectName)
             {
@@ -108,6 +125,15 @@ public class InventoryManager : MonoBehaviour
                 case SWORD_RULER_GO_NAME:
                     ActionSwordRulerClickOnInventory();
                     break;
+                case RAZOR_STONE_GO_NAME:
+                    ActionRazorStoneClickOnInventory();
+                    break;
+                case BOSS_KEY_GO_NAME:
+                    ActionBossKeyClickOnInventory();
+                    break;
+                case TORCH_LIGHT_GO_NAME:
+                    ActionTorchLightClickOnInventory();
+                    break;
                 default:
                     Debug.LogError("InventoryManager - ActionInventoryManager - Object " + name + " unknown - why the hell we are here?");
                     break;
@@ -115,10 +141,49 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("InventoryManager - ActionInventoryManager - click on empty position " + inventoryPosition);
+            Debug.Log("InventoryManager - ActionInventoryManager - click on empty position ");
         }
     }
 
+    private void AddObjectFeedback(string objectName)
+    {
+        if (objectName != null)
+        {
+            switch (objectName)
+            {
+                case TEDDY_BEAR_GO_NAME:
+                    ActionTeddyBearOnAdd();
+                    break;
+                case PAPER_CLIP_KEY_GO_NAME:
+                    ActionPaperClipKeyOnAdd();
+                    break;
+                case BOX_SHIP_GO_NAME:
+                    ActionBoxShipOnAdd();
+                    break;
+                case SWORD_RULER_GO_NAME:
+                    ActionSwordRulerOnAdd();
+                    break;
+                case RAZOR_STONE_GO_NAME:
+                    ActionRazorStoneOnAdd();
+                    break;
+                case BOSS_KEY_GO_NAME:
+                    ActionBossKeyOnAdd();
+                    break;
+                case TORCH_LIGHT_GO_NAME:
+                    ActionTorchLightOnAdd();
+                    break;
+                default:
+                    Debug.LogError("InventoryManager - ActionInventoryManager - Object " + name + " unknown - why the hell we are here?");
+                    break;
+            }
+        }
+        else
+        {
+            Debug.Log("InventoryManager - ActionInventoryManager - click on empty position ");
+        }
+    }
+
+    #region ClickOnInventory
     private void ActionTeddyBearClickOnInventory()
     {
         throw new NotImplementedException();
@@ -138,4 +203,57 @@ public class InventoryManager : MonoBehaviour
     {
         throw new NotImplementedException();
     }
+
+    private void ActionRazorStoneClickOnInventory()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void ActionBossKeyClickOnInventory()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void ActionTorchLightClickOnInventory()
+    {
+        throw new NotImplementedException();
+    }
+    #endregion
+
+    #region OnAdd
+    private void ActionTeddyBearOnAdd()
+    {
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY,"Salut je m'appelle Teddy");
+    }
+
+    private void ActionPaperClipKeyOnAdd()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void ActionBoxShipOnAdd()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void ActionSwordRulerOnAdd()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void ActionRazorStoneOnAdd()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void ActionBossKeyOnAdd()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void ActionTorchLightOnAdd()
+    {
+        throw new NotImplementedException();
+    }
+    #endregion
 }

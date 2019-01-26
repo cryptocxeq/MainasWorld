@@ -9,7 +9,7 @@ public class EventManager : MonoBehaviour
     public delegate void RoomReveal(string name);
     public event RoomReveal OnRoomReveal;
     public delegate void ItemClick(string name);
-    public event ItemClick OnItemClick;
+    public event ItemClick OnItemPickUp;
 
     public void Start()
     {
@@ -32,11 +32,11 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public void ClickItem(string name)
+    public void ItemPickUp(string name)
     {
-        if (OnItemClick != null)
+        if (OnItemPickUp != null)
         {
-            OnItemClick(name);
+            OnItemPickUp(name);
         }
     }
 }
