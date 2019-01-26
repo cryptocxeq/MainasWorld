@@ -35,6 +35,8 @@ public class UIManager : MonoBehaviour
 
         eventManager = EventManager.Instance;
         //eventManager.OnItemClick += AddObject;
+
+        HideDialog();
     }
 
     // Update is called once per frame
