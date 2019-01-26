@@ -9,7 +9,7 @@ public enum World
 
 public class WorldSwaper : MonoBehaviour
 {
-    [SerializeField] private GameObject imaginaryMask;
+    [SerializeField] private GameObject imaginaryMask = null;
     [SerializeField] private float transitionDuration = 1f;
     [SerializeField] private float minimumScale = 0.01f;
     [SerializeField] private float maximumScale = 20.0f;

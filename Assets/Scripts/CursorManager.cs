@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CursorManager : MonoBehaviour
 {
-    [SerializeField] private Texture2D realTexture;
-    [SerializeField] private Texture2D imaginaryTexture;
+    [SerializeField] private Texture2D realTexture = null;
+    [SerializeField] private Texture2D imaginaryTexture = null;
 
     void Start()
     {
