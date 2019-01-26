@@ -47,6 +47,9 @@ public class PlayerController : MonoBehaviour
 
         if (!MouseHandler.MouseOnUI())
         {
+            if (GameManager.Instance.SelectedObject != null)
+                target = GameManager.Instance.SelectedObject.transform.position;
+
             if (Input.GetMouseButton(0))
             {
                 // Get target position
