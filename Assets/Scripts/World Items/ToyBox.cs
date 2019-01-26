@@ -6,8 +6,7 @@ public class ToyBox : Interaction
 {
     protected override void PerformAction()
     {
-        GameManager.Instance.inventory.AddObject(InventoryManager.TEDDY_BEAR_GO_NAME);
+        EventManager.Instance.ItemPickUp(InventoryManager.TEDDY_BEAR_GO_NAME);
         // activer dans le monde Imaginaire "TedyBear";
     }
-
 }

@@ -7,7 +7,7 @@ public class Wardrobe : Interaction
 
     protected override void PerformAction()
     {
-        GameManager.Instance.inventory.AddObject(InventoryManager.PAPER_CLIP_KEY_GO_NAME);
+        EventManager.Instance.ItemPickUp(InventoryManager.PAPER_CLIP_KEY_GO_NAME);
     }
 
     protected override bool CanInteract()
