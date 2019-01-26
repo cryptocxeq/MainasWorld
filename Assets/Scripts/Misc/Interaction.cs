@@ -65,7 +65,7 @@ public class Interaction : MonoBehaviour
             GameManager.Instance.SelectedObject = null;
         }
 
-        SetHighlighted(isMouseOver);
+        SetHighlighted(isMouseOver && !GameManager.Instance.player.IsMovementLocked);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

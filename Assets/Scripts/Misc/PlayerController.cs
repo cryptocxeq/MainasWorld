@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour
         return isInBoat;
     }
 
+    public bool IsMovementLocked
+    {
+        get { return isMovementLocked; }
+    }
+
     public void LockMovement(bool locked)
     {
         isMovementLocked = locked;
@@ -41,6 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isMovementLocked)
         {
+            anim.SetBool("walking", false);
             target = transform.position;
             body.velocity = Vector2.zero;
             return;
