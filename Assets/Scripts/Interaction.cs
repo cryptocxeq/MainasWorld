@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class Interaction : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer mouseOverSprite = null;
-
     bool playerIsNear;
 
     protected virtual void PerformAction()
@@ -16,7 +15,6 @@ public class Interaction : MonoBehaviour
     {
         return true;
     }
-
 
     // Update is called once per frame
     void Update()
@@ -39,7 +37,7 @@ public class Interaction : MonoBehaviour
             }
         }
 
-        mouseOverSprite.gameObject.SetActive(isHighlighted);
+        SetHighlighted(isHighlighted);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -52,5 +50,10 @@ public class Interaction : MonoBehaviour
     {
         if (collision.tag == "Player")
             playerIsNear = false;
+    }
+
+    private void SetHighlighted(bool isHighlighted)
+    {
+        this.GetComponent<SpriteRenderer>().color = isHighlighted ? Color.red : Color.white;
     }
 }
