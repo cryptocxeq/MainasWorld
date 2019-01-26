@@ -13,17 +13,17 @@ public class UIManager : MonoBehaviour
     }
 
     [SerializeField]
-    private GameObject dialogPanel;
+    private GameObject dialogPanel = null;
     [SerializeField]
-    private GameObject inventoryPanel;
+    private GameObject inventoryPanel = null;
     [SerializeField]
-    private Image avatarImage;
+    private Image avatarImage = null;
     [SerializeField]
-    private Sprite mainaAvatarSprite;
+    private Sprite mainaAvatarSprite = null;
     [SerializeField]
-    private Sprite teddyAvatarSprite;
+    private Sprite teddyAvatarSprite = null;
     [SerializeField]
-    private TMP_Text dialogText;
+    private TMP_Text dialogText = null;
 
     private InventoryManager inventoryManager;
     private EventManager eventManager;
