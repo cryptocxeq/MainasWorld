@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class RazorStone : Interaction
 {
-
-    protected override void PerformAction()
+    protected override bool PerformAction()
     {
         //GameManager.Instance.inventory.AddObject(InventoryManager.bo);
+        return true;
     }
 }

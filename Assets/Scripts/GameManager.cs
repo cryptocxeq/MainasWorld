@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public PlayerController player;
     public WorldSwapper swaper;
     public InventoryManager inventory;
+    public UIManager ui;
 
     private Interaction selectedObject;
     public Interaction SelectedObject
@@ -21,5 +22,4 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
-
 }

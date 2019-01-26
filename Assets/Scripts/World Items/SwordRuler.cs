@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SwordRuler : Interaction
 {
-    protected override void PerformAction()
+    protected override bool PerformAction()
     {
         EventManager.Instance.ItemPickUp(InventoryManager.SWORD_RULER_GO_NAME);
+        return true;
     }
 
     protected override bool CanInteract()

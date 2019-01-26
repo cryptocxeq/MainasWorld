@@ -11,7 +11,7 @@ public class Box : Interaction
         parent = transform.parent.parent;
     }
 
-    protected override void PerformAction()
+    protected override bool PerformAction()
     {
         PlayerController player = GameManager.Instance.player;
         if (!player.IsInBoat())
@@ -21,6 +21,8 @@ public class Box : Interaction
             transform.parent.parent = player.transform;
             player.SetBoat(true);
         }
+
+        return true;
     }
 
     protected override bool CanInteract()

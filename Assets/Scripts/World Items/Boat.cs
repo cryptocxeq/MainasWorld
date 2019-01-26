@@ -11,7 +11,7 @@ public class Boat : Interaction
         parent = transform.parent.parent;
     }
 
-    protected override void PerformAction()
+    protected override bool PerformAction()
     {
         PlayerController player = GameManager.Instance.player;
 
@@ -21,6 +21,8 @@ public class Boat : Interaction
             transform.parent.parent = player.transform;
             player.SetBoat(true);
         }
+
+        return true;
     }
 
     protected override bool CanInteract()

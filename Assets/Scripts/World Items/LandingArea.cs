@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LandingArea : Interaction
 {
-    protected override void PerformAction()
+    protected override bool PerformAction()
     {
         Boat boat = GameObject.FindObjectOfType<Boat>();
 
@@ -17,6 +17,8 @@ public class LandingArea : Interaction
             player.SetBoat(false);
             player.LockMovement(false);
         }
+
+        return true;
     }
 
     protected override bool CanInteract()

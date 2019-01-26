@@ -10,9 +10,10 @@ public class Interaction : MonoBehaviour
     private bool playerIsNear;
     private bool hasInteracted = false;
 
-    protected virtual void PerformAction()
+    protected virtual bool PerformAction()
     {
         print("the action is activated !");
+        return false;
     }
     protected virtual bool CanInteract()
     {
@@ -41,9 +42,8 @@ public class Interaction : MonoBehaviour
                     {
                         if (playerIsNear)
                         {
-                            hasInteracted = true;
                             GameManager.Instance.SelectedObject = null;
-                            PerformAction();
+                            hasInteracted = PerformAction();
                         }
                         else
                         {
@@ -69,9 +69,8 @@ public class Interaction : MonoBehaviour
 
             if (GameManager.Instance.SelectedObject == this)
             {
-                hasInteracted = true;
                 GameManager.Instance.SelectedObject = null;
-                PerformAction();
+                hasInteracted = PerformAction();
             }
 
             playerIsNear = true;
