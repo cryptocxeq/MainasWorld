@@ -92,26 +92,30 @@ public class InventoryManager : MonoBehaviour
     public void ActionInventoryManager(int inventoryPosition)
     {
         string objectName = GetInventoryObjectName(inventoryPosition);
-        switch (objectName)
+        if(objectName != null)
         {
-            case TEDDY_BEAR_GO_NAME:
-                ActionTeddyBearClickOnInventory();
-                break;
-            case PAPER_CLIP_KEY_GO_NAME:
-                ActionPaperClipKeyClickOnInventory();
-                break;
-            case BOX_SHIP_GO_NAME:
-                ActionBoxShipClickOnInventory();
-                break;
-            case SWORD_RULER_GO_NAME:
-                ActionSwordRulerClickOnInventory();
-                break;
-            case "":
-                Debug.LogWarning("InventoryManager - ActionInventoryManager - click on empty position " + inventoryPosition);
-                break;
-            default:
-                Debug.LogError("InventoryManager - ActionInventoryManager - Object " + name + " unknown - why the hell we are here?");
-                break;
+            switch (objectName)
+            {
+                case TEDDY_BEAR_GO_NAME:
+                    ActionTeddyBearClickOnInventory();
+                    break;
+                case PAPER_CLIP_KEY_GO_NAME:
+                    ActionPaperClipKeyClickOnInventory();
+                    break;
+                case BOX_SHIP_GO_NAME:
+                    ActionBoxShipClickOnInventory();
+                    break;
+                case SWORD_RULER_GO_NAME:
+                    ActionSwordRulerClickOnInventory();
+                    break;
+                default:
+                    Debug.LogError("InventoryManager - ActionInventoryManager - Object " + name + " unknown - why the hell we are here?");
+                    break;
+            }
+        }
+        else
+        {
+            Debug.Log("InventoryManager - ActionInventoryManager - click on empty position " + inventoryPosition);
         }
     }
 
