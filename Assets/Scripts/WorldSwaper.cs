@@ -7,13 +7,17 @@ public class WorldSwaper : MonoBehaviour
     [SerializeField] private GameObject realityWorld;
     [SerializeField] private GameObject imaginaryWorld;
 
-    bool imaginationActivated;
+    public bool isImaginaryWorld;
+    public bool canSwap;
+
     int basicMask;
 
     // Start is called before the first frame update
     void Start()
     {
+        canSwap = true;
         basicMask = Camera.main.cullingMask;
+        ChangeWorld();
 
         //Camera.main.cullingMask = basicMask | (1 << LayerMask.NameToLayer("Imaginary")) | (1 << LayerMask.NameToLayer("Reality"));
     }
@@ -29,16 +33,21 @@ public class WorldSwaper : MonoBehaviour
 
     public void ChangeWorld()
     {
-        imaginationActivated = !imaginationActivated;
+        if (!canSwap)
+            return;
 
-        /*
-        realityWorld.SetActive(!imaginationActivated);
-        imaginaryWorld.SetActive(imaginationActivated);
-        /*/
-        if (imaginationActivated)
+        isImaginaryWorld = !isImaginaryWorld;
+
+        //*
+        realityWorld.SetActive(!isImaginaryWorld);
+        imaginaryWorld.SetActive(isImaginaryWorld);
+        //*/
+        if (isImaginaryWorld)
             Camera.main.cullingMask = basicMask | (1 << LayerMask.NameToLayer("Imaginary"));
         else
             Camera.main.cullingMask = basicMask | (1 << LayerMask.NameToLayer("Reality"));
         //*/
+
+        GameManager.Instance.player.LockMovement(GameManager.Instance.player.IsInBoat() && !isImaginaryWorld);
     }
 }

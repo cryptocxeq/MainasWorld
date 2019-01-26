@@ -8,16 +8,43 @@ public class PlayerController : MonoBehaviour
     private Vector3 target;
     private Rigidbody2D body;
 
+    bool InBoat;
+    bool movementLocked;
+
+    public void SetBoat(bool value)
+    {
+        InBoat = value;
+        target = transform.position;
+    }
+
+    public bool IsInBoat()
+    {
+        return InBoat;
+    }
+
+    public void LockMovement(bool locked)
+    {
+        movementLocked = locked;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        movementLocked = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (movementLocked)
+        {
+            target = transform.position;
+            body.velocity = Vector2.zero;
+            return;
+        }
+
+        if (Input.GetMouseButton(0) && !MouseHandler.MouseOnUI())
         {
             // Get target position
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -36,11 +63,12 @@ public class PlayerController : MonoBehaviour
         // Move to target in strait line
         if (target != transform.position)
         {
-            transform.right = target - transform.position;
+            //transform.right = target - transform.position;
+            Vector3 direction = (target - transform.position).normalized;
             //transform.LookAt(target);
             float dist = Vector3.Distance(transform.position, target);
             if (dist > speed * Time.deltaTime)
-                body.velocity = transform.right * speed;
+                body.velocity = direction * speed;
             else
             {
                 transform.position = target;
@@ -49,8 +77,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        target = transform.position;
+        body.velocity = Vector2.zero;
+    }
     private void OnCollisionStay2D(Collision2D collision)
     {
         target = transform.position;
+        body.velocity = Vector2.zero;
     }
 }

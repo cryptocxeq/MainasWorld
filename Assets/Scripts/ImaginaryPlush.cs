@@ -4,34 +4,29 @@ using UnityEngine;
 
 public class ImaginaryPlush : MonoBehaviour
 {
-    [SerializeField] PlayerController player;
     [SerializeField] float speed;
+    [SerializeField] int distance;
 
-    bool following;
+    PlayerController player;
+    List<Vector3> positions;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindObjectOfType<PlayerController>();
+        positions = new List<Vector3>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (following)
+        if(positions.Count < distance || player.transform.position != positions[positions.Count-1])
+            positions.Add(player.transform.position);
+
+        if(positions.Count > distance)
         {
-            transform.right = player.transform.position - transform.position;
-            transform.position += transform.right * Time.deltaTime * speed;
+            transform.position = positions[0];
+            positions.RemoveAt(0);
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        following = false;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        following = true;
     }
 }

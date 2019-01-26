@@ -13,40 +13,46 @@ public class Interaction : MonoBehaviour
     {
         print("the action is activated !");
     }
-
-    // Start is called before the first frame update
-    void Start()
+    protected virtual bool CanInteract()
     {
+        return true;
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        if (playerIsNear)
+        if (playerIsNear && !MouseHandler.MouseOnUI()  && CanInteract())
         {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if (hit.collider != null)
+            RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            bool ok = false;
+            foreach (RaycastHit2D hit in hits)
             {
-                mouseOverSprite.gameObject.SetActive(true);
-                if (Input.GetMouseButtonDown(0))
+                if (hit.collider != null && hit.collider.gameObject == gameObject)
                 {
-                    PerformAction();
+                    ok = true;
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        PerformAction();
+                    }
+                    break;
                 }
             }
-            else
-                mouseOverSprite.gameObject.SetActive(false);
+            mouseOverSprite.gameObject.SetActive(ok);
         }
         else
             mouseOverSprite.gameObject.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        playerIsNear = true;
+        if(collision.tag == "Player")
+            playerIsNear = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        playerIsNear = false;
+        if (collision.tag == "Player")
+            playerIsNear = false;
     }
 }
