@@ -6,6 +6,7 @@ using UnityEngine;
 public class Interaction : MonoBehaviour
 {
     [SerializeField] private bool interactsOnce = true;
+    [SerializeField] private bool debugMode = false;
     private bool playerIsNear;
     private bool hasInteracted = false;
 
@@ -61,6 +62,11 @@ public class Interaction : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player") {
+            if (debugMode)
+            {
+                Debug.Log("OnCollisionEnter");
+            }
+
             if (GameManager.Instance.SelectedObject == this)
             {
                 hasInteracted = true;
@@ -75,6 +81,11 @@ public class Interaction : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player") {
+            if (debugMode)
+            {
+                Debug.Log("OnCollisionExit");
+            }
+
             playerIsNear = false;
         }
     }
