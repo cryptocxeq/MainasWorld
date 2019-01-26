@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         movementLocked = false;
+        target = transform.position;
     }
 
     // Update is called once per frame
