@@ -60,7 +60,7 @@ public class Interaction : MonoBehaviour
             }
         }
 
-        if (!isMouseOver && GameManager.Instance.SelectedObject == this)
+        if (!isMouseOver && GameManager.Instance.SelectedObject == this && Input.GetMouseButtonDown(0))
         {
             GameManager.Instance.SelectedObject = null;
         }

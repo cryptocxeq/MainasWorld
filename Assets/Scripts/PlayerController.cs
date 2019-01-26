@@ -8,37 +8,37 @@ public class PlayerController : MonoBehaviour
     private Vector3 target;
     private Rigidbody2D body;
 
-    bool InBoat;
-    bool movementLocked;
+    private bool isInBoat;
+    private bool isMovementLocked;
 
     public void SetBoat(bool value)
     {
-        InBoat = value;
+        isInBoat = value;
         target = transform.position;
     }
 
     public bool IsInBoat()
     {
-        return InBoat;
+        return isInBoat;
     }
 
     public void LockMovement(bool locked)
     {
-        movementLocked = locked;
+        isMovementLocked = locked;
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        movementLocked = false;
+        isMovementLocked = false;
         target = transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (movementLocked)
+        if (isMovementLocked)
         {
             target = transform.position;
             body.velocity = Vector2.zero;
@@ -50,18 +50,11 @@ public class PlayerController : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 // Get target position
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
-                if(Physics.Raycast(ray, out hit))
-                {
-                    target = hit.point;
-                }
-                else
-                {
-                    target = transform.position;
-                }
+                target = Physics.Raycast(ray, out hit) ? hit.point : transform.position;
             }
-            else if (Input.GetMouseButtonUp(0) && GameManager.Instance.SelectedObject == null)
+            else if (Input.GetMouseButtonUp(0) && !GameManager.Instance.SelectedObject)
             {
                 target = transform.position;
                 body.velocity = Vector2.zero;
@@ -72,9 +65,9 @@ public class PlayerController : MonoBehaviour
         if (target != transform.position)
         {
             //transform.right = target - transform.position;
-            Vector3 direction = (target - transform.position).normalized;
+            var direction = (target - transform.position).normalized;
             //transform.LookAt(target);
-            float dist = Vector3.Distance(transform.position, target);
+            var dist = Vector3.Distance(transform.position, target);
             if (dist > speed * Time.deltaTime)
                 body.velocity = direction * speed;
             else
@@ -86,8 +79,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            Vector3 mousePosition = Input.mousePosition;
-            if(mousePosition.x < 0 || mousePosition.y < 0 || mousePosition.x > Screen.width || mousePosition.y > Screen.height)
+            var mousePosition = Input.mousePosition;
+            if (mousePosition.x < 0 || mousePosition.y < 0 || mousePosition.x > Screen.width || mousePosition.y > Screen.height)
             {
                 transform.position = target;
                 body.velocity = Vector2.zero;
