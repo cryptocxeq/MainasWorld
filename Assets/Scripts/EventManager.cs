@@ -8,13 +8,15 @@ public class EventManager : MonoBehaviour
     public event WorldChange OnWorldChange;
     public delegate void RoomReveal(string name);
     public event RoomReveal OnRoomReveal;
+    public delegate void ItemClick(string name);
+    public event ItemClick OnItemClick;
 
     public void Start()
     {
         Instance = this;
     }
 
-    public void DidChangeWorld(World world)
+    public void ChangeWorld(World world)
     {
         if (OnWorldChange != null)
         {
@@ -22,11 +24,19 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public void DidRevealRoom(string name)
+    public void RevealRoom(string name)
     {
         if (OnRoomReveal != null)
         {
             OnRoomReveal(name);
+        }
+    }
+
+    public void ClickItem(string name)
+    {
+        if (OnItemClick != null)
+        {
+            OnItemClick(name);
         }
     }
 }

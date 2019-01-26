@@ -8,6 +8,6 @@ public class RoomRevealer : Interaction
 
     protected override void PerformAction()
     {
-        EventManager.Instance.DidRevealRoom(roomName);
+        EventManager.Instance.RevealRoom(roomName);
     }
 }

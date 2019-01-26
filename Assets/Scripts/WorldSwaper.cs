@@ -63,6 +63,6 @@ public class WorldSwaper : MonoBehaviour
         var scaleVector = world == World.Imaginary ? MinimumScaleVector : MaximumScaleVector;
         LeanTween.scale(imaginaryMask, scaleVector, transitionDuration).setEase(LeanTweenType.easeInCubic);
         world = world == World.Real ? World.Imaginary : World.Real;
-        EventManager.Instance.DidChangeWorld(world);
+        EventManager.Instance.ChangeWorld(world);
     }
 }
