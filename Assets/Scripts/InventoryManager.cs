@@ -19,6 +19,7 @@ public class InventoryManager : MonoBehaviour
 
     private UIManager uiManager;
     private EventManager eventManager;
+    public bool switchAsked;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,8 @@ public class InventoryManager : MonoBehaviour
 
         eventManager = EventManager.Instance;
         eventManager.OnItemPickUp += AddObject;
+
+        switchAsked = false;
     }
 
     // Update is called once per frame
@@ -200,7 +203,16 @@ public class InventoryManager : MonoBehaviour
     #region ClickOnInventory
     private void ActionTeddyBearClickOnInventory()
     {
-        uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, "Salut je m'appelle toujours Teddy");
+        switchAsked = true;
+        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        {
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, "C'est parti pour le pays magique!");            
+        }
+        else
+        {
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, "De retour dans le réel!");
+        }
+        
     }
 
     private void ActionPaperClipKeyClickOnInventory()

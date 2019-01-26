@@ -96,6 +96,11 @@ public class UIManager : MonoBehaviour
     public void HideDialog()
     {
         dialogPanel.SetActive(false);
+        if(inventoryManager.switchAsked)
+        {
+            inventoryManager.switchAsked = false;
+            GameManager.Instance.swaper.ChangeWorld();
+        }
     }
 
     public void CleanDialogText()
