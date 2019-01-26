@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -36,38 +37,35 @@ public class Interaction : MonoBehaviour
             return;
         }
 
-        var isHighlighted = false;
+        var isMouseOver = false;
         if (!MouseHandler.MouseOnUI() && CanInteract())
-        {
-            var hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            foreach (var hit in hits)
-            {
-                if (!hit.collider || hit.collider.gameObject != gameObject) continue;
-                
-                isHighlighted = true;
-                if (Input.GetMouseButtonDown(0))
-                {
-                    if (playerIsNear)
-                    {
-                        GameManager.Instance.SelectedObject = null;
-                        hasInteracted = PerformAction();
-                    }
-                    else
-                    {
-                        GameManager.Instance.SelectedObject = this;
-                    }
-                }
+        {            
+            var touchedHit = Physics2D
+                .RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero)
+                .Select((h) => (RaycastHit2D?)h)
+                .FirstOrDefault((h) => h?.collider.gameObject == gameObject);
+            isMouseOver = touchedHit != null;
 
-                break;
+            if (isMouseOver && Input.GetMouseButtonDown(0))
+            {
+                if (playerIsNear)
+                {
+                    GameManager.Instance.SelectedObject = null;
+                    hasInteracted = PerformAction();
+                }
+                else
+                {
+                    GameManager.Instance.SelectedObject = this;
+                }
             }
         }
 
-        if (!isHighlighted)
+        if (!isMouseOver && GameManager.Instance.SelectedObject == this && Input.GetMouseButtonDown(0))
         {
             GameManager.Instance.SelectedObject = null;
         }
 
-        SetHighlighted(isHighlighted);
+        SetHighlighted(isMouseOver);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
