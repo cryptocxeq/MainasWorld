@@ -9,6 +9,7 @@ public enum World
 
 public class WorldSwapper : MonoBehaviour
 {
+    [SerializeField] private GameObject realMask = null;
     [SerializeField] private GameObject imaginaryMask = null;
     [SerializeField] private float transitionDuration = 1f;
     [SerializeField] private float minimumScale = 0.01f;
@@ -41,6 +42,7 @@ public class WorldSwapper : MonoBehaviour
     void Start()
     {
         canSwap = true;
+        realMask.transform.localScale = MinimumScaleVector;
         imaginaryMask.transform.localScale = MinimumScaleVector;
     }
 
@@ -64,6 +66,7 @@ public class WorldSwapper : MonoBehaviour
 
         var scaleVector = world == World.Imaginary ? MinimumScaleVector : MaximumScaleVector;
         LeanTween.scale(imaginaryMask, scaleVector, transitionDuration).setEase(LeanTweenType.easeInCubic);
+        LeanTween.scale(realMask, scaleVector, transitionDuration).setEase(LeanTweenType.easeInCubic);
         world = world == World.Real ? World.Imaginary : World.Real;
         EventManager.Instance.ChangeWorld(world);
     }
