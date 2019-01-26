@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 1f;
     private Vector3 target;
     private Rigidbody2D body;
+    private Animator anim;
     private bool isInBoat;
     private bool isMovementLocked;
 
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         isMovementLocked = false;
         target = transform.position;
     }
@@ -88,6 +90,28 @@ public class PlayerController : MonoBehaviour
                 body.velocity = Vector2.zero;
             }
         }
+
+        anim.SetBool("walking", body.velocity != Vector2.zero);
+        Vector2 dir = body.velocity.normalized;
+        if (dir.y > 0.7f)
+        {
+            anim.SetBool("top", true);
+            anim.SetBool("down", false);
+            anim.SetBool("leftright", false);
+        }
+        if (dir.y < -0.7f)
+        {
+            anim.SetBool("top", false);
+            anim.SetBool("down", true);
+            anim.SetBool("leftright", false);
+        }
+        else if (dir.x != 0f)
+        {
+            anim.SetBool("top", false);
+            anim.SetBool("down", false);
+            anim.SetBool("leftright", true);
+        }
+        GetComponent<SpriteRenderer>().flipX = body.velocity.x > 0;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
