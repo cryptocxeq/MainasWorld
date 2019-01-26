@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ImaginaryPlush : MonoBehaviour
 {
-    [SerializeField] int distance = 20;
+    //[SerializeField] float speed = 1;
+    [SerializeField] int distance = 1;
 
     PlayerController player;
     List<Vector3> positions;

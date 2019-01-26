@@ -6,7 +6,7 @@ public class SwordRuler : Interaction
 {
     protected override void PerformAction()
     {
-        GameManager.Instance.inventory.AddObject(InventoryManager.SWORD_RULER_GO_NAME);
+        EventManager.Instance.ItemPickUp(InventoryManager.SWORD_RULER_GO_NAME);
     }
 
     protected override bool CanInteract()

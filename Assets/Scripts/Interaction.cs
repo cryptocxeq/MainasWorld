@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer defaultSprite = null;
     [SerializeField] SpriteRenderer mouseOverSprite = null;
 
     bool playerIsNear;
@@ -22,17 +21,15 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-        if (!MouseHandler.MouseOnUI()  && CanInteract())
+        var isHighlighted = false;
+        if (!MouseHandler.MouseOnUI() && CanInteract())
         {
             RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            bool ok = false;
             foreach (RaycastHit2D hit in hits)
             {
                 if (hit.collider != null && hit.collider.gameObject == gameObject)
                 {
-                    ok = true;
+                    isHighlighted = true;
                     if (Input.GetMouseButtonDown(0) && playerIsNear)
                     {
                         PerformAction();
@@ -40,10 +37,9 @@ public class Interaction : MonoBehaviour
                     break;
                 }
             }
-            mouseOverSprite.gameObject.SetActive(ok);
         }
-        else
-            mouseOverSprite.gameObject.SetActive(false);
+
+        mouseOverSprite.gameObject.SetActive(isHighlighted);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
