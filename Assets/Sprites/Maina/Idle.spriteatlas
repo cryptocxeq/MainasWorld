@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Idle
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 97b718e8bfa4c489294e83fa6f5357df, type: 3}
+    totalSpriteSurfaceArea: 4151830
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 818c4d10c3ce17a46bf04a37d73a1ca3, type: 3}
+  - {fileID: 21300000, guid: 587bbfd1581ac4445afc5987dcd0b99f, type: 3}
+  - {fileID: 21300000, guid: 7b1d1882e3c871244a8510a89712f4bc, type: 3}
+  - {fileID: 21300000, guid: e51b2ba28880b5045990242ee19aff8b, type: 3}
+  - {fileID: 21300000, guid: 52262ab26eeae8344bf7825f17cdccbc, type: 3}
+  - {fileID: 21300000, guid: 01549d3324dc3c84f80e2888499d498d, type: 3}
+  - {fileID: 21300000, guid: 12d68d43c37ba634a8e9067c01087d38, type: 3}
+  - {fileID: 21300000, guid: 33597b24720daa64483c8b0ece297b16, type: 3}
+  - {fileID: 21300000, guid: 89e0ef05e7c334445bcf7a1ae859d9f3, type: 3}
+  - {fileID: 21300000, guid: 6dccfbb58d1e5294fb62f7ced8c2a4a3, type: 3}
+  - {fileID: 21300000, guid: 6edb6f669ac1c2648a9c0fbdb2a88993, type: 3}
+  - {fileID: 21300000, guid: e13834d61cd3cec4a8e36bd3a6acb00e, type: 3}
+  - {fileID: 21300000, guid: 43889837931e7da4595010db19dfe5f2, type: 3}
+  - {fileID: 21300000, guid: 3a5c0187e9ee794448a514c13b42af0f, type: 3}
+  - {fileID: 21300000, guid: c70eec0829524054d8ef99a436d185fe, type: 3}
+  - {fileID: 21300000, guid: 6fe17348be2136449bd802c28f535353, type: 3}
+  - {fileID: 21300000, guid: dd7bff589736e124fb449482563c7b87, type: 3}
+  - {fileID: 21300000, guid: 4e0b1168357ff474a996e2323cd7fcf1, type: 3}
+  - {fileID: 21300000, guid: 74d44d596c9c0b4488463e8c4f19d4aa, type: 3}
+  - {fileID: 21300000, guid: 030c7e7916b8e2c4d8525cf5346db682, type: 3}
+  - {fileID: 21300000, guid: afe414b963c198c4da031d3addc25a19, type: 3}
+  - {fileID: 21300000, guid: 705567e9caecf424e916d502be4afe99, type: 3}
+  - {fileID: 21300000, guid: cfd289e950807684f81141ccfdbae6fd, type: 3}
+  - {fileID: 21300000, guid: 2fd11f7af1651e64ca97a474449b3eec, type: 3}
+  - {fileID: 21300000, guid: c14dc78a69efcb64b8a8945e37a13eb9, type: 3}
+  - {fileID: 21300000, guid: 6b23ae5d9f231f349ad14a46f1422045, type: 3}
+  - {fileID: 21300000, guid: 2939f97d522c5ae4f8423219547b400e, type: 3}
+  - {fileID: 21300000, guid: db3dba8df5b12724c9fcf4ac4d6d244d, type: 3}
+  - {fileID: 21300000, guid: 944195cec8e06604897dfef8a429fff3, type: 3}
+  - {fileID: 21300000, guid: 18dbabeeb71b2cc4291245bfe1e083c4, type: 3}
+  - {fileID: 21300000, guid: b030fdeefb91e7a40927602a61001d80, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - skeleton-animation_24
+  - skeleton-animation_8
+  - skeleton-animation_26
+  - skeleton-animation_20
+  - skeleton-animation_4
+  - skeleton-animation_15
+  - skeleton-animation_14
+  - skeleton-animation_23
+  - skeleton-animation_17
+  - skeleton-animation_5
+  - skeleton-animation_30
+  - skeleton-animation_28
+  - skeleton-animation_9
+  - skeleton-animation_25
+  - skeleton-animation_0
+  - skeleton-animation_11
+  - skeleton-animation_12
+  - skeleton-animation_21
+  - skeleton-animation_19
+  - skeleton-animation_7
+  - skeleton-animation_1
+  - skeleton-animation_10
+  - skeleton-animation_22
+  - skeleton-animation_29
+  - skeleton-animation_6
+  - skeleton-animation_27
+  - skeleton-animation_13
+  - skeleton-animation_16
+  - skeleton-animation_18
+  - skeleton-animation_2
+  - skeleton-animation_3
+  m_Tag: Idle
+  m_IsVariant: 0

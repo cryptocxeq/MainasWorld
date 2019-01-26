@@ -47,10 +47,12 @@ public class WorldSwapper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.A))
         {
             ChangeWorld();
         }
+#endif
     }
 
     public void ChangeWorld()

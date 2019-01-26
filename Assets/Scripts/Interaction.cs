@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class Interaction : MonoBehaviour
 {
-    static Color highlightTint = new Color(1f, 1f, 0.5f);
+    static readonly Color HighlightTint = new Color(1f, 1f, 0.5f);
 
     [SerializeField] private bool interactsOnce = true;
     [SerializeField] private bool debugMode = false;
     private bool playerIsNear;
     private bool hasInteracted = false;
+    private SpriteRenderer spriteRenderer;
 
     protected virtual bool PerformAction()
     {
@@ -22,8 +24,12 @@ public class Interaction : MonoBehaviour
         return true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
+    {
+        spriteRenderer = this.GetComponent<SpriteRenderer>();
+    }
+
+    private void Update()
     {
         if (interactsOnce && hasInteracted)
         {
@@ -31,68 +37,69 @@ public class Interaction : MonoBehaviour
             return;
         }
 
-        var isHighlighted = false;
+        var isMouseOver = false;
         if (!MouseHandler.MouseOnUI() && CanInteract())
-        {
-            RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            foreach (RaycastHit2D hit in hits)
-            {
-                if (hit.collider != null && hit.collider.gameObject == gameObject)
-                {
-                    isHighlighted = true;
-                    if (Input.GetMouseButtonDown(0))
-                    {
-                        if (playerIsNear)
-                        {
-                            GameManager.Instance.SelectedObject = null;
-                            hasInteracted = PerformAction();
-                        }
-                        else
-                        {
-                            GameManager.Instance.SelectedObject = this;
-                        }
-                    }
+        {            
+            var touchedHit = Physics2D
+                .RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero)
+                .Select((h) => (RaycastHit2D?)h)
+                .FirstOrDefault((h) => h?.collider.gameObject == gameObject);
+            isMouseOver = touchedHit != null;
 
-                    break;
+            if (isMouseOver && Input.GetMouseButtonDown(0))
+            {
+                if (playerIsNear)
+                {
+                    GameManager.Instance.SelectedObject = null;
+                    hasInteracted = PerformAction();
+                }
+                else
+                {
+                    GameManager.Instance.SelectedObject = this;
                 }
             }
         }
 
-        SetHighlighted(isHighlighted);
+        if (!isMouseOver && GameManager.Instance.SelectedObject == this && Input.GetMouseButton(0))
+        {
+            GameManager.Instance.SelectedObject = null;
+        }
+
+        SetHighlighted(isMouseOver);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player") {
-            if (debugMode)
-            {
-                Debug.Log("OnCollisionEnter");
-            }
+        if (!collision.gameObject.CompareTag("Player")) return;
 
-            if (GameManager.Instance.SelectedObject == this)
-            {
-                GameManager.Instance.SelectedObject = null;
-                hasInteracted = PerformAction();
-            }
-
-            playerIsNear = true;
+        if (debugMode)
+        {
+            Debug.Log("OnCollisionEnter");
         }
+
+        if (GameManager.Instance.SelectedObject == this)
+        {
+            GameManager.Instance.SelectedObject = null;
+            hasInteracted = PerformAction();
+        }
+
+        playerIsNear = true;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player") {
-            if (debugMode)
-            {
-                Debug.Log("OnCollisionExit");
-            }
-
-            playerIsNear = false;
+        if (!collision.gameObject.CompareTag("Player")) return;
+        
+        if (debugMode)
+        {
+            Debug.Log("OnCollisionExit");
         }
+
+        playerIsNear = false;
     }
 
     private void SetHighlighted(bool isHighlighted)
     {
-        this.GetComponent<SpriteRenderer>().color = isHighlighted ? Interaction.highlightTint : Color.white;
+        spriteRenderer.color = isHighlighted ? Interaction.HighlightTint : Color.white;
     }
 }
