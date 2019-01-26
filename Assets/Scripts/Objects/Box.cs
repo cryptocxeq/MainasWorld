@@ -27,7 +27,7 @@ public class Box : Interaction
 
     protected override bool CanInteract()
     {
-        return GameManager.Instance.swaper.World == World.Real;
+        return GameManager.Instance.swapper.World == World.Real;
     }
 
     public void ResetParent()

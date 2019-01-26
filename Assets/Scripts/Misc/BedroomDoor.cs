@@ -7,7 +7,7 @@ public class BedroomDoor : Interaction
     protected override bool PerformAction()
     {
         if (GameManager.Instance.inventory.InventoryObjectOwned(InventoryManager.PAPER_CLIP_KEY_GO_NAME) &&
-            GameManager.Instance.swaper.World == World.Imaginary)
+            GameManager.Instance.swapper.World == World.Imaginary)
         {
             this.gameObject.SetActive(false);
             EventManager.Instance.RevealRoom("Corridor");

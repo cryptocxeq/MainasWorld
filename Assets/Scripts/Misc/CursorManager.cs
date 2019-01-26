@@ -9,7 +9,7 @@ public class CursorManager : MonoBehaviour
 
     void Start()
     {
-        this.UpdateCursor(GameManager.Instance.swaper.World);
+        this.UpdateCursor(GameManager.Instance.swapper.World);
         EventManager.Instance.OnWorldChange += (World world) => {
             this.UpdateCursor(world);
         };
@@ -17,7 +17,7 @@ public class CursorManager : MonoBehaviour
 
     private void UpdateCursor(World world)
     {
-        var texture = GameManager.Instance.swaper.World == World.Real ? realTexture : imaginaryTexture;
+        var texture = GameManager.Instance.swapper.World == World.Real ? realTexture : imaginaryTexture;
         Cursor.SetCursor(texture, Vector2.zero, CursorMode.Auto);
     }
 }

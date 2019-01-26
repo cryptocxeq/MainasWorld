@@ -204,7 +204,7 @@ public class InventoryManager : MonoBehaviour
     private void ActionTeddyBearClickOnInventory()
     {
         switchAsked = true;
-        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, "C'est parti pour le pays magique!");            
         }
@@ -217,7 +217,7 @@ public class InventoryManager : MonoBehaviour
 
     private void ActionPaperClipKeyClickOnInventory()
     {
-        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP, "Voulez-vous toujours mon assistance?");
         }
@@ -230,7 +230,7 @@ public class InventoryManager : MonoBehaviour
 
     private void ActionBoxShipClickOnInventory()
     {
-        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP, "Metal Gear??!");
         }
@@ -242,7 +242,7 @@ public class InventoryManager : MonoBehaviour
 
     private void ActionSwordRulerClickOnInventory()
     {
-        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER, "Not suitable for children");
         }
@@ -255,7 +255,7 @@ public class InventoryManager : MonoBehaviour
 
     private void ActionRazorStoneClickOnInventory()
     {
-        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Stone!!! Le monde est stone!!!");
         }
@@ -267,7 +267,7 @@ public class InventoryManager : MonoBehaviour
 
     private void ActionBossKeyClickOnInventory()
     {
-        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY, "Tadaaadaaadaaa!");
         }
@@ -279,7 +279,7 @@ public class InventoryManager : MonoBehaviour
 
     private void ActionTorchLightClickOnInventory()
     {
-        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Ma maman m'a toujours dit que je n'étais pas une lumière...");
         }
@@ -301,7 +301,7 @@ public class InventoryManager : MonoBehaviour
 
     private void ActionPaperClipKeyOnAdd()
     {
-        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP, "Voulez-vous mon assistance?");
             int inventoryPosition = InventoryHasObject(PAPER_CLIP_KEY_GO_NAME);
@@ -317,7 +317,7 @@ public class InventoryManager : MonoBehaviour
 
     private void ActionBoxShipOnAdd()
     {
-        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP, "Maman les petits bateaux qui vont sur l'eau ont ils des jambes?");
             int inventoryPosition = InventoryHasObject(BOX_SHIP_GO_NAME);
@@ -333,7 +333,7 @@ public class InventoryManager : MonoBehaviour
 
     private void ActionSwordRulerOnAdd()
     {
-        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER, "One ruler to sword them all.");
             int inventoryPosition = InventoryHasObject(SWORD_RULER_GO_NAME);
@@ -349,7 +349,7 @@ public class InventoryManager : MonoBehaviour
 
     private void ActionRazorStoneOnAdd()
     {
-        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Des cailloux, des cailloux");
             int inventoryPosition = InventoryHasObject(RAZOR_STONE_GO_NAME);
@@ -365,7 +365,7 @@ public class InventoryManager : MonoBehaviour
 
     private void ActionBossKeyOnAdd()
     {
-        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY, "La clé!");
             int inventoryPosition = InventoryHasObject(BOSS_KEY_GO_NAME);
@@ -381,7 +381,7 @@ public class InventoryManager : MonoBehaviour
 
     private void ActionTorchLightOnAdd()
     {
-        if (GameManager.Instance.swaper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Le pouvoir de la lumière!");
             int inventoryPosition = InventoryHasObject(TORCH_LIGHT_GO_NAME);

@@ -1,24 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
     public PlayerController player;
-    public WorldSwapper swaper;
+    public WorldSwapper swapper;
     public InventoryManager inventory;
     public UIManager ui;
+    public Interaction SelectedObject { get; set; }
 
-    private Interaction selectedObject;
-    public Interaction SelectedObject
-    {
-        get { return selectedObject; }
-        set { selectedObject = value; }
-    }
-
-    void Start()
+    private void Awake()
     {
         Instance = this;
     }

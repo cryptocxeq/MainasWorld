@@ -8,12 +8,12 @@ public class NoSwapArea : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Player")
-            GameManager.Instance.swaper.CanSwap = GameManager.Instance.player.IsInBoat();
+            GameManager.Instance.swapper.CanSwap = GameManager.Instance.player.IsInBoat();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
-            GameManager.Instance.swaper.CanSwap = true;
+            GameManager.Instance.swapper.CanSwap = true;
     }
 }
