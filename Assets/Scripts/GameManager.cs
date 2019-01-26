@@ -10,6 +10,13 @@ public class GameManager : MonoBehaviour
     public WorldSwapper swaper;
     public InventoryManager inventory;
 
+    private Interaction selectedObject;
+    public Interaction SelectedObject
+    {
+        get { return selectedObject; }
+        set { selectedObject = value; }
+    }
+
     void Start()
     {
         Instance = this;

@@ -44,20 +44,27 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if (Input.GetMouseButton(0) && !MouseHandler.MouseOnUI())
+        if (!MouseHandler.MouseOnUI())
         {
-            // Get target position
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if(Physics.Raycast(ray, out hit))
+            if (Input.GetMouseButton(0))
             {
-                target = hit.point;
+                // Get target position
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if(Physics.Raycast(ray, out hit))
+                {
+                    target = hit.point;
+                }
+                else
+                {
+                    target = transform.position;
+                }
             }
-            else
+            else if (Input.GetMouseButtonUp(0) && GameManager.Instance.SelectedObject == null)
             {
                 target = transform.position;
+                body.velocity = Vector2.zero;
             }
-
         }
 
         // Move to target in strait line

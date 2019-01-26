@@ -36,11 +36,20 @@ public class Interaction : MonoBehaviour
                 if (hit.collider != null && hit.collider.gameObject == gameObject)
                 {
                     isHighlighted = true;
-                    if (Input.GetMouseButtonDown(0) && playerIsNear)
+                    if (Input.GetMouseButtonDown(0))
                     {
-                        hasInteracted = true;
-                        PerformAction();
+                        if (playerIsNear)
+                        {
+                            hasInteracted = true;
+                            GameManager.Instance.SelectedObject = null;
+                            PerformAction();
+                        }
+                        else
+                        {
+                            GameManager.Instance.SelectedObject = this;
+                        }
                     }
+
                     break;
                 }
             }
@@ -49,16 +58,25 @@ public class Interaction : MonoBehaviour
         SetHighlighted(isHighlighted);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.tag == "Player")
+        if (collision.gameObject.tag == "Player") {
+            if (GameManager.Instance.SelectedObject == this)
+            {
+                hasInteracted = true;
+                GameManager.Instance.SelectedObject = null;
+                PerformAction();
+            }
+
             playerIsNear = true;
+        }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.gameObject.tag == "Player") {
             playerIsNear = false;
+        }
     }
 
     private void SetHighlighted(bool isHighlighted)
