@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class Interaction : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer mouseOverSprite = null;
-
-    bool playerIsNear;
+    [SerializeField] private bool interactsOnce = true;
+    private bool playerIsNear;
+    private bool hasInteracted = false;
 
     protected virtual void PerformAction()
     {
@@ -17,10 +18,15 @@ public class Interaction : MonoBehaviour
         return true;
     }
 
-
     // Update is called once per frame
     void Update()
     {
+        if (interactsOnce && hasInteracted)
+        {
+            SetHighlighted(false);
+            return;
+        }
+
         var isHighlighted = false;
         if (!MouseHandler.MouseOnUI() && CanInteract())
         {
@@ -32,6 +38,7 @@ public class Interaction : MonoBehaviour
                     isHighlighted = true;
                     if (Input.GetMouseButtonDown(0) && playerIsNear)
                     {
+                        hasInteracted = true;
                         PerformAction();
                     }
                     break;
@@ -39,7 +46,7 @@ public class Interaction : MonoBehaviour
             }
         }
 
-        mouseOverSprite.gameObject.SetActive(isHighlighted);
+        SetHighlighted(isHighlighted);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -52,5 +59,10 @@ public class Interaction : MonoBehaviour
     {
         if (collision.tag == "Player")
             playerIsNear = false;
+    }
+
+    private void SetHighlighted(bool isHighlighted)
+    {
+        this.GetComponent<SpriteRenderer>().color = isHighlighted ? Color.red : Color.white;
     }
 }
