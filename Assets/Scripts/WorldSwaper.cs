@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum World
+{
+    Real, Imaginary
+}
+
 public class WorldSwaper : MonoBehaviour
 {
     [SerializeField] private GameObject imaginaryMask;
     [SerializeField] private float transitionDuration = 1f;
     [SerializeField] private float minimumScale = 0.01f;
     [SerializeField] private float maximumScale = 20.0f;
-    private bool isImaginaryWorld;
+    private World world;
     private bool canSwap;
 
-    public bool IsImaginaryWorld
+    public World World
     {
-        get { return isImaginaryWorld; }
+        get { return world; }
     }
 
     private Vector3 MinimumScaleVector
@@ -51,10 +56,13 @@ public class WorldSwaper : MonoBehaviour
     public void ChangeWorld()
     {
         if (!canSwap)
+        {
             return;
+        }
 
-        var scaleVector = isImaginaryWorld ? MinimumScaleVector : MaximumScaleVector;
-        LeanTween.scale(imaginaryMask, scaleVector, transitionDuration).setEase(LeanTweenType.easeInBack);
-        isImaginaryWorld = !isImaginaryWorld;
+        var scaleVector = world == World.Imaginary ? MinimumScaleVector : MaximumScaleVector;
+        LeanTween.scale(imaginaryMask, scaleVector, transitionDuration).setEase(LeanTweenType.easeInCubic);
+        world = world == World.Real ? World.Imaginary : World.Real;
+        EventManager.Instance.DidChangeWorld(world);
     }
 }
