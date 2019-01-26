@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 1f;
     private Vector3 target;
     private Rigidbody2D body;
-
     private bool isInBoat;
     private bool isMovementLocked;
 
@@ -93,6 +92,7 @@ public class PlayerController : MonoBehaviour
         target = transform.position;
         body.velocity = Vector2.zero;
     }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         target = transform.position;
