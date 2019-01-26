@@ -22,7 +22,9 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerIsNear && !MouseHandler.MouseOnUI()  && CanInteract())
+
+
+        if (!MouseHandler.MouseOnUI()  && CanInteract())
         {
             RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             bool ok = false;
@@ -31,7 +33,7 @@ public class Interaction : MonoBehaviour
                 if (hit.collider != null && hit.collider.gameObject == gameObject)
                 {
                     ok = true;
-                    if (Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButtonDown(0) && playerIsNear)
                     {
                         PerformAction();
                     }

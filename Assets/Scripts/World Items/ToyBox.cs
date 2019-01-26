@@ -6,7 +6,8 @@ public class ToyBox : Interaction
 {
     protected override void PerformAction()
     {
-        print("Add the plush to the inventory ! (and open dialog ?)");
+        GameManager.Instance.inventory.AddObject(InventoryManager.TEDDY_BEAR_GO_NAME);
+        // activer dans le monde Imaginaire "TedyBear";
     }
 
 }

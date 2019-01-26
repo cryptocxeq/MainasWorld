@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public PlayerController player;
     public WorldSwaper swaper;
+    public InventoryManager inventory;
 
     void Start()
     {
