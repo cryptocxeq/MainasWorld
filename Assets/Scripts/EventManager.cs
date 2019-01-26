@@ -10,6 +10,8 @@ public class EventManager : MonoBehaviour
     public event RoomReveal OnRoomReveal;
     public delegate void ItemClick(string name);
     public event ItemClick OnItemPickUp;
+    public delegate void DialogClosed();
+    public event DialogClosed OnDialogClosed;
 
     public void Start()
     {
@@ -37,6 +39,14 @@ public class EventManager : MonoBehaviour
         if (OnItemPickUp != null)
         {
             OnItemPickUp(name);
+        }
+    }
+
+    public void CloseDialog()
+    {
+        if (OnDialogClosed != null)
+        {
+            OnDialogClosed();
         }
     }
 }

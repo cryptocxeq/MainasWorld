@@ -122,6 +122,8 @@ public class UIManager : MonoBehaviour
             OnWorldSwap();
         }
 
+        eventManager.CloseDialog();
+
         PlayerController player = GameManager.Instance.player;
         player.LockMovement(false);
     }
