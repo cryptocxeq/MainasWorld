@@ -8,9 +8,8 @@ public class Room : MonoBehaviour
     {
         this.gameObject.SetActive(false);
 
-        var roomName = this.gameObject.name.Split('-')[1];
         EventManager.Instance.OnRoomReveal += (string name) => {
-            if (name == roomName) {
+            if (name == this.gameObject.name) {
                 this.gameObject.SetActive(true);
             }
         };
