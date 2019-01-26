@@ -5,7 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Interaction : MonoBehaviour
 {
-    bool playerIsNear;
+    [SerializeField] private bool interactsOnce = true;
+    private bool playerIsNear;
+    private bool hasInteracted = false;
 
     protected virtual void PerformAction()
     {
@@ -19,6 +21,12 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (interactsOnce && hasInteracted)
+        {
+            SetHighlighted(false);
+            return;
+        }
+
         var isHighlighted = false;
         if (!MouseHandler.MouseOnUI() && CanInteract())
         {
@@ -30,6 +38,7 @@ public class Interaction : MonoBehaviour
                     isHighlighted = true;
                     if (Input.GetMouseButtonDown(0) && playerIsNear)
                     {
+                        hasInteracted = true;
                         PerformAction();
                     }
                     break;
