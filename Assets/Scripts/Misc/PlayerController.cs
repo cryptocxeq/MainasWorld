@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] GameObject boat;
+    [SerializeField] GameObject box;
     [SerializeField] private float speed = 1f;
     private Vector3 target;
     private Rigidbody2D body;
@@ -39,6 +41,37 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         isMovementLocked = false;
         target = transform.position;
+
+        EventManager.Instance.OnWorldChange += (World world) => {
+            if (IsInBoat())
+            {
+                boat.SetActive(world == World.Imaginary);
+                box.SetActive(world == World.Real);
+            } else
+            {
+                boat.SetActive(false);
+                box.SetActive(false);
+            }
+        };
+
+        EventManager.Instance.OnItemPickUp += (string itemName) => {
+
+            if (itemName == InventoryManager.SWORD_RULER_GO_NAME)
+            {
+                if (GameManager.Instance.swapper.World == World.Imaginary)
+                    anim.SetTrigger("sword");
+                else if (GameManager.Instance.swapper.World == World.Real)
+                    anim.SetTrigger("rule");
+
+                EventManager.Instance.OnWorldChange += (World world) => {
+                        if (world == World.Imaginary)
+                            anim.SetTrigger("sword");
+                        else if (world == World.Real)
+                            anim.SetTrigger("rule");
+                };
+
+            }
+        };
     }
 
     // Update is called once per frame

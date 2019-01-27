@@ -4,13 +4,7 @@ using UnityEngine;
 
 public class Boat : Interaction
 {
-    Transform parent;
-
-    void Start()
-    {
-        parent = transform.parent.parent;
-    }
-
+    [SerializeField] Follower follower;
     protected override bool PerformAction()
     {
         PlayerController player = GameManager.Instance.player;
@@ -18,8 +12,8 @@ public class Boat : Interaction
         if (!player.IsInBoat())
         {
             player.transform.position = transform.position;
-            transform.parent.parent = player.transform;
             player.SetBoat(true);
+            ActivateFollow(true);
         }
 
         return true;
@@ -30,8 +24,8 @@ public class Boat : Interaction
         return GameManager.Instance.swapper.World == World.Imaginary;
     }
 
-    public void ResetParent()
+    public void ActivateFollow(bool value)
     {
-        transform.parent.parent = parent;
+        follower.enabled = value;
     }
 }
