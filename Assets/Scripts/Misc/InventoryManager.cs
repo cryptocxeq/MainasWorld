@@ -38,7 +38,12 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            DebugFeatureAddAllAvailableObjectsInInventory();
+        }
+#endif
     }
 
     /*
@@ -56,7 +61,7 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("InventoryManager - AddObject - Object " + name + " already in inventory - why the hell we are here?");
+            Debug.LogWarning("InventoryManager - AddObject - Object " + name + " already in inventory");
         }
     }
 
@@ -281,11 +286,11 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Ma maman m'a toujours dit que je n'étais pas une lumière...");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.TORCH_LIGHT, "Ma maman m'a toujours dit que je n'étais pas une lumière...");
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Ma maman m'a toujours dit que j'étais rasoir...");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.TORCH_LIGHT, "Ma maman m'a toujours dit de ne pas toucher à la torche dans son meuble...");
         }        
     }
     #endregion
@@ -383,13 +388,13 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Le pouvoir de la lumière!");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.TORCH_LIGHT, "Le pouvoir de la lumière!");
             int inventoryPosition = InventoryHasObject(TORCH_LIGHT_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, TORCH_LIGHT_GO_NAME);
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Le pouvoir de la lumière est avec moi!");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.TORCH_LIGHT, "Le pouvoir de la lumière est avec moi!");
             int inventoryPosition = InventoryHasObject(TORCH_LIGHT_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, TORCH_LIGHT_GO_NAME);
         }
@@ -405,5 +410,16 @@ public class InventoryManager : MonoBehaviour
             objectPositionInInventory.TryGetValue(currentKey, out name);
             uiManager.SetInventoryItemAtPosition(currentKey, name);
         }
+    }
+
+    public void DebugFeatureAddAllAvailableObjectsInInventory()
+    {
+        AddObject(TEDDY_BEAR_GO_NAME);
+        AddObject(PAPER_CLIP_KEY_GO_NAME);
+        AddObject(BOX_SHIP_GO_NAME);
+        AddObject(SWORD_RULER_GO_NAME);
+        AddObject(RAZOR_STONE_GO_NAME);
+        AddObject(BOSS_KEY_GO_NAME);
+        AddObject(TORCH_LIGHT_GO_NAME);
     }
 }

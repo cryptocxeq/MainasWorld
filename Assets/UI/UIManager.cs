@@ -44,6 +44,8 @@ public class UIManager : MonoBehaviour
     private Image inventoryImage5 = null;
     [SerializeField]
     private Image inventoryImage6 = null;
+    [SerializeField]
+    private Image inventoryImage7 = null;
 
     [SerializeField]
     private Sprite MOTHER_SPRITE_REAL = null;
@@ -266,6 +268,9 @@ public class UIManager : MonoBehaviour
                 break;
             case 6:
                 modifiedImage = inventoryImage6;
+                break;
+            case 7:
+                modifiedImage = inventoryImage7;
                 break;
             default:
                 Debug.LogError("UIManager - SetInventoryItemAtPosition - Position " + position + " unknown - why the hell we are here?");
