@@ -14,34 +14,16 @@ public class WorldSwapper : MonoBehaviour
     [SerializeField] private float transitionDuration = 1f;
     [SerializeField] private float minimumScale = 0.01f;
     [SerializeField] private float maximumScale = 20.0f;
-    private World world;
-    private bool canSwap;
+    private Vector3 MinimumScaleVector => new Vector3(minimumScale, minimumScale, minimumScale);
+    private Vector3 MaximumScaleVector => new Vector3(maximumScale, maximumScale, maximumScale);
 
-    public World World
-    {
-        get { return world; }
-    }
-
-    private Vector3 MinimumScaleVector
-    {
-        get { return new Vector3(minimumScale, minimumScale, minimumScale); }
-    }
-
-    private Vector3 MaximumScaleVector
-    {
-        get { return new Vector3(maximumScale, maximumScale, maximumScale); }
-    }
-
-    public bool CanSwap
-    {
-        get { return canSwap; }
-        set { canSwap = value; }
-    }
+    public World World { get; private set; }
+    public string CantSwapReason { get; set; }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        canSwap = true;
+        CantSwapReason = null;
         realMask.transform.localScale = MinimumScaleVector;
         imaginaryMask.transform.localScale = MinimumScaleVector;
     }
@@ -59,15 +41,15 @@ public class WorldSwapper : MonoBehaviour
 
     public void ChangeWorld()
     {
-        if (!canSwap)
+        if (CantSwapReason != null)
         {
             return;
         }
 
-        var scaleVector = world == World.Imaginary ? MinimumScaleVector : MaximumScaleVector;
+        var scaleVector = World == World.Imaginary ? MinimumScaleVector : MaximumScaleVector;
         LeanTween.scale(imaginaryMask, scaleVector, transitionDuration).setEase(LeanTweenType.easeInCubic);
         LeanTween.scale(realMask, scaleVector, transitionDuration).setEase(LeanTweenType.easeInCubic);
-        world = world == World.Real ? World.Imaginary : World.Real;
-        EventManager.Instance.ChangeWorld(world);
+        World = World == World.Real ? World.Imaginary : World.Real;
+        EventManager.Instance.ChangeWorld(World);
     }
 }

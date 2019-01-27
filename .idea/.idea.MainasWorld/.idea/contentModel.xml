@@ -52,7 +52,6 @@
           <e p="MainPanelManager.cs" t="Include" />
           <e p="Misc" t="Include">
             <e p="ApparingInSpecificWorld.cs" t="Include" />
-            <e p="BedroomDoor.cs" t="Include" />
             <e p="CursorManager.cs" t="Include" />
             <e p="EventManager.cs" t="Include" />
             <e p="Follower.cs" t="Include" />
@@ -68,11 +67,14 @@
             <e p="WorldSwapper.cs" t="Include" />
           </e>
           <e p="Objects" t="Include">
+            <e p="BathroomDoor.cs" t="Include" />
+            <e p="BedroomDoor.cs" t="Include" />
             <e p="Boat.cs" t="Include" />
             <e p="BossKey.cs" t="Include" />
             <e p="Box.cs" t="Include" />
             <e p="Desk.cs" t="Include" />
             <e p="LandingArea.cs" t="Include" />
+            <e p="MotherBedroomDoor.cs" t="Include" />
             <e p="RazorStone.cs" t="Include" />
             <e p="SwordRuler.cs" t="Include" />
             <e p="TorchLight.cs" t="Include" />

@@ -208,18 +208,25 @@ public class InventoryManager : MonoBehaviour
     #region ClickOnInventory
     private void ActionTeddyBearClickOnInventory()
     {
-        switchAsked = true;
-        if (GameManager.Instance.swapper.World.Equals(World.Real))
+        if (GameManager.Instance.swapper.CantSwapReason != null)
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, 
-                "Maïna, Maïna, let's visit the wonderful imaginary world!");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, GameManager.Instance.swapper.CantSwapReason);
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, 
-                "If you're sure you want to go back to the boring real world...");
-        }
-        
+            switchAsked = true;
+            
+            if (GameManager.Instance.swapper.World.Equals(World.Real))
+            {
+                uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, 
+                    "Maïna, Maïna, let's visit the wonderful imaginary world!");
+            }
+            else
+            {
+                uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, 
+                    "If you're sure you want to go back to the boring real world...");
+            }
+        }        
     }
 
     private void ActionPaperClipKeyClickOnInventory()
