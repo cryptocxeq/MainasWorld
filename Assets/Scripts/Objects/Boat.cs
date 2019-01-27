@@ -9,7 +9,7 @@ public class Boat : Interaction
     {
         PlayerController player = GameManager.Instance.player;
 
-        if (!player.IsInBoat())
+        if (!player.IsInBoat)
         {
             player.transform.position = transform.position;
             player.SetBoat(true);

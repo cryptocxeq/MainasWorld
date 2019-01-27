@@ -59,8 +59,8 @@ public class WorldSwapper : MonoBehaviour
 
     IEnumerator ActionLockTime()
     {
-        GameManager.Instance.player.SetActing(true);
+        GameManager.Instance.player.IsActing = true;
         yield return new WaitForSeconds(transitionDuration);
-        GameManager.Instance.player.SetActing(false);
+        GameManager.Instance.player.IsActing = false;
     }
 }

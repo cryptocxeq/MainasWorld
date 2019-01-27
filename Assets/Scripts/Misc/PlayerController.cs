@@ -4,52 +4,29 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] GameObject boat = null;
-    [SerializeField] GameObject box = null;
+    [SerializeField] private GameObject boat = null;
     [SerializeField] private float speed = 1f;
     private Vector3 target;
     private Rigidbody2D body;
     private Animator anim;
-    private bool isInBoat;
-    private bool isMovementLocked;
 
-    private bool isActing;
+    public bool IsInBoat { get; private set; }
+    public bool IsMovementLocked { get; set; }
+    public bool IsActing { get; set; }
 
     public void SetBoat(bool value)
     {
-        isInBoat = value;
+        IsInBoat = value;
         target = transform.position;
 
         if (value)
         {
             boat.SetActive(GameManager.Instance.swapper.World == World.Imaginary);
-            box.SetActive(GameManager.Instance.swapper.World == World.Real);
         }
         else
         {
             boat.SetActive(false);
-            box.SetActive(false);
         }
-    }
-
-    public bool IsInBoat()
-    {
-        return isInBoat;
-    }
-
-    public bool IsMovementLocked
-    {
-        get { return isMovementLocked; }
-    }
-
-    public void LockMovement(bool locked)
-    {
-        isMovementLocked = locked;
-    }
-
-    public void SetActing(bool value)
-    {
-        isActing = value;
     }
 
     // Start is called before the first frame update
@@ -57,19 +34,18 @@ public class PlayerController : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        isMovementLocked = false;
-        isActing = false;
+        IsMovementLocked = false;
+        IsActing = false;
         target = transform.position;
 
         EventManager.Instance.OnWorldChange += (World world) => {
-            if (IsInBoat())
+            if (IsInBoat)
             {
                 boat.SetActive(world == World.Imaginary);
-                box.SetActive(world == World.Real);
-            } else
+            }
+            else
             {
                 boat.SetActive(false);
-                box.SetActive(false);
             }
         };
 
@@ -101,7 +77,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
             anim.SetTrigger("rule");
 
-        if (isMovementLocked || isActing)
+        if (IsMovementLocked || IsActing)
         {
             anim.SetBool("walking", false);
             target = transform.position;
@@ -154,8 +130,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        anim.SetBool("walking", body.velocity != Vector2.zero && !IsInBoat());
-        Vector2 dir = body.velocity.normalized;
+        anim.SetBool("walking", body.velocity != Vector2.zero && !IsInBoat);
+        var dir = body.velocity.normalized;
         if (dir.y > 0.5f)
         {
             anim.SetBool("top", true);

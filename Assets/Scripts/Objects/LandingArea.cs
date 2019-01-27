@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LandingArea : Interaction
 {
-    [SerializeField] string roomName = null;
-    [SerializeField] Transform groundTarget = null;
-    [SerializeField] Transform riverTarget = null;
+    [SerializeField] private string roomName = null;
+    [SerializeField] private Transform groundTarget = null;
+    [SerializeField] private Transform riverTarget = null;
 
     protected override bool PerformAction()
     {
-        PlayerController player = GameManager.Instance.player;
+        var player = GameManager.Instance.player;
 
-        if (player.IsInBoat())
+        if (player.IsInBoat)
         {
             player.transform.position = groundTarget.position;
             player.SetBoat(false);

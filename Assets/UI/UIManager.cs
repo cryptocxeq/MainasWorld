@@ -117,7 +117,7 @@ public class UIManager : MonoBehaviour
         dialogPanel.SetActive(true);
 
         PlayerController player = GameManager.Instance.player;
-        player.LockMovement(true);
+        player.IsMovementLocked = true;
     }
 
     public void HideDialog()
@@ -136,7 +136,7 @@ public class UIManager : MonoBehaviour
         }
 
         var player = GameManager.Instance.player;
-        player.LockMovement(false);
+        player.IsMovementLocked = false;
     }
 
     public void CleanDialogText()

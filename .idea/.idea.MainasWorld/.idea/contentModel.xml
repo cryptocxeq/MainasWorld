@@ -51,7 +51,7 @@
         <e p="Scripts" t="Include">
           <e p="MainPanelManager.cs" t="Include" />
           <e p="Misc" t="Include">
-            <e p="ApparingInSpecificWorld.cs" t="Include" />
+            <e p="BedroomLandingArea.cs" t="Include" />
             <e p="CursorManager.cs" t="Include" />
             <e p="EventManager.cs" t="Include" />
             <e p="Follower.cs" t="Include" />
@@ -65,6 +65,7 @@
             <e p="NoSwapArea.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="Room.cs" t="Include" />
+            <e p="WorldSpecific.cs" t="Include" />
             <e p="WorldSwapper.cs" t="Include" />
           </e>
           <e p="Objects" t="Include">

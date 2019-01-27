@@ -54,7 +54,6 @@ public class InventoryManager : MonoBehaviour
         int objectPosition = InventoryHasObject(name);
         if (objectPosition < 1)
         {
-            Debug.Log("Adding object " + name + " in inventory in position " + objectPosition);
             objectPositionInInventory.Add(currentObjectIndex, name);
             currentObjectIndex++;
             AddObjectFeedback(name);
@@ -161,10 +160,6 @@ public class InventoryManager : MonoBehaviour
                     break;
             }
         }
-        else
-        {
-            Debug.Log("InventoryManager - ActionInventoryManager - click on empty position ");
-        }
     }
 
     private void AddObjectFeedback(string objectName)
@@ -198,10 +193,6 @@ public class InventoryManager : MonoBehaviour
                     Debug.LogError("InventoryManager - ActionInventoryManager - Object " + name + " unknown - why the hell we are here?");
                     break;
             }
-        }
-        else
-        {
-            Debug.Log("InventoryManager - ActionInventoryManager - click on empty position ");
         }
     }
 
