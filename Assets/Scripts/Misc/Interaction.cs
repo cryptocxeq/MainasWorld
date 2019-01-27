@@ -12,6 +12,7 @@ public class Interaction : MonoBehaviour
     [SerializeField] private bool debugMode = false;
     private bool playerIsNear;
     private bool hasInteracted = false;
+    private bool isHighlighted = false;
     private SpriteRenderer spriteRenderer;
 
     protected virtual bool PerformAction()
@@ -65,7 +66,7 @@ public class Interaction : MonoBehaviour
         {
             GameManager.Instance.SelectedObject = null;
         }
-
+        
         SetHighlighted(isMouseOver && !GameManager.Instance.player.IsMovementLocked);
     }
 
@@ -102,5 +103,16 @@ public class Interaction : MonoBehaviour
     private void SetHighlighted(bool isHighlighted)
     {
         spriteRenderer.color = isHighlighted ? Interaction.HighlightTint : Color.white;
+
+        if (this.isHighlighted && !isHighlighted)
+        {
+            EventManager.Instance.Highlight(false);
+        }
+        else if (!this.isHighlighted && isHighlighted)
+        {
+            EventManager.Instance.Highlight(true);
+        }
+        
+        this.isHighlighted = isHighlighted;
     }
 }

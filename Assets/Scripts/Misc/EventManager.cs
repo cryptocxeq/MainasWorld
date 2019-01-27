@@ -12,6 +12,8 @@ public class EventManager : MonoBehaviour
     public event ItemClick OnItemPickUp;
     public delegate void DialogClosed();
     public event DialogClosed OnDialogClosed;
+    public delegate void Highlight(bool isHighlighted);
+    public event Highlight OnHighlight;
 
     public void Start()
     {
@@ -47,6 +49,14 @@ public class EventManager : MonoBehaviour
         if (OnDialogClosed != null)
         {
             OnDialogClosed();
+        }
+    }
+
+    public void Highlight(bool isHighlighted)
+    {
+        if (OnHighlight != null)
+        {
+            OnHighlight(isHighlighted);
         }
     }
 }
