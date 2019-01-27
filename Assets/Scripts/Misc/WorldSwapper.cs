@@ -47,10 +47,20 @@ public class WorldSwapper : MonoBehaviour
             return;
         }
 
+
         var scaleVector = World == World.Imaginary ? MinimumScaleVector : MaximumScaleVector;
         LeanTween.scale(imaginaryMask, scaleVector, transitionDuration).setEase(LeanTweenType.easeInCubic);
         LeanTween.scale(realMask, scaleVector, transitionDuration).setEase(LeanTweenType.easeInCubic);
         World = World == World.Real ? World.Imaginary : World.Real;
         EventManager.Instance.ChangeWorld(World);
+
+        StartCoroutine(ActionLockTime());
+    }
+
+    IEnumerator ActionLockTime()
+    {
+        GameManager.Instance.player.SetActing(true);
+        yield return new WaitForSeconds(transitionDuration);
+        GameManager.Instance.player.SetActing(false);
     }
 }

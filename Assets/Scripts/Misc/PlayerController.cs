@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private bool isInBoat;
     private bool isMovementLocked;
 
+    private bool isActing;
+
     public void SetBoat(bool value)
     {
         isInBoat = value;
@@ -45,12 +47,18 @@ public class PlayerController : MonoBehaviour
         isMovementLocked = locked;
     }
 
+    public void SetActing(bool value)
+    {
+        isActing = value;
+    }
+
     // Start is called before the first frame update
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         isMovementLocked = false;
+        isActing = false;
         target = transform.position;
 
         EventManager.Instance.OnWorldChange += (World world) => {
@@ -93,7 +101,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
             anim.SetTrigger("rule");
 
-        if (isMovementLocked)
+        if (isMovementLocked || isActing)
         {
             anim.SetBool("walking", false);
             target = transform.position;
