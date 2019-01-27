@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ApparingInSpecificWorld : MonoBehaviour
 {
-    [SerializeField] World world;
+    [SerializeField] World world = World.Real;
     // Start is called before the first frame update
     void Start()
     {

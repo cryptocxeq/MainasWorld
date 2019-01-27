@@ -15,7 +15,8 @@ public class BedroomDoor : Interaction
         }
         else
         {
-            GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA, "Maman m'a enformée dans ma chambre.");
+            GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA,
+                "Mummy locked the door to my room. I need to get out!");
             return false;
         }
     }

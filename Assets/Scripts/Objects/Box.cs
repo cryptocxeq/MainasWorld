@@ -4,24 +4,22 @@ using UnityEngine;
 
 public class Box : Interaction
 {
-    Transform parent;
-
-    void Start()
-    {
-        parent = transform.parent.parent;
-    }
-
+    [SerializeField] GameObject boat = null;
     protected override bool PerformAction()
     {
+
+        EventManager.Instance.ItemPickUp(InventoryManager.BOX_SHIP_GO_NAME);
+        Destroy(gameObject);
+        Destroy(boat.gameObject);
+        /*
         PlayerController player = GameManager.Instance.player;
         if (!player.IsInBoat())
         {
             player.LockMovement(true);
             player.transform.position = transform.position;
-            transform.parent.parent = player.transform;
             player.SetBoat(true);
         }
-
+        */
         return true;
     }
 
@@ -30,8 +28,4 @@ public class Box : Interaction
         return GameManager.Instance.swapper.World == World.Real;
     }
 
-    public void ResetParent()
-    {
-        transform.parent.parent = parent;
-    }
 }

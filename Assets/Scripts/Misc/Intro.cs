@@ -8,16 +8,15 @@ public class Intro : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MOTHER, 
-            "Tu es une vilaine fille Maïna ! Je t'avais prévenu de ne pas t'aventurer dehors. Pour t'apprendre " +
-            "l'obéissance, tu resteras dans ta chambre jusqu'à ta majorité !");
+            "You're a naughty girl! I told you not to leave the house. To teach you some manners, you're " +
+            "grounded and you'll stay in your room until your majority!");
         EventManager.Instance.OnDialogClosed += PlayMainaDialogue;
     }
 
     private void PlayMainaDialogue()
     {
         GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA, 
-            "Maman est vraiment trop méchante. Si seulement papa était encore là... Il faut que m'échappe pour " +
-            "le retrouver !");
+            "Mummy is really too mean. If only Daddy was still here.... I have to escape to find him!");
         EventManager.Instance.OnDialogClosed -= PlayMainaDialogue;
     }   
 }
