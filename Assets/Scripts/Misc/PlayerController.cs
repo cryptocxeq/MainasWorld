@@ -146,7 +146,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        anim.SetBool("walking", body.velocity != Vector2.zero);
+        anim.SetBool("walking", body.velocity != Vector2.zero && !IsInBoat());
         Vector2 dir = body.velocity.normalized;
         if (dir.y > 0.5f)
         {
