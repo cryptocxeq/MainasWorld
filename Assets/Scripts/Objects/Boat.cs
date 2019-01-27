@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boat : Interaction
 {
-    [SerializeField] Follower follower;
+    [SerializeField] Follower follower = null;
     protected override bool PerformAction()
     {
         PlayerController player = GameManager.Instance.player;

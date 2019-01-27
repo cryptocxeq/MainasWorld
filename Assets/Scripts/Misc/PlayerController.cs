@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] GameObject boat;
-    [SerializeField] GameObject box;
+    [SerializeField] GameObject boat = null;
+    [SerializeField] GameObject box = null;
     [SerializeField] private float speed = 1f;
     private Vector3 target;
     private Rigidbody2D body;

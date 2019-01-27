@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Box : Interaction
 {
-    [SerializeField] GameObject boat;
+    [SerializeField] GameObject boat = null;
     protected override bool PerformAction()
     {
 
