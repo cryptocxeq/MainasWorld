@@ -33,7 +33,7 @@ SpriteAtlas:
     - {fileID: 102900000, guid: 9398cdcbb00714509a401db78c4cdea2, type: 3}
     - {fileID: 102900000, guid: 5aaa3baf28abc466d8d746110b1a2c14, type: 3}
     - {fileID: 102900000, guid: b0ddae31ed1ac49dfbcc8107eb8218bb, type: 3}
-    totalSpriteSurfaceArea: 2709265
+    totalSpriteSurfaceArea: 3114281
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -48,10 +48,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 818f0f82dce2f49faa0d43afe670b708, type: 3}
   - {fileID: 21300000, guid: a9be84920d62e4cb790e6f864d1a888b, type: 3}
   - {fileID: 21300000, guid: ac3a7a33bd842403591ab7e31a00679f, type: 3}
+  - {fileID: 21300000, guid: 85ceb643e2ff14449aa5448ac1100b4a, type: 3}
   - {fileID: 21300000, guid: cf81a4a38dcdc4bdfb0efcd2494c4cdb, type: 3}
   - {fileID: 21300000, guid: dcc75b94cfd9d4b378b9763b8de3d8ad, type: 3}
   - {fileID: 21300000, guid: b39997c4ee4c34c87871963c235c6e2e, type: 3}
   - {fileID: 21300000, guid: 79ea5f95c3d66462c99b38692df4ad72, type: 3}
+  - {fileID: 21300000, guid: f032bea580f534c1ab0bbd940a502d9b, type: 3}
   - {fileID: 21300000, guid: af15b0b5e13d843baa5fd90f90536088, type: 3}
   - {fileID: 21300000, guid: d78a74e54c733f747be198dcaf724fab, type: 3}
   - {fileID: 21300000, guid: 552995466c239074a8090c77cf74b54d, type: 3}
@@ -61,6 +63,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f43fa2e6a9e1d49daa8da8c6e171bc2b, type: 3}
   - {fileID: 21300000, guid: 24238be6cea3e4353807ddacbdf6f2d5, type: 3}
   - {fileID: 21300000, guid: c6f0f43757a42439db66bdab7bbc8ff6, type: 3}
+  - {fileID: 21300000, guid: 70e5c657eaa3a43e49f4b08c9c928378, type: 3}
   - {fileID: 21300000, guid: e73e7e57c84fa463e9bb10b73f75a03d, type: 3}
   - {fileID: 21300000, guid: 0a756877fc7ac432dbcf6f2769fc0aa9, type: 3}
   - {fileID: 21300000, guid: 8b97a787616f435458c1631a62a7d09c, type: 3}
@@ -72,8 +75,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1229ea281011fbe4784439ae731b45f7, type: 3}
   - {fileID: 21300000, guid: 7ca4c03838ea5f84a8050ec8914bbed6, type: 3}
   - {fileID: 21300000, guid: f395e038ff3f045deb47cd0fe2af195b, type: 3}
+  - {fileID: 21300000, guid: 03a8a748d93304cf2b785c5a57d427aa, type: 3}
   - {fileID: 21300000, guid: e0da3a481e1d148eda8c7c9c0a06196c, type: 3}
   - {fileID: 21300000, guid: 9a5cac48e1f9b49fdbd07c88495453a7, type: 3}
+  - {fileID: 21300000, guid: 9dfba558dd7c24df9aba1508d1fb2a48, type: 3}
   - {fileID: 21300000, guid: 56668d98c9baf4ffa8dd4259072cec05, type: 3}
   - {fileID: 21300000, guid: 61d869b824f834699ae51d2c67039658, type: 3}
   - {fileID: 21300000, guid: a19a99e8e915c43fd9426a4fde4c9ff4, type: 3}
@@ -87,6 +92,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 01e29caa428876a4a918bbdea00a92a5, type: 3}
   - {fileID: 21300000, guid: 741ce8ca27563ce41ac3790baa94d916, type: 3}
   - {fileID: 21300000, guid: 0230a54b0e6d8e74f9c80ff3133403c7, type: 3}
+  - {fileID: 21300000, guid: 88770a4b9f0f044759326348b586e1bf, type: 3}
   - {fileID: 21300000, guid: e08c4a8b8576b4777adfc98cbf184592, type: 3}
   - {fileID: 21300000, guid: 05ce109b6201b4142965e99ee71c1088, type: 3}
   - {fileID: 21300000, guid: a8997a3c9c4e5491d91dcaafcb61365f, type: 3}
@@ -108,6 +114,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: ac26fe3f82efa4f60a1222249f90f805, type: 3}
   - {fileID: 21300000, guid: 5e2cbf3f70ccb44118a2a740f53ce167, type: 3}
   - {fileID: 21300000, guid: 9d21d47f353ce4586bd040aa82f3fd43, type: 3}
+  - {fileID: 21300000, guid: d2cd458fdc2d445c5ac65548fbaa0d4b, type: 3}
   - {fileID: 21300000, guid: da68369fbb6cc584a90c6989e034e557, type: 3}
   - {fileID: 21300000, guid: fa24d7bf40cd1d345b95561165a78226, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -122,10 +129,12 @@ SpriteAtlas:
   - Bathroom-Washbasin-Imaginary
   - PaperClip-Real
   - Bedroom-Wall
+  - LivingRoom-Buffet
   - Bathroom-Tile-Imaginary1
   - Bedroom-Curtain-Real
   - Bedroom-Carpet1
   - Ruler-Imaginary
+  - LivingRoom-Table
   - TeddyBear-Imaginary
   - chaise_behind
   - water_border_angle
@@ -135,6 +144,7 @@ SpriteAtlas:
   - Bathroom-Tile-Imaginary2
   - Bedroom-Rug-Real
   - Light-Imaginary
+  - LivingRoom-Library
   - Bedroom-Desk-Imaginary
   - Bedroom-Desk-Real
   - Bathroom-Toilet-Real
@@ -146,8 +156,10 @@ SpriteAtlas:
   - Bathroom-Towel-Real
   - Bathroom-Wall-Real
   - Light-Real
+  - LivingRoom-Sofa1
   - Razor-Imaginary
   - Window
+  - LivingRoom-Lamp
   - LivingRoom-Floor2
   - Bedroom-Bed-Imaginary
   - Bedroom-Etagere
@@ -161,6 +173,7 @@ SpriteAtlas:
   - Bathroom-Tile-Real
   - Bathroom-Commode-Real
   - bloc_cuisine
+  - LivingRoom-Sofa2
   - Box-Imaginary
   - Bathroom-Makeup-Real
   - Corridor-Wall
@@ -182,6 +195,7 @@ SpriteAtlas:
   - WallTopI1
   - WallTopL
   - Bathroom-Bathtub-Imaginary
+  - LivingRoom-Cupboard
   - avatar_mother
   - plant_02
   m_Tag: Atlas
