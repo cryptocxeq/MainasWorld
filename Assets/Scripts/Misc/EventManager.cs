@@ -13,7 +13,7 @@ public class EventManager : MonoBehaviour
     public delegate void DialogClosed();
     public event DialogClosed OnDialogClosed;
     public delegate void HighlightChange(bool isHighlighted);
-    public event HighlightChange OnHighlight;
+    public event HighlightChange OnHighlightChange;
 
     public void Start()
     {
@@ -54,9 +54,9 @@ public class EventManager : MonoBehaviour
 
     public void Highlight(bool isHighlighted)
     {
-        if (OnHighlight != null)
+        if (OnHighlightChange != null)
         {
-            OnHighlight(isHighlighted);
+            OnHighlightChange(isHighlighted);
         }
     }
 }
