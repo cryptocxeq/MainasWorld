@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
 public class Interaction : MonoBehaviour
 {
     static readonly Color HighlightTint = new Color(1f, 1f, 0.5f);
@@ -13,7 +12,7 @@ public class Interaction : MonoBehaviour
     private bool playerIsNear;
     private bool hasInteracted = false;
     private bool isHighlighted = false;
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer[] spriteRenderers;
 
     protected virtual bool PerformAction()
     {
@@ -27,7 +26,7 @@ public class Interaction : MonoBehaviour
 
     private void Start()
     {
-        spriteRenderer = this.GetComponent<SpriteRenderer>();
+        spriteRenderers = this.GetComponentsInChildren<SpriteRenderer>();
     }
 
     private void Update()
@@ -102,7 +101,10 @@ public class Interaction : MonoBehaviour
 
     private void SetHighlighted(bool isHighlighted)
     {
-        spriteRenderer.color = isHighlighted ? Interaction.HighlightTint : Color.white;
+        foreach (var spriteRenderer in spriteRenderers)
+        {
+            spriteRenderer.color = isHighlighted ? Interaction.HighlightTint : Color.white;
+        }
 
         if (this.isHighlighted && !isHighlighted)
         {
