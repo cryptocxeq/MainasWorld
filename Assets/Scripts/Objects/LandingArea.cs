@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class LandingArea : Interaction
 {
-    [SerializeField] string roomName;
-    [SerializeField] Transform groundTarget;
-    [SerializeField] Transform riverTarget;
+    [SerializeField] string roomName = null;
+    [SerializeField] Transform groundTarget = null;
+    [SerializeField] Transform riverTarget = null;
 
     protected override bool PerformAction()
     {
