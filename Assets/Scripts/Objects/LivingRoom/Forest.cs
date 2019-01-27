@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Forest : Interaction
 {
-    [SerializeField] GameObject realForm;
+    [SerializeField] GameObject realForm = null;
 
     protected override bool PerformAction()
     {
