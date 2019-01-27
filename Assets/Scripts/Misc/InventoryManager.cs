@@ -375,7 +375,7 @@ public class InventoryManager : MonoBehaviour
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY,
                 "The house keys! Quick, let's not wake Mummy up or she's be really mad.");
-            int inventoryPosition = InventoryHasObject(BOSS_KEY_GO_NAME);
+            var inventoryPosition = InventoryHasObject(BOSS_KEY_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, BOSS_KEY_GO_NAME);
         }
         else
@@ -389,8 +389,8 @@ public class InventoryManager : MonoBehaviour
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
             uiManager.UpdateDialog(UIManager.DialogSpeaker.TORCH_LIGHT,
-                "Le pouvoir de la lumière!");
-            int inventoryPosition = InventoryHasObject(TORCH_LIGHT_GO_NAME);
+                "Let there be light!");
+            var inventoryPosition = InventoryHasObject(TORCH_LIGHT_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, TORCH_LIGHT_GO_NAME);
         }
         else
@@ -403,9 +403,9 @@ public class InventoryManager : MonoBehaviour
 
     public void OnWorldSwap()
     {
-        foreach (int currentKey in objectPositionInInventory.Keys)
+        foreach (var currentKey in objectPositionInInventory.Keys)
         {
-            string name = "";
+            var name = "";
             objectPositionInInventory.TryGetValue(currentKey, out name);
             uiManager.SetInventoryItemAtPosition(currentKey, name);
         }
