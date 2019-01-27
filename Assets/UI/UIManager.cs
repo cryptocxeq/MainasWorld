@@ -16,7 +16,8 @@ public class UIManager : MonoBehaviour
         SWORD_RULER,
         BOSS_KEY,
         RAZOR_STONE,
-        TORCH_LIGHT
+        TORCH_LIGHT,
+        FATHER
     }
 
     [SerializeField]
@@ -83,6 +84,11 @@ public class UIManager : MonoBehaviour
     private Sprite TORCH_LIGHT_SPRITE_REAL = null;
     [SerializeField]
     private Sprite TORCH_LIGHT_SPRITE_IMAGINARY = null;
+    //FATHER_SPRITE_REAL
+    [SerializeField]
+    private Sprite FATHER_SPRITE_REAL = null;
+    [SerializeField]
+    private Sprite FATHER_SPRITE_IMAGINARY = null;
 
     // Start is called before the first frame update
     private void Awake()
@@ -232,6 +238,16 @@ public class UIManager : MonoBehaviour
                 else
                 {
                     avatarImage.sprite = TORCH_LIGHT_SPRITE_IMAGINARY;
+                }
+                break;
+            case DialogSpeaker.FATHER:
+                if (GameManager.Instance.swapper.World.Equals(World.Real))
+                {
+                    avatarImage.sprite = FATHER_SPRITE_REAL;
+                }
+                else
+                {
+                    avatarImage.sprite = FATHER_SPRITE_IMAGINARY;
                 }
                 break;
         }
