@@ -12,8 +12,8 @@ public class EventManager : MonoBehaviour
     public event ItemClick OnItemPickUp;
     public delegate void DialogClosed();
     public event DialogClosed OnDialogClosed;
-    public delegate void Highlight(bool isHighlighted);
-    public event Highlight OnHighlight;
+    public delegate void HighlightChange(bool isHighlighted);
+    public event HighlightChange OnHighlight;
 
     public void Start()
     {
