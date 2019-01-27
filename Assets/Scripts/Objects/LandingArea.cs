@@ -4,25 +4,31 @@ using UnityEngine;
 
 public class LandingArea : Interaction
 {
+    [SerializeField] string roomName;
+    [SerializeField] Transform groundTarget;
+    [SerializeField] Transform riverTarget;
+
     protected override bool PerformAction()
     {
-        Boat boat = GameObject.FindObjectOfType<Boat>();
-
         PlayerController player = GameManager.Instance.player;
 
         if (player.IsInBoat())
         {
-            boat.ActivateFollow(false);
-            player.transform.position = transform.position;
+            player.transform.position = groundTarget.position;
             player.SetBoat(false);
-            player.LockMovement(false);
+            EventManager.Instance.RevealRoom(roomName);
+        }
+        else
+        {
+            player.transform.position = riverTarget.position;
+            player.SetBoat(true);
         }
 
         return true;
     }
-
+    
     protected override bool CanInteract()
     {
-        return GameManager.Instance.player.IsInBoat();
+        return GameManager.Instance.inventory.InventoryObjectOwned(InventoryManager.BOX_SHIP_GO_NAME);
     }
 }

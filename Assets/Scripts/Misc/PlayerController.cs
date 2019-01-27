@@ -17,6 +17,17 @@ public class PlayerController : MonoBehaviour
     {
         isInBoat = value;
         target = transform.position;
+
+        if (value)
+        {
+            boat.SetActive(GameManager.Instance.swapper.World == World.Imaginary);
+            box.SetActive(GameManager.Instance.swapper.World == World.Real);
+        }
+        else
+        {
+            boat.SetActive(false);
+            box.SetActive(false);
+        }
     }
 
     public bool IsInBoat()
