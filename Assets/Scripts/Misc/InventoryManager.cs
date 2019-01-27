@@ -206,11 +206,13 @@ public class InventoryManager : MonoBehaviour
         switchAsked = true;
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, "C'est parti pour le pays magique!");            
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, 
+                "Maïna, Maïna, let's visit the wonderful imaginary world!");
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, "De retour dans le réel!");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, 
+                "If you're sure you want to go back to the boring real world...");
         }
         
     }
@@ -219,11 +221,13 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP, "Voulez-vous toujours mon assistance?");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP, 
+                "An old paper clip that was lying around.");
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP, "Voulez-vous installer Ubuntu?");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP,
+                "The key to get out of the room the witch imprisoned me in!");
         }
         
     }
@@ -232,11 +236,13 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP, "Metal Gear??!");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP,
+                "A cardboard box. I like to play with it, imagining it's a boat.");
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP, "Snake??!");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP,
+                "The Esmeralda, my boat. It's unsinkable!");
         }
     }
 
@@ -244,11 +250,13 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER, "Not suitable for children");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER,
+                "That's the ruler Mummy uses to hit me when I've been bad.");
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER, "I've got the power!");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER,
+                "Caliburn, the legendary sword. It's got magical powers.");
         }
         
     }
@@ -257,35 +265,33 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Stone!!! Le monde est stone!!!");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE,
+               "Daddy's razor. That's all that's left of him here.");
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "I feel like a wrecking ball!!!");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE,
+                "Daddy's ultra-sharp Cutter 2000. He uses it on all of him adventures.");
         }
     }
 
     private void ActionBossKeyClickOnInventory()
     {
-        if (GameManager.Instance.swapper.World.Equals(World.Real))
-        {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY, "Tadaaadaaadaaa!");
-        }
-        else
-        {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY, "Ta daaamm daaamm daaammm!");
-        }        
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY,
+            "The house key! I can finally leave to join Daddy on his latest adventure.");        
     }
 
     private void ActionTorchLightClickOnInventory()
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Ma maman m'a toujours dit que je n'étais pas une lumière...");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE,
+                "When mummy punishes me in the cupboard, I use this light to scare monsters away.");
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Ma maman m'a toujours dit que j'étais rasoir...");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE,
+                "The light of Eärendil. It will light my way in darkness places when all other lights go out.");
         }        
     }
     #endregion
@@ -293,7 +299,8 @@ public class InventoryManager : MonoBehaviour
     #region OnAdd
     private void ActionTeddyBearOnAdd()
     {
-        uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY,"Salut je m'appelle Teddy");
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY,
+            "Maïna! I'm so happy to see you. I thought you would leave me in that dreaded toy-box forever.");
         int inventoryPosition = InventoryHasObject(TEDDY_BEAR_GO_NAME);
         uiManager.SetInventoryItemAtPosition(inventoryPosition, TEDDY_BEAR_GO_NAME);
 
@@ -303,15 +310,14 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP, "Voulez-vous mon assistance?");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP,
+                "A paper clip? What is it doing here?");
             int inventoryPosition = InventoryHasObject(PAPER_CLIP_KEY_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, PAPER_CLIP_KEY_GO_NAME);
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP, "Bonjour, avez-vous entendu parler de notre seigneur et notre sauveur Richard Stallman?");
-            int inventoryPosition = InventoryHasObject(PAPER_CLIP_KEY_GO_NAME);
-            uiManager.SetInventoryItemAtPosition(inventoryPosition, PAPER_CLIP_KEY_GO_NAME);
+            Debug.LogError("SHOULD NOT HAPPEN");
         }
     }
 
@@ -319,15 +325,14 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP, "Maman les petits bateaux qui vont sur l'eau ont ils des jambes?");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP,
+                "We moved after daddy left, and we still have cardboard boxes lying around.");
             int inventoryPosition = InventoryHasObject(BOX_SHIP_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, BOX_SHIP_GO_NAME);
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP, "Oh hé matelot!");
-            int inventoryPosition = InventoryHasObject(BOX_SHIP_GO_NAME);
-            uiManager.SetInventoryItemAtPosition(inventoryPosition, BOX_SHIP_GO_NAME);
+            Debug.LogError("SHOULD NOT HAPPEN");
         }
     }
 
@@ -335,15 +340,14 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER, "One ruler to sword them all.");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER,
+                "My ruler! I never go anywhere without it.");
             int inventoryPosition = InventoryHasObject(SWORD_RULER_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, SWORD_RULER_GO_NAME);
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER, "One ruler to sword them all and bring them in the darkness");
-            int inventoryPosition = InventoryHasObject(SWORD_RULER_GO_NAME);
-            uiManager.SetInventoryItemAtPosition(inventoryPosition, SWORD_RULER_GO_NAME);
+            Debug.LogError("SHOULD NOT HAPPEN");
         }
     }
 
@@ -351,15 +355,14 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Des cailloux, des cailloux");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE,
+                "Daddy's rasor. Why would he leave without it?");
             int inventoryPosition = InventoryHasObject(RAZOR_STONE_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, RAZOR_STONE_GO_NAME);
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Des cailloux, des cailloux, encore des cailloux...");
-            int inventoryPosition = InventoryHasObject(RAZOR_STONE_GO_NAME);
-            uiManager.SetInventoryItemAtPosition(inventoryPosition, RAZOR_STONE_GO_NAME);
+            Debug.LogError("SHOULD NOT HAPPEN");
         }
     }
 
@@ -367,15 +370,14 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY, "La clé!");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY,
+                "The house keys! Quick, let's not wake Mummy up or she's be really mad.");
             int inventoryPosition = InventoryHasObject(BOSS_KEY_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, BOSS_KEY_GO_NAME);
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY, "La clé vers la liberté!");
-            int inventoryPosition = InventoryHasObject(BOSS_KEY_GO_NAME);
-            uiManager.SetInventoryItemAtPosition(inventoryPosition, BOSS_KEY_GO_NAME);
+            Debug.LogError("SHOULD NOT HAPPEN");
         }
     }
 
@@ -383,15 +385,14 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Le pouvoir de la lumière!");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE,
+                "Le pouvoir de la lumière!");
             int inventoryPosition = InventoryHasObject(TORCH_LIGHT_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, TORCH_LIGHT_GO_NAME);
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, "Le pouvoir de la lumière est avec moi!");
-            int inventoryPosition = InventoryHasObject(TORCH_LIGHT_GO_NAME);
-            uiManager.SetInventoryItemAtPosition(inventoryPosition, TORCH_LIGHT_GO_NAME);
+            Debug.LogError("SHOULD NOT HAPPEN");
         }
     }
     #endregion
