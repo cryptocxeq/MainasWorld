@@ -42,7 +42,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 7
   spritePivot: {x: 0.5, y: 0}
   spritePixelsToUnits: 128
@@ -96,10 +96,10 @@ TextureImporter:
     sprites: []
     outline: []
     physicsShape:
-    - - {x: -64, y: -128}
-      - {x: 62, y: -128}
-      - {x: 63, y: -70}
-      - {x: -64, y: -71}
+    - - {x: -64, y: 128}
+      - {x: -64, y: -128}
+      - {x: 64, y: -128}
+      - {x: 64, y: 128}
     bones: []
     spriteID: b8771cf7d439148969dc16116043c632
     vertices: []

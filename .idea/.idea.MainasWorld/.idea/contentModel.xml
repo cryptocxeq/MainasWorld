@@ -85,6 +85,7 @@
         <e p="Scripts" t="Include">
           <e p="MainPanelManager.cs" t="Include" />
           <e p="Misc" t="Include">
+            <e p="ApparingInSpecificWorld.cs" t="Include" />
             <e p="BedroomDoor.cs" t="Include" />
             <e p="CursorManager.cs" t="Include" />
             <e p="EventManager.cs" t="Include" />
