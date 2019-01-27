@@ -19,6 +19,7 @@ public class WorldSwapper : MonoBehaviour
 
     public World World { get; private set; }
     public string CantSwapReason { get; set; }
+    public float TransitionDuration => transitionDuration;
 
     // Start is called before the first frame update
     private void Start()

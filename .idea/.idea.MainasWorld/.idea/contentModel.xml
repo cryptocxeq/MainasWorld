@@ -61,6 +61,7 @@
             <e p="Intro.cs" t="Include" />
             <e p="InventoryManager.cs" t="Include" />
             <e p="MouseHandler.cs" t="Include" />
+            <e p="MusicSwitcher.cs" t="Include" />
             <e p="NoSwapArea.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="Room.cs" t="Include" />
