@@ -12,6 +12,6 @@ public class Wardrobe : Interaction
 
     protected override bool CanInteract()
     {
-        return base.CanInteract();
+        return GameManager.Instance.swapper.World == World.Real;
     }
 }

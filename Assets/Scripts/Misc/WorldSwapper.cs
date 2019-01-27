@@ -41,7 +41,7 @@ public class WorldSwapper : MonoBehaviour
 
     public void ChangeWorld()
     {
-        if (CantSwapReason == null)
+        if (CantSwapReason != null)
         {
             return;
         }
