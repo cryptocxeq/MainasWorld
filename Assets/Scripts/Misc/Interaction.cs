@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
-    static readonly Color HighlightTint = new Color(1f, 1f, 0.5f);
-
     [SerializeField] private bool interactsOnce = true;
     [SerializeField] private bool debugMode = false;
+    [SerializeField] private Color highlightTint = new Color(1f, 1f, 0.5f);
     private bool playerIsNear;
     private bool hasInteracted = false;
     private bool isHighlighted = false;
@@ -103,7 +102,7 @@ public class Interaction : MonoBehaviour
     {
         foreach (var spriteRenderer in spriteRenderers)
         {
-            spriteRenderer.color = isHighlighted ? Interaction.HighlightTint : Color.white;
+            spriteRenderer.color = isHighlighted ? highlightTint : Color.white;
         }
 
         if (this.isHighlighted && !isHighlighted)

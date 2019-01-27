@@ -81,9 +81,11 @@
               <e p="Forest.cs" t="Include" />
               <e p="Lighthouse.cs" t="Include" />
               <e p="LightTorch.cs" t="Include" />
+              <e p="Sofa.cs" t="Include" />
             </e>
             <e p="MotherBedroomDesk.cs" t="Include" />
             <e p="MotherBedroomDoor.cs" t="Include" />
+            <e p="MotherWindow.cs" t="Include" />
             <e p="RazorStone.cs" t="Include" />
             <e p="SwordRuler.cs" t="Include" />
             <e p="ToyBox.cs" t="Include" />

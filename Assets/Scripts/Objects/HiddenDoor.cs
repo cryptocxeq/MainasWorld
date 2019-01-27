@@ -8,7 +8,7 @@ public class HiddenDoor : Interaction
     {
         if (GameManager.Instance.inventory.InventoryObjectOwned(InventoryManager.TORCH_LIGHT_GO_NAME))
         {
-            this.gameObject.SetActive(true);
+            this.gameObject.SetActive(false);
             EventManager.Instance.RevealRoom("Balcony");
             GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA,
                "Darkness fades with the light and the monsters go away.");
