@@ -33,35 +33,46 @@ SpriteAtlas:
     - {fileID: 102900000, guid: 9398cdcbb00714509a401db78c4cdea2, type: 3}
     - {fileID: 102900000, guid: 5aaa3baf28abc466d8d746110b1a2c14, type: 3}
     - {fileID: 102900000, guid: b0ddae31ed1ac49dfbcc8107eb8218bb, type: 3}
-    totalSpriteSurfaceArea: 3114281
+    totalSpriteSurfaceArea: 3815616
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: d6122c50e04137344bcc6b5fe0a014f5, type: 3}
   - {fileID: 21300000, guid: 9d6cef50b32c24ed1972cd0e8a929b0e, type: 3}
+  - {fileID: 21300000, guid: 751ad280782d34d09b77b7c5038765ea, type: 3}
   - {fileID: 21300000, guid: 1c0b4b90181274caa8519d48cab6866e, type: 3}
   - {fileID: 21300000, guid: 2414cec0e437ff94484f6813a98d0352, type: 3}
   - {fileID: 21300000, guid: 4f99231163584df42a86d41938924372, type: 3}
   - {fileID: 21300000, guid: 47305f41e9b234c1c9de28ba67cdcbaa, type: 3}
   - {fileID: 21300000, guid: 1ef8c061e0b7f8f40919eb2093abc903, type: 3}
+  - {fileID: 21300000, guid: c7d75671e9dc94d538f97ade9f0faf0b, type: 3}
+  - {fileID: 21300000, guid: c5bf7ab1063fe4c3383463dfbacedadf, type: 3}
+  - {fileID: 21300000, guid: 717e0fe1d87bb4590a82350503ef957d, type: 3}
+  - {fileID: 21300000, guid: 31846822e10844da39bb47baf48fd675, type: 3}
+  - {fileID: 21300000, guid: b8c8b942d6f1844be91229368682595f, type: 3}
+  - {fileID: 21300000, guid: fd899852771804ea6a5f0b0cde3a5f6a, type: 3}
   - {fileID: 21300000, guid: e5073d824b8cf44f88ed76b074034052, type: 3}
   - {fileID: 21300000, guid: 818f0f82dce2f49faa0d43afe670b708, type: 3}
   - {fileID: 21300000, guid: a9be84920d62e4cb790e6f864d1a888b, type: 3}
   - {fileID: 21300000, guid: ac3a7a33bd842403591ab7e31a00679f, type: 3}
   - {fileID: 21300000, guid: 85ceb643e2ff14449aa5448ac1100b4a, type: 3}
+  - {fileID: 21300000, guid: aa1a8a436c75e4fd1abf99bc20b652e6, type: 3}
   - {fileID: 21300000, guid: cf81a4a38dcdc4bdfb0efcd2494c4cdb, type: 3}
   - {fileID: 21300000, guid: dcc75b94cfd9d4b378b9763b8de3d8ad, type: 3}
+  - {fileID: 21300000, guid: 6c7a6eb489bb04a5a8c0d7c0f0748b25, type: 3}
   - {fileID: 21300000, guid: b39997c4ee4c34c87871963c235c6e2e, type: 3}
   - {fileID: 21300000, guid: 79ea5f95c3d66462c99b38692df4ad72, type: 3}
   - {fileID: 21300000, guid: f032bea580f534c1ab0bbd940a502d9b, type: 3}
   - {fileID: 21300000, guid: af15b0b5e13d843baa5fd90f90536088, type: 3}
   - {fileID: 21300000, guid: d78a74e54c733f747be198dcaf724fab, type: 3}
+  - {fileID: 21300000, guid: 84a512169ebec4af1be4bb69b3485fd6, type: 3}
   - {fileID: 21300000, guid: 552995466c239074a8090c77cf74b54d, type: 3}
   - {fileID: 21300000, guid: 20ce94660714d1b40b44099d2f816a1d, type: 3}
   - {fileID: 21300000, guid: f6a4d576e7e4a460fa3058ae1e827a49, type: 3}
   - {fileID: 21300000, guid: 95acf1b6e7a2847949ee9d57773e7d88, type: 3}
   - {fileID: 21300000, guid: f43fa2e6a9e1d49daa8da8c6e171bc2b, type: 3}
   - {fileID: 21300000, guid: 24238be6cea3e4353807ddacbdf6f2d5, type: 3}
+  - {fileID: 21300000, guid: ac6e63079a2284cc2b19988d78e656bf, type: 3}
   - {fileID: 21300000, guid: c6f0f43757a42439db66bdab7bbc8ff6, type: 3}
   - {fileID: 21300000, guid: 70e5c657eaa3a43e49f4b08c9c928378, type: 3}
   - {fileID: 21300000, guid: e73e7e57c84fa463e9bb10b73f75a03d, type: 3}
@@ -71,22 +82,31 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 002333b74af1744f0998fa8fdaefe9a8, type: 3}
   - {fileID: 21300000, guid: b44ef2c73fb7d0740be0351fce6b7326, type: 3}
   - {fileID: 21300000, guid: 4969edd758487764bb1d7b6fa512dd2c, type: 3}
+  - {fileID: 21300000, guid: edf54fe7983254772a20a291b135d47a, type: 3}
   - {fileID: 21300000, guid: 3be93528400ed5046abd121b7d19bd7d, type: 3}
   - {fileID: 21300000, guid: 1229ea281011fbe4784439ae731b45f7, type: 3}
   - {fileID: 21300000, guid: 7ca4c03838ea5f84a8050ec8914bbed6, type: 3}
   - {fileID: 21300000, guid: f395e038ff3f045deb47cd0fe2af195b, type: 3}
+  - {fileID: 21300000, guid: bd248938f0c29418fab5cd1be5d59c34, type: 3}
+  - {fileID: 21300000, guid: 89733148fcd3d457d9aef0e3ef14741e, type: 3}
   - {fileID: 21300000, guid: 03a8a748d93304cf2b785c5a57d427aa, type: 3}
   - {fileID: 21300000, guid: e0da3a481e1d148eda8c7c9c0a06196c, type: 3}
   - {fileID: 21300000, guid: 9a5cac48e1f9b49fdbd07c88495453a7, type: 3}
   - {fileID: 21300000, guid: 9dfba558dd7c24df9aba1508d1fb2a48, type: 3}
   - {fileID: 21300000, guid: 56668d98c9baf4ffa8dd4259072cec05, type: 3}
   - {fileID: 21300000, guid: 61d869b824f834699ae51d2c67039658, type: 3}
+  - {fileID: 21300000, guid: 56072bd877a8f4d80ac6c5a5499f490c, type: 3}
+  - {fileID: 21300000, guid: e6d519e81c91b41ffa583f769e9d6f2a, type: 3}
   - {fileID: 21300000, guid: a19a99e8e915c43fd9426a4fde4c9ff4, type: 3}
+  - {fileID: 21300000, guid: 875b6ee8cf8f74dfeae7483ca3b79c45, type: 3}
   - {fileID: 21300000, guid: 9fe4c6f807ad5498bb14fce73dd20012, type: 3}
   - {fileID: 21300000, guid: 03ad9719417916a43949f5a840280ea1, type: 3}
+  - {fileID: 21300000, guid: c0ac91a9f907840a989d902f9d2d955f, type: 3}
   - {fileID: 21300000, guid: 5821d0b90565f47668b193d2524a6a29, type: 3}
   - {fileID: 21300000, guid: 0a8595b95177449f0a10308c236562e7, type: 3}
+  - {fileID: 21300000, guid: b8c48cd98f4d145d29462dcd2f5fc9e6, type: 3}
   - {fileID: 21300000, guid: 138fdae9455e24953afaac10f04dd873, type: 3}
+  - {fileID: 21300000, guid: 0439c64a73e3847c8be577e22ed4ab94, type: 3}
   - {fileID: 21300000, guid: eb77766ae8c164781b5d5be5c544ad72, type: 3}
   - {fileID: 21300000, guid: a42f1baa444e8f64c8cedc0840fa2550, type: 3}
   - {fileID: 21300000, guid: 01e29caa428876a4a918bbdea00a92a5, type: 3}
@@ -101,6 +121,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: c566d5ec9d7484500b8ba2505f870b4d, type: 3}
   - {fileID: 21300000, guid: 8f92231de64963645849ae4ee02f658d, type: 3}
   - {fileID: 21300000, guid: b6ce781d7431f43aa875167de4c284bf, type: 3}
+  - {fileID: 21300000, guid: faa0484ddf9654ccd93a283e7bf05272, type: 3}
   - {fileID: 21300000, guid: 7a8bc25d4abb1415ca943a0e02dad3f2, type: 3}
   - {fileID: 21300000, guid: f162a27db292c4851898b280a85a3e48, type: 3}
   - {fileID: 21300000, guid: 28fc8dbd7e4df024ca51066fb995e347, type: 3}
@@ -110,6 +131,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 7a3f814e52c884b26bf25502addeb387, type: 3}
   - {fileID: 21300000, guid: 9a8ca26eb9d294c4a91cef17fa8ab651, type: 3}
   - {fileID: 21300000, guid: 3212feae8463d45008584de25d81de9b, type: 3}
+  - {fileID: 21300000, guid: 3b306dce68c4a4ccda0b2bd47cac11dc, type: 3}
   - {fileID: 21300000, guid: ce42992f4b043475a92e01b1686f68a0, type: 3}
   - {fileID: 21300000, guid: ac26fe3f82efa4f60a1222249f90f805, type: 3}
   - {fileID: 21300000, guid: 5e2cbf3f70ccb44118a2a740f53ce167, type: 3}
@@ -117,86 +139,110 @@ SpriteAtlas:
   - {fileID: 21300000, guid: d2cd458fdc2d445c5ac65548fbaa0d4b, type: 3}
   - {fileID: 21300000, guid: da68369fbb6cc584a90c6989e034e557, type: 3}
   - {fileID: 21300000, guid: fa24d7bf40cd1d345b95561165a78226, type: 3}
+  - {fileID: 21300000, guid: 5deee2efda02240ee8637d34be680d61, type: 3}
   m_PackedSpriteNamesToIndex:
   - avatar_father
   - Box-Real
+  - LivingRoom-Volcano1
   - Bathroom-Commode-Imaginary
-  - meuble_cuisine
-  - carre_cuisine
+  - LivingRoom-Cabinet
+  - LivingRoom-Floor3
   - Ruler-Real
-  - water
+  - Corridor-Water
+  - LivingRoom-Volcano7
+  - LivingRoom-Volcano6
+  - LivingRoom-Volcano5
+  - LivingRoom-Fridge-Imaginary
+  - LivingRoom-Kitchen-Imaginary
+  - LivingRoom-Volcano3
   - Bedroom-Wardribe-Imaginary
   - Bathroom-Washbasin-Imaginary
   - PaperClip-Real
   - Bedroom-Wall
-  - LivingRoom-Buffet
+  - LivingRoom-Buffet-Real
+  - LivingRoom-Volcano10
   - Bathroom-Tile-Imaginary1
   - Bedroom-Curtain-Real
+  - LivingRoom-Volcano11
   - Bedroom-Carpet1
   - Ruler-Imaginary
-  - LivingRoom-Table
+  - LivingRoom-Table1-Real
   - TeddyBear-Imaginary
-  - chaise_behind
-  - water_border_angle
+  - LivingRoom-Chair2
+  - LivingRoom-Sofa2-Imaginary
+  - Corridor-WaterAngle
   - Bathroom-Bathtub-Real
   - Bedroom-Carpet2
   - Corridor-Carpet
   - Bathroom-Tile-Imaginary2
   - Bedroom-Rug-Real
+  - LivingRoom-Sofa1-Imaginary
   - Light-Imaginary
-  - LivingRoom-Library
+  - LivingRoom-Library-Real
   - Bedroom-Desk-Imaginary
   - Bedroom-Desk-Real
   - Bathroom-Toilet-Real
-  - plant_01
+  - Corridor-Plant1
   - LivingRoom-Floor1
-  - table_cuisine
+  - LivingRoom-Table2
   - Bathroom-Washbasin-Real
-  - fridge
+  - LivingRoom-Volcano8
+  - LivingRoom-Fridge-Real
   - Bathroom-Towel-Real
   - Bathroom-Wall-Real
   - Light-Real
-  - LivingRoom-Sofa1
+  - LivingRoom-Table1-Imaginary
+  - LivingRoom-Volcano
+  - LivingRoom-Sofa1-Real
   - Razor-Imaginary
   - Window
-  - LivingRoom-Lamp
+  - LivingRoom-Lamp-Real
   - LivingRoom-Floor2
   - Bedroom-Bed-Imaginary
+  - LivingRoom-Floor1-Imginary
+  - LivingRoom-Buffet-Imaginary
   - Bedroom-Etagere
+  - LivingRoom-Volcano2
   - Bedroom-Rug-Imaginary
   - Maina
+  - LivingRoom-Volcano9
   - Bedroom-Curtain-Imaginary
   - PaperClip-Imaginary
+  - LivingRoom-Lamp-Imaginary
   - Door
+  - LivingRoom-Volcano12
   - Bedroom-Wardrobe-Real
-  - porte_balcon
+  - LivingRoom-Door
   - Bathroom-Tile-Real
   - Bathroom-Commode-Real
-  - bloc_cuisine
-  - LivingRoom-Sofa2
+  - LivingRoom-Kitchen-Real
+  - LivingRoom-Sofa2-Real
   - Box-Imaginary
   - Bathroom-Makeup-Real
   - Corridor-Wall
   - WallTopI2
   - Bathroom-Wall-Imaginary
   - Razor-Real
-  - water_border
+  - Corridor-WaterBorder
   - AppartmentKey-Imaginary
+  - LivingRoom-Liane
   - WallTopT
   - Bedroom-Carpet3
-  - chaise
+  - LivingRoom-Chair1
   - Bedroom-Toybox
   - avatar_maina
   - Bedroom-Poster
   - AppartmentKey-Real
   - Bathroom-Toilet-Imaginary
   - TeddyBear-Real
+  - LivingRoom-Library-Imaginary
   - Bedroom-Bed-Real
   - WallTopI1
   - WallTopL
   - Bathroom-Bathtub-Imaginary
   - LivingRoom-Cupboard
   - avatar_mother
-  - plant_02
+  - Corridor-Plant2
+  - LivingRoom-Volcano4
   m_Tag: Atlas
   m_IsVariant: 0

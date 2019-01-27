@@ -73,6 +73,7 @@
             <e p="Boat.cs" t="Include" />
             <e p="BossKey.cs" t="Include" />
             <e p="Box.cs" t="Include" />
+            <e p="Commode.cs" t="Include" />
             <e p="Desk.cs" t="Include" />
             <e p="LandingArea.cs" t="Include" />
             <e p="MotherBedroomDoor.cs" t="Include" />

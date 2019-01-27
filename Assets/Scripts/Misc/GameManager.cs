@@ -17,4 +17,18 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
+
+    private void Update()
+    {
+        #if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            var rooms = swapper.GetComponentsInChildren<Room>(true);
+            foreach (var room in rooms)
+            {
+                room.gameObject.SetActive(true);
+            }
+        }
+        #endif
+    }
 }
