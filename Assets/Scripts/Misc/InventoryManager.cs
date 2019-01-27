@@ -362,7 +362,7 @@ public class InventoryManager : MonoBehaviour
             Debug.LogError("SHOULD NOT HAPPEN");
         }
     }
-
+    
     private void ActionRazorStoneOnAdd()
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
