@@ -44,6 +44,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.S))
+            anim.SetTrigger("sword");
+        if (Input.GetKeyDown(KeyCode.R))
+            anim.SetTrigger("rule");
+
         if (isMovementLocked)
         {
             anim.SetBool("walking", false);

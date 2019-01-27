@@ -31,6 +31,7 @@ public class Interaction : MonoBehaviour
 
     private void Update()
     {
+
         if (interactsOnce && hasInteracted)
         {
             SetHighlighted(false);
