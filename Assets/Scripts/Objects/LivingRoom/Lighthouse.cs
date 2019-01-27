@@ -6,7 +6,7 @@ public class Lighthouse : Interaction
 {
     protected override bool PerformAction()
     {
-        GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA, "Aïe!! Cette lumière est trop chaude pour être récupérée...");
+        GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA, "OUCH!! This light is much too bright to be picked up!");
         return true;
     }
 
