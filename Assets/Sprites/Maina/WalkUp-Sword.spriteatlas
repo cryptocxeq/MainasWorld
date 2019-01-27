@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WalkUp-Sword
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 023cc21b74394594ea89a5b06269c4ea, type: 3}
+    totalSpriteSurfaceArea: 7001660
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: abd75f80db6e26145a0b3178139ef097, type: 3}
+  - {fileID: 21300000, guid: 0036c9e10dfc8de46a5d0bc4204e5a9f, type: 3}
+  - {fileID: 21300000, guid: d783aa63062c61149b53463fd63bfafe, type: 3}
+  - {fileID: 21300000, guid: e153cc144c2680f4ba5aa8f0af8cbce2, type: 3}
+  - {fileID: 21300000, guid: 0e2c54240003a9d4db8a6ed044af800d, type: 3}
+  - {fileID: 21300000, guid: 184bf365c4d0f8349963f853d41b0dca, type: 3}
+  - {fileID: 21300000, guid: fb13f8466e627fd4c8d5292f76932d26, type: 3}
+  - {fileID: 21300000, guid: 66ace2568af184840bc7a77bd830e5d8, type: 3}
+  - {fileID: 21300000, guid: 4e27d796fd9d52e4aaf9e5c85609403f, type: 3}
+  - {fileID: 21300000, guid: 5f4fd3b61a0841448b916fe4faa70025, type: 3}
+  - {fileID: 21300000, guid: 92c30337043fa5a4f80c140da0a2197c, type: 3}
+  - {fileID: 21300000, guid: 4b20d267c4c339c4f835f6d49ccec79c, type: 3}
+  - {fileID: 21300000, guid: 106597e71e6880c459842db08cefd4db, type: 3}
+  - {fileID: 21300000, guid: a7f36238f6f2e5747ac424abc05f09d5, type: 3}
+  - {fileID: 21300000, guid: a400ea78bf4fcc3418eb22084098e3e6, type: 3}
+  - {fileID: 21300000, guid: 02a069592c9cf2049985055108bc4659, type: 3}
+  - {fileID: 21300000, guid: 6e2512b958c71bd488ef349e0f3e47f2, type: 3}
+  - {fileID: 21300000, guid: daa08df965cbc5947958dd4ac1dddc26, type: 3}
+  - {fileID: 21300000, guid: 81989d6ab9f4b1448974e0a889206990, type: 3}
+  - {fileID: 21300000, guid: a4e335ca2e4803f418ce90f67121fe66, type: 3}
+  - {fileID: 21300000, guid: f9f716fbdd3e94b468ab02539b552333, type: 3}
+  - {fileID: 21300000, guid: 1f3b642cfaa0bbe4db198c5a1ef411aa, type: 3}
+  - {fileID: 21300000, guid: cdd2bfcca980efa47ab5189a37905b5e, type: 3}
+  - {fileID: 21300000, guid: 55b2744d105e19347935556973532f55, type: 3}
+  - {fileID: 21300000, guid: 368d998d7da60d64eba565dbad6b3d8a, type: 3}
+  - {fileID: 21300000, guid: fc138ead8c8a97f47adf4378578ed89b, type: 3}
+  - {fileID: 21300000, guid: a9e1c1cea7aa50247aaa4d3a11e5f7fb, type: 3}
+  - {fileID: 21300000, guid: b7c55e2f2b84b23499cb3d25fe421370, type: 3}
+  - {fileID: 21300000, guid: 0479434f76ab4b84492b98b2dae30cb0, type: 3}
+  - {fileID: 21300000, guid: abcdb8cf1663e464aa895af58e57a104, type: 3}
+  - {fileID: 21300000, guid: 3b73b0dfcaad9944ca1700533c7ca086, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - walk-behind-animation_10
+  - walk-behind-animation_18
+  - walk-behind-animation_29
+  - walk-behind-animation_15
+  - walk-behind-animation_9
+  - walk-behind-animation_0
+  - walk-behind-animation_27
+  - walk-behind-animation_21
+  - walk-behind-animation_6
+  - walk-behind-animation_2
+  - walk-behind-animation_22
+  - walk-behind-animation_1
+  - walk-behind-animation_17
+  - walk-behind-animation_28
+  - walk-behind-animation_11
+  - walk-behind-animation_16
+  - walk-behind-animation_14
+  - walk-behind-animation_5
+  - walk-behind-animation_25
+  - walk-behind-animation_3
+  - walk-behind-animation_26
+  - walk-behind-animation_7
+  - walk-behind-animation_24
+  - walk-behind-animation_20
+  - walk-behind-animation_23
+  - walk-behind-animation_4
+  - walk-behind-animation_19
+  - walk-behind-animation_12
+  - walk-behind-animation_30
+  - walk-behind-animation_13
+  - walk-behind-animation_8
+  m_Tag: WalkUp-Sword
+  m_IsVariant: 0

@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TilesUI
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 5aaa3baf28abc466d8d746110b1a2c14, type: 3}
+    - {fileID: 102900000, guid: bb3a0d660c4a76f4981e065fa3fb00d2, type: 3}
+    totalSpriteSurfaceArea: 1804324
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: afe78530a4318f24f8bfd403b7c5f9a2, type: 3}
+  - {fileID: 21300000, guid: 751ad280782d34d09b77b7c5038765ea, type: 3}
+  - {fileID: 21300000, guid: 4f99231163584df42a86d41938924372, type: 3}
+  - {fileID: 21300000, guid: e58e512113f414d67a42b1e45603d45b, type: 3}
+  - {fileID: 21300000, guid: b06f0471c0f7e487988bded679eca607, type: 3}
+  - {fileID: 21300000, guid: c7d75671e9dc94d538f97ade9f0faf0b, type: 3}
+  - {fileID: 21300000, guid: c5bf7ab1063fe4c3383463dfbacedadf, type: 3}
+  - {fileID: 21300000, guid: 717e0fe1d87bb4590a82350503ef957d, type: 3}
+  - {fileID: 21300000, guid: a902351222794b445bcd7f8f301947c6, type: 3}
+  - {fileID: 21300000, guid: fd899852771804ea6a5f0b0cde3a5f6a, type: 3}
+  - {fileID: 21300000, guid: ad5a203399b389a49a16303ff6f55139, type: 3}
+  - {fileID: 21300000, guid: ac3a7a33bd842403591ab7e31a00679f, type: 3}
+  - {fileID: 21300000, guid: aa1a8a436c75e4fd1abf99bc20b652e6, type: 3}
+  - {fileID: 21300000, guid: cf81a4a38dcdc4bdfb0efcd2494c4cdb, type: 3}
+  - {fileID: 21300000, guid: 385b2a9407d5d45de8b3fa09ada8e2cd, type: 3}
+  - {fileID: 21300000, guid: 6c7a6eb489bb04a5a8c0d7c0f0748b25, type: 3}
+  - {fileID: 21300000, guid: b39997c4ee4c34c87871963c235c6e2e, type: 3}
+  - {fileID: 21300000, guid: e2fca4d4699d1478bac93e6554ce4631, type: 3}
+  - {fileID: 21300000, guid: 4a0949f4e845e4d428ae4d4ca11d5c2b, type: 3}
+  - {fileID: 21300000, guid: c3d45225b69f58946b90958b6d3e7661, type: 3}
+  - {fileID: 21300000, guid: 437cb4c54ad1b4507a9a4d38a5df9a23, type: 3}
+  - {fileID: 21300000, guid: 0d3ef1464154d4624a0028487815459c, type: 3}
+  - {fileID: 21300000, guid: f6a4d576e7e4a460fa3058ae1e827a49, type: 3}
+  - {fileID: 21300000, guid: 95acf1b6e7a2847949ee9d57773e7d88, type: 3}
+  - {fileID: 21300000, guid: 62d378b6a0a1247f6b2da26ec2250f84, type: 3}
+  - {fileID: 21300000, guid: f43fa2e6a9e1d49daa8da8c6e171bc2b, type: 3}
+  - {fileID: 21300000, guid: 8c05f327472cc2941b8e4b6b4516722f, type: 3}
+  - {fileID: 21300000, guid: 58c389775d33dc7429bf0c0228d6729a, type: 3}
+  - {fileID: 21300000, guid: dc9ac4873b60e4333bc16b8ae097d2c9, type: 3}
+  - {fileID: 21300000, guid: 002333b74af1744f0998fa8fdaefe9a8, type: 3}
+  - {fileID: 21300000, guid: edf54fe7983254772a20a291b135d47a, type: 3}
+  - {fileID: 21300000, guid: 26038008b4c524bd382f3775e3cebe5c, type: 3}
+  - {fileID: 21300000, guid: 7ca4c03838ea5f84a8050ec8914bbed6, type: 3}
+  - {fileID: 21300000, guid: 89733148fcd3d457d9aef0e3ef14741e, type: 3}
+  - {fileID: 21300000, guid: 56668d98c9baf4ffa8dd4259072cec05, type: 3}
+  - {fileID: 21300000, guid: 56072bd877a8f4d80ac6c5a5499f490c, type: 3}
+  - {fileID: 21300000, guid: 0d982829f21d9cd479af8e48f712aa3c, type: 3}
+  - {fileID: 21300000, guid: c0ac91a9f907840a989d902f9d2d955f, type: 3}
+  - {fileID: 21300000, guid: 0439c64a73e3847c8be577e22ed4ab94, type: 3}
+  - {fileID: 21300000, guid: 01e29caa428876a4a918bbdea00a92a5, type: 3}
+  - {fileID: 21300000, guid: f5e361cbd221d4ed989b2068c08f0df5, type: 3}
+  - {fileID: 21300000, guid: a8997a3c9c4e5491d91dcaafcb61365f, type: 3}
+  - {fileID: 21300000, guid: a6ac275c925504a9eb281f28d9581437, type: 3}
+  - {fileID: 21300000, guid: 9f826b7cf9c7c4897b9dfd2c6fee251a, type: 3}
+  - {fileID: 21300000, guid: 488fb58cd49120f43873fc605f84f4d1, type: 3}
+  - {fileID: 21300000, guid: c5a9dc9cf1d61405c8467c6c54e28bb8, type: 3}
+  - {fileID: 21300000, guid: 5bd941cc449a7410eba95a21f1fa2102, type: 3}
+  - {fileID: 21300000, guid: 7a8bc25d4abb1415ca943a0e02dad3f2, type: 3}
+  - {fileID: 21300000, guid: f162a27db292c4851898b280a85a3e48, type: 3}
+  - {fileID: 21300000, guid: 40433f3e94c0040d2b5492dfbdf7abb2, type: 3}
+  - {fileID: 21300000, guid: ac26fe3f82efa4f60a1222249f90f805, type: 3}
+  - {fileID: 21300000, guid: 5e2cbf3f70ccb44118a2a740f53ce167, type: 3}
+  - {fileID: 21300000, guid: 6731a99f9621d64449095fd197b2dedf, type: 3}
+  - {fileID: 21300000, guid: 078a93cfaa6932f4ca1ca743ec15303a, type: 3}
+  - {fileID: 21300000, guid: 5deee2efda02240ee8637d34be680d61, type: 3}
+  - {fileID: 21300000, guid: 85d798ffcb71048ab9dc3d9b4ac96358, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - AvatarBackground
+  - LivingRoom-Volcano1
+  - LivingRoom-Floor3
+  - MotherBedroom-Floor-Real2
+  - Balcony-Floor-Real
+  - LivingRoom-Volcano7
+  - LivingRoom-Volcano6
+  - LivingRoom-Volcano5
+  - Background
+  - LivingRoom-Volcano3
+  - ButtonHover
+  - Bedroom-Wall
+  - LivingRoom-Volcano10
+  - Bathroom-Tile-Imaginary1
+  - MotherBedroom-Wall-Real
+  - LivingRoom-Volcano11
+  - Bedroom-Carpet1
+  - Balcony-Side-Imaginary2
+  - Balcony-Floor-Imaginary
+  - DialogBackground
+  - Balcony-Side
+  - MotherBedroom-Floor-Real1
+  - Bedroom-Carpet2
+  - Corridor-Carpet
+  - MotherBedroom-Wall-Imaginary
+  - Bathroom-Tile-Imaginary2
+  - ArrowNormal
+  - InventoryBackground
+  - Balcony-Down
+  - LivingRoom-Floor1
+  - LivingRoom-Volcano8
+  - Balcony-Right
+  - Bathroom-Wall-Real
+  - LivingRoom-Volcano
+  - LivingRoom-Floor2
+  - LivingRoom-Floor1-Imginary
+  - ButtonNormal
+  - LivingRoom-Volcano9
+  - LivingRoom-Volcano12
+  - Bathroom-Tile-Real
+  - Balcony-Side-Imaginary1
+  - Corridor-Wall
+  - Balcony-Top
+  - WallTopI2
+  - InventorySlot
+  - Bathroom-Wall-Imaginary
+  - Baclony-TopAngle
+  - WallTopT
+  - Bedroom-Carpet3
+  - MotherBedroom-Floor-Imaginary1
+  - WallTopI1
+  - WallTopL
+  - Logo
+  - ArrowHover
+  - LivingRoom-Volcano4
+  - MotherBedroom-Floor-Imaginary2
+  m_Tag: TilesUI
+  m_IsVariant: 0

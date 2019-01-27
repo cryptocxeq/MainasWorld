@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WalkUp
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 5d7d672889c124248a69e6cb25faa1cb, type: 3}
+    totalSpriteSurfaceArea: 4821120
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 25d577b00c2fa6347855baa70871aae2, type: 3}
+  - {fileID: 21300000, guid: 6a64f621521233d478f512572c144626, type: 3}
+  - {fileID: 21300000, guid: fab189616eea73247b52b87e3163f143, type: 3}
+  - {fileID: 21300000, guid: 9d8e2671167ed504a8ad4a47e94a1067, type: 3}
+  - {fileID: 21300000, guid: 941192b1be09e5f49a35e7445a52192d, type: 3}
+  - {fileID: 21300000, guid: 0fe1b0e1e322e4f48b84bc303cf66138, type: 3}
+  - {fileID: 21300000, guid: 686b554211ee1db469a3aaaa319802f1, type: 3}
+  - {fileID: 21300000, guid: 74ba7a035187bc04894c1d0f14a4d923, type: 3}
+  - {fileID: 21300000, guid: 02dd3523ec004614b90f11f402b9d5c0, type: 3}
+  - {fileID: 21300000, guid: ba39f233b8ef89c47bcb2cd095257a5e, type: 3}
+  - {fileID: 21300000, guid: f9045fc3977728940b28d07a064c88ae, type: 3}
+  - {fileID: 21300000, guid: 5abfe6e3a5530804389f40bc60b5e9a1, type: 3}
+  - {fileID: 21300000, guid: bc7c87a439b374249b258cc8e328e40c, type: 3}
+  - {fileID: 21300000, guid: 811c5c9612598d44684e55df0ffc1f61, type: 3}
+  - {fileID: 21300000, guid: 5df646171c73d5f4dbcc35369afeeb74, type: 3}
+  - {fileID: 21300000, guid: 0b6d9969bf4d5f9468b4427e19c13dd6, type: 3}
+  - {fileID: 21300000, guid: 2d7c474ac474e4147a3c432fc0598064, type: 3}
+  - {fileID: 21300000, guid: 5bd8205ae6e6cd540896db64adc92058, type: 3}
+  - {fileID: 21300000, guid: d4fff91bc5108ef478b8c78f6083e3ba, type: 3}
+  - {fileID: 21300000, guid: 6839d15bce45e504296438a2e2e6ee57, type: 3}
+  - {fileID: 21300000, guid: f328621cc1d4d4f42948b41db092926d, type: 3}
+  - {fileID: 21300000, guid: e2689b2caf45cc74e95f43f6fc8f02cc, type: 3}
+  - {fileID: 21300000, guid: 440de62dcc140e54b8c656d75ffb0f76, type: 3}
+  - {fileID: 21300000, guid: 598db8bdd938a884593672df20cebab8, type: 3}
+  - {fileID: 21300000, guid: 169e5ccd6f590084585ece376b29c485, type: 3}
+  - {fileID: 21300000, guid: 2e168e1ea67655140b3eb415bc3eaa01, type: 3}
+  - {fileID: 21300000, guid: 98b9272ebb4e0824e83f8a31aa188a98, type: 3}
+  - {fileID: 21300000, guid: cdfae98e8174d3747af48e940011dd07, type: 3}
+  - {fileID: 21300000, guid: 27dda7ee9dba2414e916c5561a748e22, type: 3}
+  - {fileID: 21300000, guid: a6332d5f08b3eca47b5822d53d7a26cd, type: 3}
+  - {fileID: 21300000, guid: ce3b5bffdd78f604ab5b8b82b9a5e517, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - walk-behind-animation_19
+  - walk-behind-animation_1
+  - walk-behind-animation_23
+  - walk-behind-animation_18
+  - walk-behind-animation_4
+  - walk-behind-animation_25
+  - walk-behind-animation_3
+  - walk-behind-animation_17
+  - walk-behind-animation_8
+  - walk-behind-animation_16
+  - walk-behind-animation_29
+  - walk-behind-animation_10
+  - walk-behind-animation_26
+  - walk-behind-animation_2
+  - walk-behind-animation_14
+  - walk-behind-animation_20
+  - walk-behind-animation_24
+  - walk-behind-animation_5
+  - walk-behind-animation_7
+  - walk-behind-animation_22
+  - walk-behind-animation_15
+  - walk-behind-animation_12
+  - walk-behind-animation_30
+  - walk-behind-animation_9
+  - walk-behind-animation_6
+  - walk-behind-animation_27
+  - walk-behind-animation_11
+  - walk-behind-animation_21
+  - walk-behind-animation_13
+  - walk-behind-animation_28
+  - walk-behind-animation_0
+  m_Tag: WalkUp
+  m_IsVariant: 0

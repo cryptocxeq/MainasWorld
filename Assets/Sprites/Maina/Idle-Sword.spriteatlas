@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Idle-Sword
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 8a3577dbfc0ad6744aa3d4d37726cd84, type: 3}
+    totalSpriteSurfaceArea: 5053000
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 07b304507f1bb7d46a68baf0f126d8c2, type: 3}
+  - {fileID: 21300000, guid: f4ba6980576e77644bdc08c5c2481a40, type: 3}
+  - {fileID: 21300000, guid: b6ea3bc03a0dc0e4a81e72f3d5fe2429, type: 3}
+  - {fileID: 21300000, guid: 6f46b9c1120cd2f43ac4d7dc37a28889, type: 3}
+  - {fileID: 21300000, guid: 195e74121543a504b8af9e91d25432f1, type: 3}
+  - {fileID: 21300000, guid: 86ab30d3af1c3cb40bb33789d00cf46a, type: 3}
+  - {fileID: 21300000, guid: 3fa305049f4ae4c4aa9d36f74fbcb597, type: 3}
+  - {fileID: 21300000, guid: 0a4ea714254a3b34eaf5c97b675ebebe, type: 3}
+  - {fileID: 21300000, guid: b981d6642002c0e4db414365a4b800a2, type: 3}
+  - {fileID: 21300000, guid: 0039b29445177604ea45bc3671f17dfe, type: 3}
+  - {fileID: 21300000, guid: 00e72c45c5b53224883436a5647033a8, type: 3}
+  - {fileID: 21300000, guid: 1effc596deda2664da616d7cde99c749, type: 3}
+  - {fileID: 21300000, guid: 383e8857c46d7014f82bde275ac30375, type: 3}
+  - {fileID: 21300000, guid: 457ffce75986a1f438c8cff8ab3b1245, type: 3}
+  - {fileID: 21300000, guid: 03fe4a18c3bbee44aaf43f49b6d74221, type: 3}
+  - {fileID: 21300000, guid: 83cccc48b1a90b94bae192ae587006c6, type: 3}
+  - {fileID: 21300000, guid: 1b91a4b81f4d14342a88be94a118d3c5, type: 3}
+  - {fileID: 21300000, guid: b7c6bff8285d8164588e599253c40a03, type: 3}
+  - {fileID: 21300000, guid: 61a4a389f70c42c41892e2c4b8662a79, type: 3}
+  - {fileID: 21300000, guid: 690cf1d9d3c7114439884405fa1e8b25, type: 3}
+  - {fileID: 21300000, guid: 9671eacaa2c8a3c41992db2c0ee5f551, type: 3}
+  - {fileID: 21300000, guid: 989d50daeddcad14a9f8572a92d24f88, type: 3}
+  - {fileID: 21300000, guid: 23ef6fea2a930164c9b44174e0e81876, type: 3}
+  - {fileID: 21300000, guid: 84a2932b54e91284589c3d3b4db67cda, type: 3}
+  - {fileID: 21300000, guid: bbef872cf73a58840a08c8ee2b170d0c, type: 3}
+  - {fileID: 21300000, guid: dc8d970db5784f74186755e186b24975, type: 3}
+  - {fileID: 21300000, guid: e106e92e2694c6c419ee68ed7647a700, type: 3}
+  - {fileID: 21300000, guid: 2e80a63e5ab378644b62700b87f02b64, type: 3}
+  - {fileID: 21300000, guid: 8d3e2f9ed047b0b4fa308040c33d9704, type: 3}
+  - {fileID: 21300000, guid: 4409dc1f75b41f342836579b5c6c1fe6, type: 3}
+  - {fileID: 21300000, guid: 42fd9c6f6d0814b418c969634c475e12, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - skeleton-animation_23
+  - skeleton-animation_11
+  - skeleton-animation_0
+  - skeleton-animation_14
+  - skeleton-animation_8
+  - skeleton-animation_3
+  - skeleton-animation_27
+  - skeleton-animation_21
+  - skeleton-animation_9
+  - skeleton-animation_24
+  - skeleton-animation_22
+  - skeleton-animation_30
+  - skeleton-animation_10
+  - skeleton-animation_26
+  - skeleton-animation_7
+  - skeleton-animation_5
+  - skeleton-animation_6
+  - skeleton-animation_2
+  - skeleton-animation_17
+  - skeleton-animation_1
+  - skeleton-animation_12
+  - skeleton-animation_19
+  - skeleton-animation_25
+  - skeleton-animation_28
+  - skeleton-animation_13
+  - skeleton-animation_4
+  - skeleton-animation_16
+  - skeleton-animation_29
+  - skeleton-animation_18
+  - skeleton-animation_20
+  - skeleton-animation_15
+  m_Tag: Idle-Sword
+  m_IsVariant: 0

@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WalkSide-Sword
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: c2bba273202b90b47936a523aa081a2d, type: 3}
+    totalSpriteSurfaceArea: 5427635
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: b8855f70f0a217a469ba9497a4128417, type: 3}
+  - {fileID: 21300000, guid: a7c6b6d0207a25141b9077a009d4a837, type: 3}
+  - {fileID: 21300000, guid: 2ffff8d1b21490c4f9378bcb97dc80c5, type: 3}
+  - {fileID: 21300000, guid: 7f4ef573a8d06aa4d8e0271c48b25114, type: 3}
+  - {fileID: 21300000, guid: c8c300549c6aaca408b8797c56334bbe, type: 3}
+  - {fileID: 21300000, guid: a5ca66b4e8b4bc645aadc658bd209bdc, type: 3}
+  - {fileID: 21300000, guid: 02bc6406593dd494c8c7bf9112e2ca86, type: 3}
+  - {fileID: 21300000, guid: 4d406a16b2772e24da79cd039394d329, type: 3}
+  - {fileID: 21300000, guid: 52a1bd37585ef86429f76dfef8b287aa, type: 3}
+  - {fileID: 21300000, guid: 5ffb48578784cf94490906f9b8948809, type: 3}
+  - {fileID: 21300000, guid: 3dccda9768328d64f8f22e82fc5e0197, type: 3}
+  - {fileID: 21300000, guid: 2e8d3218744c24a489104c2011124796, type: 3}
+  - {fileID: 21300000, guid: 9f7a20c89f322df409736dd17d0ed5aa, type: 3}
+  - {fileID: 21300000, guid: 960a70d8c5d9b7c4d92670721d8b724a, type: 3}
+  - {fileID: 21300000, guid: fe2cb9d8bce30214284816d8ef13bf74, type: 3}
+  - {fileID: 21300000, guid: 9dc6ac2ab3252d84292393428eff201f, type: 3}
+  - {fileID: 21300000, guid: a42aa3aac96edb54fb0268bf866d8ff5, type: 3}
+  - {fileID: 21300000, guid: 2c3d573b7f73cfa4db036276caa89239, type: 3}
+  - {fileID: 21300000, guid: 6738bd2c960aab4448d944f52c06b2af, type: 3}
+  - {fileID: 21300000, guid: 0e32c16cb5386b946a86bcaffff6f262, type: 3}
+  - {fileID: 21300000, guid: dc9db46c3d5bf2547bc86e9bdcd27f2d, type: 3}
+  - {fileID: 21300000, guid: ce32ff0d3e86e89428ddfff0ea551209, type: 3}
+  - {fileID: 21300000, guid: 96f1895d99de2f54a9ea574f9105e7c8, type: 3}
+  - {fileID: 21300000, guid: 818bc1bd0133fe343b1aa2f622045633, type: 3}
+  - {fileID: 21300000, guid: 7a1f4abd12d589c4881b1bfa847d3468, type: 3}
+  - {fileID: 21300000, guid: 02f719ed832b7b8499039377b3ac012e, type: 3}
+  - {fileID: 21300000, guid: b0a48e2ee55447c49bf3f352d6056931, type: 3}
+  - {fileID: 21300000, guid: a79e388e35e2c4746940b25dc3facbfd, type: 3}
+  - {fileID: 21300000, guid: 95f801ee3aed9c7438bfbbf581b45df5, type: 3}
+  - {fileID: 21300000, guid: 5e77a2eed37237244946e72f731c0808, type: 3}
+  - {fileID: 21300000, guid: 1a4e679f44dd75d4a9a9e090ccfcc226, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - walk-walk_28
+  - walk-walk_17
+  - walk-walk_14
+  - walk-walk_30
+  - walk-walk_13
+  - walk-walk_25
+  - walk-walk_10
+  - walk-walk_22
+  - walk-walk_24
+  - walk-walk_0
+  - walk-walk_27
+  - walk-walk_1
+  - walk-walk_9
+  - walk-walk_29
+  - walk-walk_18
+  - walk-walk_8
+  - walk-walk_21
+  - walk-walk_5
+  - walk-walk_7
+  - walk-walk_15
+  - walk-walk_19
+  - walk-walk_6
+  - walk-walk_3
+  - walk-walk_11
+  - walk-walk_20
+  - walk-walk_12
+  - walk-walk_4
+  - walk-walk_23
+  - walk-walk_26
+  - walk-walk_2
+  - walk-walk_16
+  m_Tag: WalkSide-Sword
+  m_IsVariant: 0

@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WalkDown-Ruler
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: a20c0dda9cd196e41bdeb2eb90157275, type: 3}
+    totalSpriteSurfaceArea: 4315200
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: fe3cf7b09c89e3b43ac1c0800e0b5511, type: 3}
+  - {fileID: 21300000, guid: 5a7345d1c23a3cc4f9a42ea1153f4da6, type: 3}
+  - {fileID: 21300000, guid: 4de820a5b297d0a499cecff63c4f9889, type: 3}
+  - {fileID: 21300000, guid: a660e1b51ab168c41934a4d09714b720, type: 3}
+  - {fileID: 21300000, guid: daf197f579f116a43894bf885dfa704d, type: 3}
+  - {fileID: 21300000, guid: 8ce01c36e0c4038419445df2730c5fe0, type: 3}
+  - {fileID: 21300000, guid: 443cd656e2cc19547a9c6ecf626fa7cc, type: 3}
+  - {fileID: 21300000, guid: 804d7976e780e2c4f95b280a6416682e, type: 3}
+  - {fileID: 21300000, guid: 09505ed698db8b64a9708508b4a9b955, type: 3}
+  - {fileID: 21300000, guid: d797d7273daf1ce4b895bd987031168a, type: 3}
+  - {fileID: 21300000, guid: fb70dd48edeb8e94aa70fd270f3153a4, type: 3}
+  - {fileID: 21300000, guid: 52fc78889c8e1b04e9f92209b6d3fb43, type: 3}
+  - {fileID: 21300000, guid: 3afe1db8db8e09a40a86074529ca5359, type: 3}
+  - {fileID: 21300000, guid: 18bae2093ccccdf44927d05cffe190ac, type: 3}
+  - {fileID: 21300000, guid: f9303a09f7b7cab40b519077d062a354, type: 3}
+  - {fileID: 21300000, guid: 32fccb391ec0bf14e88ceaf39fecb7b4, type: 3}
+  - {fileID: 21300000, guid: cc10cd59c19be194b9c8c5a0051b3958, type: 3}
+  - {fileID: 21300000, guid: edd4fc3a38c129342b084c059d5378f4, type: 3}
+  - {fileID: 21300000, guid: ed40679a0f36f2c45b2c9b6345d2db55, type: 3}
+  - {fileID: 21300000, guid: 53b52fba9649fa743a1f450a17b17a91, type: 3}
+  - {fileID: 21300000, guid: a910abda5efae7540a4acbb659b5df9a, type: 3}
+  - {fileID: 21300000, guid: b0b5bc2bdd921b04389e848d3585f2ba, type: 3}
+  - {fileID: 21300000, guid: fa314f2bd7ae7234584e63c88a29255b, type: 3}
+  - {fileID: 21300000, guid: 06f1366bccc2bf5458eb5f8abd47f964, type: 3}
+  - {fileID: 21300000, guid: 5a4d54ec3b7f70049bc7f5132e704dc5, type: 3}
+  - {fileID: 21300000, guid: c71d0bfcd11507d4884aa21d698502d5, type: 3}
+  - {fileID: 21300000, guid: 2434963d4ab65e940bbdd40a067d00d6, type: 3}
+  - {fileID: 21300000, guid: 5434651e55d029840820a19509c0653b, type: 3}
+  - {fileID: 21300000, guid: 78fe035e6c3ae224ea682476673e6126, type: 3}
+  - {fileID: 21300000, guid: 2371c67e9b7ea6d42b14217a438d28ef, type: 3}
+  - {fileID: 21300000, guid: 28b6befe9489e6649a323ae0128e85b4, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - skeleton-walk_4
+  - skeleton-walk_16
+  - skeleton-walk_28
+  - skeleton-walk_9
+  - skeleton-walk_24
+  - skeleton-walk_10
+  - skeleton-walk_5
+  - skeleton-walk_29
+  - skeleton-walk_8
+  - skeleton-walk_27
+  - skeleton-walk_7
+  - skeleton-walk_2
+  - skeleton-walk_6
+  - skeleton-walk_13
+  - skeleton-walk_19
+  - skeleton-walk_26
+  - skeleton-walk_17
+  - skeleton-walk_18
+  - skeleton-walk_25
+  - skeleton-walk_20
+  - skeleton-walk_23
+  - skeleton-walk_3
+  - skeleton-walk_22
+  - skeleton-walk_1
+  - skeleton-walk_0
+  - skeleton-walk_14
+  - skeleton-walk_12
+  - skeleton-walk_21
+  - skeleton-walk_15
+  - skeleton-walk_11
+  - skeleton-walk_30
+  m_Tag: WalkDown-Ruler
+  m_IsVariant: 0

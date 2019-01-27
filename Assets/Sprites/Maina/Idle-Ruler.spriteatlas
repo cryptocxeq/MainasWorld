@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Idle-Ruler
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: e02e83bdb7f556546a2d939a032b4e3c, type: 3}
+    totalSpriteSurfaceArea: 4194052
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 8029e460f566cfc42a6b5ee2f069db28, type: 3}
+  - {fileID: 21300000, guid: c8219a41d755ddb47a1879f9f9416bc6, type: 3}
+  - {fileID: 21300000, guid: 7156f9b1bd90a2547b6fec94598983db, type: 3}
+  - {fileID: 21300000, guid: c172ce53870037643a0913876d41c1b5, type: 3}
+  - {fileID: 21300000, guid: cd259604cc7da83479c5c68bcf02602e, type: 3}
+  - {fileID: 21300000, guid: 8c303944671fbb84e9b26b9d16abd9a7, type: 3}
+  - {fileID: 21300000, guid: f935e5a4965018d4e8b707f0974ddc98, type: 3}
+  - {fileID: 21300000, guid: 4349d4854c19d9f42b739e6c24e3c2e1, type: 3}
+  - {fileID: 21300000, guid: 6306fac55f70316439db4e29d4133468, type: 3}
+  - {fileID: 21300000, guid: f0fcfaa6094e5534e9c08147890fe8a3, type: 3}
+  - {fileID: 21300000, guid: f1d347b6d643cbf44a27022aa7fb7d00, type: 3}
+  - {fileID: 21300000, guid: 4d292dd634c66324bab1157fbb7a4d0d, type: 3}
+  - {fileID: 21300000, guid: 96f104371c5d56f4c9b20bfa6290d12d, type: 3}
+  - {fileID: 21300000, guid: 7e1032874c669de40b283f70d1785f1b, type: 3}
+  - {fileID: 21300000, guid: 6fa240b78cbf9414098634052f6bc390, type: 3}
+  - {fileID: 21300000, guid: 798b84e77bb8202459392fa1c209c8c7, type: 3}
+  - {fileID: 21300000, guid: c43c1f386df2c5a448dcbae73b99986e, type: 3}
+  - {fileID: 21300000, guid: aed139e892d50844f9e9fa989de49e04, type: 3}
+  - {fileID: 21300000, guid: 855c9109f11668a46bfee7bc08e2a48b, type: 3}
+  - {fileID: 21300000, guid: d154d5d93de1b2a47ba1f03b92cf6b91, type: 3}
+  - {fileID: 21300000, guid: fdfee6d9649801d439d6577faac53396, type: 3}
+  - {fileID: 21300000, guid: 31ff4b6ab2f3063499e0d48243f96ff6, type: 3}
+  - {fileID: 21300000, guid: c845828a20313fa4fb571d8d784b4aab, type: 3}
+  - {fileID: 21300000, guid: 499a71fb4d73b644da2bf32c753e3576, type: 3}
+  - {fileID: 21300000, guid: 4f59752ca3cce9e40a37ac4787801c13, type: 3}
+  - {fileID: 21300000, guid: 6b7a585c2e15fcd469bddcdb3a55f4bf, type: 3}
+  - {fileID: 21300000, guid: 21e8fb1d37e7c2f438a18a42228c8351, type: 3}
+  - {fileID: 21300000, guid: 55a88f2d9c1aa1541abf232f98aa9103, type: 3}
+  - {fileID: 21300000, guid: 4656a1bd3e5085d43a132cfe5b98e331, type: 3}
+  - {fileID: 21300000, guid: 65ee8eed1f7709e4591d72202a2c8c80, type: 3}
+  - {fileID: 21300000, guid: 7bbeed6e70846e64f920cc15c82d891e, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - skeleton-animation_27
+  - skeleton-animation_21
+  - skeleton-animation_10
+  - skeleton-animation_9
+  - skeleton-animation_22
+  - skeleton-animation_8
+  - skeleton-animation_2
+  - skeleton-animation_4
+  - skeleton-animation_6
+  - skeleton-animation_24
+  - skeleton-animation_12
+  - skeleton-animation_16
+  - skeleton-animation_29
+  - skeleton-animation_3
+  - skeleton-animation_7
+  - skeleton-animation_13
+  - skeleton-animation_5
+  - skeleton-animation_0
+  - skeleton-animation_18
+  - skeleton-animation_25
+  - skeleton-animation_26
+  - skeleton-animation_17
+  - skeleton-animation_15
+  - skeleton-animation_20
+  - skeleton-animation_23
+  - skeleton-animation_11
+  - skeleton-animation_1
+  - skeleton-animation_30
+  - skeleton-animation_19
+  - skeleton-animation_28
+  - skeleton-animation_14
+  m_Tag: Idle-Ruler
+  m_IsVariant: 0

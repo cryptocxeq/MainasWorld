@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Items
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: b0ddae31ed1ac49dfbcc8107eb8218bb, type: 3}
+    totalSpriteSurfaceArea: 695529
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: d6122c50e04137344bcc6b5fe0a014f5, type: 3}
+  - {fileID: 21300000, guid: 9d6cef50b32c24ed1972cd0e8a929b0e, type: 3}
+  - {fileID: 21300000, guid: 47305f41e9b234c1c9de28ba67cdcbaa, type: 3}
+  - {fileID: 21300000, guid: a9be84920d62e4cb790e6f864d1a888b, type: 3}
+  - {fileID: 21300000, guid: 79ea5f95c3d66462c99b38692df4ad72, type: 3}
+  - {fileID: 21300000, guid: c6f0f43757a42439db66bdab7bbc8ff6, type: 3}
+  - {fileID: 21300000, guid: f395e038ff3f045deb47cd0fe2af195b, type: 3}
+  - {fileID: 21300000, guid: e0da3a481e1d148eda8c7c9c0a06196c, type: 3}
+  - {fileID: 21300000, guid: 0a8595b95177449f0a10308c236562e7, type: 3}
+  - {fileID: 21300000, guid: e08c4a8b8576b4777adfc98cbf184592, type: 3}
+  - {fileID: 21300000, guid: c566d5ec9d7484500b8ba2505f870b4d, type: 3}
+  - {fileID: 21300000, guid: b6ce781d7431f43aa875167de4c284bf, type: 3}
+  - {fileID: 21300000, guid: 775a721e53190194d938cc2f216ee88f, type: 3}
+  - {fileID: 21300000, guid: 7a3f814e52c884b26bf25502addeb387, type: 3}
+  - {fileID: 21300000, guid: 3212feae8463d45008584de25d81de9b, type: 3}
+  - {fileID: 21300000, guid: da68369fbb6cc584a90c6989e034e557, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Father
+  - Box-Real
+  - Ruler-Real
+  - PaperClip-Real
+  - Ruler-Imaginary
+  - Light-Imaginary
+  - Light-Real
+  - Razor-Imaginary
+  - PaperClip-Imaginary
+  - Box-Imaginary
+  - Razor-Real
+  - AppartmentKey-Imaginary
+  - Maina
+  - AppartmentKey-Real
+  - TeddyBear
+  - Mother
+  m_Tag: Items
+  m_IsVariant: 0
