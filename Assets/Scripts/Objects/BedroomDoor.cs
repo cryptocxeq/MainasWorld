@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Lean.Localization;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,8 +16,9 @@ public class BedroomDoor : Interaction
         }
         else
         {
-            GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA,
-                "Mummy locked the door to my room. I need to get out!");
+            string text = "Mummy locked the door to my room. I need to get out!";
+            text = LeanLocalization.GetTranslationText("bedroomPerformActionRealText");
+            GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA, text);
             return false;
         }
     }

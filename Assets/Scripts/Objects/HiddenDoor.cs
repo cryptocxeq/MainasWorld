@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Lean.Localization;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,14 +11,16 @@ public class HiddenDoor : Interaction
         {
             this.gameObject.SetActive(false);
             EventManager.Instance.RevealRoom("Balcony");
-            GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA,
-               "Darkness fades with the light and the monsters go away.");
+            string text = "Darkness fades with the light and the monsters go away.";
+            text = LeanLocalization.GetTranslationText("hiddenDoorPerformActionRealText");
+            GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA, text);
             return true;
         }
         else
         {
-            GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA,
-               "It is too dark here. I can't go alone!");
+            string text = "It is too dark here. I can't go alone!";
+            text = LeanLocalization.GetTranslationText("hiddenDoorPerformActionRealNoTorchText");
+            GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA, text);
             return false;
         }
     }

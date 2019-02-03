@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Lean.Localization;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +16,9 @@ public class Forest : Interaction
             return true;
         }else
         {
-            GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA, "I need somthing to cut these exotic plants!");
+            string text = "I need something to cut these exotic plants!";
+            text = LeanLocalization.GetTranslationText("swordRulerForestInteractionText");
+            GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA, text);
             return false;
         }
 

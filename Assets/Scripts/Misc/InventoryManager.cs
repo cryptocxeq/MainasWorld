@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lean.Localization;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -201,6 +202,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.CantSwapReason != null)
         {
+            //TODO
             uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, GameManager.Instance.swapper.CantSwapReason);
         }
         else
@@ -209,13 +211,15 @@ public class InventoryManager : MonoBehaviour
             
             if (GameManager.Instance.swapper.World.Equals(World.Real))
             {
-                uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, 
-                    "Maïna, Maïna, let's visit the wonderful imaginary world!");
+                string text = "Maïna, Maïna, let's visit the wonderful imaginary world!";
+                text = LeanLocalization.GetTranslationText("teddyBearClickRealText");
+                uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, text);
             }
             else
             {
-                uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, 
-                    "If you're sure you want to go back to the boring real world...");
+                string text = "If you're sure you want to go back to the boring real world...";
+                text = LeanLocalization.GetTranslationText("teddyBearClickImaginaryText");
+                uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, text);
             }
         }        
     }
@@ -224,13 +228,15 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP, 
-                "An old paper clip that was lying around.");
+            string text = "An old paper clip that was lying around.";
+            text = LeanLocalization.GetTranslationText("paperClipKeyClickRealText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP, text);
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP,
-                "The key to get out of the room the witch imprisoned me in!");
+            string text = "The key to get out of the room the witch imprisoned me in!";
+            text = LeanLocalization.GetTranslationText("paperClipKeyClickImaginaryText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP, text);
         }
         
     }
@@ -239,13 +245,15 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP,
-                "A cardboard box. I like to play with it, imagining it's a boat.");
+            string text = "A cardboard box. I like to play with it, imagining it's a boat.";
+            text = LeanLocalization.GetTranslationText("boxShipClickRealText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP, text );
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP,
-                "The Esmeralda, my boat. It's unsinkable!");
+            string text = "The Esmeralda, my boat. It's unsinkable!";
+            text = LeanLocalization.GetTranslationText("boxShipClickImaginaryText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP, text);
         }
     }
 
@@ -253,13 +261,15 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER,
-                "That's the ruler Mummy uses to hit me when I've been bad.");
+            string text = "That's the ruler Mummy uses to hit me when I've been bad.";
+            text = LeanLocalization.GetTranslationText("swordRulerClickRealText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER, text);
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER,
-                "Caliburn, the legendary sword. It's got magical powers.");
+            string text = "Caliburn, the legendary sword. It's got magical powers.";
+            text = LeanLocalization.GetTranslationText("swordRulerClickImaginaryText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER, text);
         }
         
     }
@@ -268,33 +278,38 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE,
-               "Daddy's razor. That's all that's left of him here.");
+            string text = "Daddy's razor. That's all that's left of him here.";
+            text = LeanLocalization.GetTranslationText("razorStoneClickRealText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, text);
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE,
-                "Daddy's ultra-sharp Cutter 2000. He uses it on all of him adventures.");
+            string text = "Daddy's ultra-sharp Cutter 2000. He uses it on all of him adventures.";
+            text = LeanLocalization.GetTranslationText("razorStoneClickImaginaryText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, text);
         }
     }
 
     private void ActionBossKeyClickOnInventory()
     {
-        uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY,
-            "The house key! I can finally leave to join Daddy on his latest adventure.");        
+        string text = "The house key! I can finally leave to join Daddy on his latest adventure.";
+        text = LeanLocalization.GetTranslationText("bossKeyClickText");
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY, text);        
     }
 
     private void ActionTorchLightClickOnInventory()
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.TORCH_LIGHT,
-                "When mummy punishes me in the cupboard, I use this light to scare monsters away.");
+            string text = "When mummy punishes me in the cupboard, I use this light to scare monsters away.";
+            text = LeanLocalization.GetTranslationText("torchLightClickRealText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.TORCH_LIGHT, text);
         }
         else
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.TORCH_LIGHT,
-                "The light of Eärendil. It will light my way in darkness places when all other lights go out.");
+            string text = "The light of Eärendil. It will light my way in darkness places when all other lights go out.";
+            text = LeanLocalization.GetTranslationText("torchLightClickImaginaryText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.TORCH_LIGHT, text);
         }        
     }
     #endregion
@@ -302,8 +317,9 @@ public class InventoryManager : MonoBehaviour
     #region OnAdd
     private void ActionTeddyBearOnAdd()
     {
-        uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY,
-            "Maïna! I'm so happy to see you. I thought you would leave me in that dreaded toy-box forever.");
+        string text = "Maïna! I'm so happy to see you. I thought you would leave me in that dreaded toy-box forever.";
+        text = LeanLocalization.GetTranslationText("teddyBearAddRealText");
+        uiManager.UpdateDialog(UIManager.DialogSpeaker.TEDDY, text);
         int inventoryPosition = InventoryHasObject(TEDDY_BEAR_GO_NAME);
         uiManager.SetInventoryItemAtPosition(inventoryPosition, TEDDY_BEAR_GO_NAME);
 
@@ -313,8 +329,9 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP,
-                "A paper clip? What is it doing here?");
+            string text = "A paper clip? What is it doing here?";
+            text = LeanLocalization.GetTranslationText("paperClipAddRealText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.PAPER_CLIP, text);
             int inventoryPosition = InventoryHasObject(PAPER_CLIP_KEY_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, PAPER_CLIP_KEY_GO_NAME);
         }
@@ -328,8 +345,9 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP,
-                "We moved after daddy left, and we still have cardboard boxes lying around.");
+            string text = "We moved after daddy left, and we still have cardboard boxes lying around.";
+            text = LeanLocalization.GetTranslationText("boxShipAddRealText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOX_SHIP, text);
             int inventoryPosition = InventoryHasObject(BOX_SHIP_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, BOX_SHIP_GO_NAME);
         }
@@ -343,8 +361,9 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER,
-                "My ruler! I never go anywhere without it.");
+            string text = "My ruler! I never go anywhere without it.";
+            text = LeanLocalization.GetTranslationText("swordRulerAddRealText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.SWORD_RULER, text);
             int inventoryPosition = InventoryHasObject(SWORD_RULER_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, SWORD_RULER_GO_NAME);
         }
@@ -358,8 +377,9 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE,
-                "Daddy's rasor. Why would he leave without it?");
+            string text = "Daddy's rasor. Why would he leave without it?";
+            text = LeanLocalization.GetTranslationText("razorStoneAddRealText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.RAZOR_STONE, text);
             int inventoryPosition = InventoryHasObject(RAZOR_STONE_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, RAZOR_STONE_GO_NAME);
         }
@@ -373,9 +393,10 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY,
-                "The house keys! Quick, let's not wake Mummy up or she's be really mad.");
-            var inventoryPosition = InventoryHasObject(BOSS_KEY_GO_NAME);
+            string text = "The house keys! Quick, let's not wake Mummy up or she's be really mad.";
+            text = LeanLocalization.GetTranslationText("bossKeyAddRealText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.BOSS_KEY, text);
+            int inventoryPosition = InventoryHasObject(BOSS_KEY_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, BOSS_KEY_GO_NAME);
         }
         else
@@ -388,9 +409,10 @@ public class InventoryManager : MonoBehaviour
     {
         if (GameManager.Instance.swapper.World.Equals(World.Real))
         {
-            uiManager.UpdateDialog(UIManager.DialogSpeaker.TORCH_LIGHT,
-                "Let there be light!");
-            var inventoryPosition = InventoryHasObject(TORCH_LIGHT_GO_NAME);
+            string text = "Let there be light!";
+            text = LeanLocalization.GetTranslationText("torchLightAddRealText");
+            uiManager.UpdateDialog(UIManager.DialogSpeaker.TORCH_LIGHT, text);
+            int inventoryPosition = InventoryHasObject(TORCH_LIGHT_GO_NAME);
             uiManager.SetInventoryItemAtPosition(inventoryPosition, TORCH_LIGHT_GO_NAME);
         }
         else
@@ -403,9 +425,9 @@ public class InventoryManager : MonoBehaviour
 
     public void OnWorldSwap()
     {
-        foreach (var currentKey in objectPositionInInventory.Keys)
+        foreach (int currentKey in objectPositionInInventory.Keys)
         {
-            var name = "";
+            string name = "";
             objectPositionInInventory.TryGetValue(currentKey, out name);
             uiManager.SetInventoryItemAtPosition(currentKey, name);
         }

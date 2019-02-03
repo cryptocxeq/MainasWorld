@@ -1,0 +1,521 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6837097301778716092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6837097301778716082}
+  - component: {fileID: 6837097301778716083}
+  m_Layer: 0
+  m_Name: LeanLocalization
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6837097301778716082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837097301778716092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6837097301778716083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837097301778716092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultLanguage: English
+  DetectLanguage: 1
+  SaveLanguage: 1
+  Languages:
+  - English
+  - French
+  Cultures:
+  - Language: English
+    Alias: en
+  - Language: English
+    Alias: en-GB
+  - Language: English
+    Alias: en-US
+  - Language: English
+    Alias: en-AU
+  - Language: English
+    Alias: en-CA
+  - Language: English
+    Alias: en-NZ
+  - Language: English
+    Alias: en-IE
+  - Language: English
+    Alias: en-ZA
+  - Language: English
+    Alias: en-JM
+  - Language: English
+    Alias: en-en029
+  - Language: English
+    Alias: en-BZ
+  - Language: English
+    Alias: en-TT
+  - Language: English
+    Alias: en-ZW
+  - Language: English
+    Alias: en-PH
+  - Language: French
+    Alias: fr
+  - Language: French
+    Alias: fr-FR
+  - Language: French
+    Alias: fr-BE
+  - Language: French
+    Alias: fr-CA
+  - Language: French
+    Alias: fr-CH
+  - Language: French
+    Alias: fr-LU
+  - Language: French
+    Alias: fr-MC
+  Phrases:
+  - Name: StartButton
+    Translations:
+    - Language: English
+      Text: Start
+      Object: {fileID: 0}
+    - Language: French
+      Text: "D\xE9marrer"
+      Object: {fileID: 0}
+  - Name: CreditsButtonText
+    Translations:
+    - Language: English
+      Text: Credits
+      Object: {fileID: 0}
+    - Language: French
+      Text: "Cr\xE9dits"
+      Object: {fileID: 0}
+  - Name: ThanksText
+    Translations:
+    - Language: English
+      Text: Game made for Global Game Jam 2019 at Geneva. Thanks Hepia for your welcome
+        !
+      Object: {fileID: 0}
+    - Language: French
+      Text: "Jeu fait pour la Global Game Jam 2019 \xE0 Gen\xE8ve. Merci \xE0 l'Hepia
+        pour votre accueil!"
+      Object: {fileID: 0}
+  - Name: ThemeText
+    Translations:
+    - Language: English
+      Text: 'Theme: What home means to you'
+      Object: {fileID: 0}
+    - Language: French
+      Text: "Th\xE8me: What home means to you"
+      Object: {fileID: 0}
+  - Name: TeamText
+    Translations:
+    - Language: English
+      Text: 'Lauriane Andro - Stressing 2D artist
+
+        Issa Barbier - Non-sleeping developer
+
+        David Hart - Extreme developer
+
+        Stefan Tschanz - Pixel mover
+
+        Julien Tetart - Not so stressed developer'
+      Object: {fileID: 0}
+    - Language: French
+      Text: "Lauriane Andro - Artiste 2D Stress\xE9e\nIssa Barbier - D\xE9veloppeur
+        qui ne dort jamais\nDavid Hart - D\xE9veloppeur de l'extr\xEAme\nStefan Tschanz
+        - D\xE9placeur de pixels\nJulien Tetart - D\xE9veloppeur d\xE9tendu"
+      Object: {fileID: 0}
+  - Name: BackButtonText
+    Translations:
+    - Language: English
+      Text: BACK
+      Object: {fileID: 0}
+    - Language: French
+      Text: RETOUR
+      Object: {fileID: 0}
+  - Name: LanguageButtonText
+    Translations:
+    - Language: English
+      Text: French
+      Object: {fileID: 0}
+    - Language: French
+      Text: English
+      Object: {fileID: 0}
+  - Name: motherIntroText
+    Translations:
+    - Language: English
+      Text: You're a naughty girl! I told you not to leave the house. To teach you
+        some manners, you're grounded and you'll stay in your room until your majority!
+      Object: {fileID: 0}
+    - Language: French
+      Text: Vilaine fillel! Je t'avais pourtant bien dit de ne pas quitter la maison.
+        Pour la peine, tu es puni dans ta chambre jusqu'a ta majorite!
+      Object: {fileID: 0}
+  - Name: mainaMotherIntroText
+    Translations:
+    - Language: English
+      Text: Mummy is really too mean. If only Daddy was still here.... I have to escape
+        to find him!
+      Object: {fileID: 0}
+    - Language: French
+      Text: Maman est vraiment trop mechante. Si seulement Papa etait encore la....
+        Je dois m'echapper pour le trouver!
+      Object: {fileID: 0}
+  - Name: teddyBearClickRealText
+    Translations:
+    - Language: English
+      Text: Maina, Maina, let's visit the wonderful imaginary world!
+      Object: {fileID: 0}
+    - Language: French
+      Text: Maina, Maina, en route pour le pays imaginaire!
+      Object: {fileID: 0}
+  - Name: teddyBearClickImaginaryText
+    Translations:
+    - Language: English
+      Text: If you're sure you want to go back to the boring real world...
+      Object: {fileID: 0}
+    - Language: French
+      Text: Si tu es sur alors retournons dans le monde reel si ennuyeux.
+      Object: {fileID: 0}
+  - Name: paperClipKeyClickRealText
+    Translations:
+    - Language: English
+      Text: An old paper clip that was lying around.
+      Object: {fileID: 0}
+    - Language: French
+      Text: Un vieux trombonne qui traine.
+      Object: {fileID: 0}
+  - Name: paperClipKeyClickImaginaryText
+    Translations:
+    - Language: English
+      Text: The key to get out of the room the witch imprisoned me in!
+      Object: {fileID: 0}
+    - Language: French
+      Text: La cle pour sortir de la piece ou la sorciere m'a emprisonnee!
+      Object: {fileID: 0}
+  - Name: boxShipClickRealText
+    Translations:
+    - Language: English
+      Text: A cardboard box. I like to play with it, imagining it's a boat.
+      Object: {fileID: 0}
+    - Language: French
+      Text: Une boite en carton. J'adore jouer avec en imaginant que c'est un bateau.
+      Object: {fileID: 0}
+  - Name: boxShipClickImaginaryText
+    Translations:
+    - Language: English
+      Text: The Esmeralda, my boat. It's unsinkable!
+      Object: {fileID: 0}
+    - Language: French
+      Text: L'Esmeralda, mon bateau. Il est insubmersible!
+      Object: {fileID: 0}
+  - Name: swordRulerClickRealText
+    Translations:
+    - Language: English
+      Text: That's the ruler Mummy uses to hit me when I've been bad.
+      Object: {fileID: 0}
+    - Language: French
+      Text: C'est la regle que ma maman utilise pour me frapper quand j'ai ete mechante.
+      Object: {fileID: 0}
+  - Name: swordRulerClickImaginaryText
+    Translations:
+    - Language: English
+      Text: Caliburn, the legendary sword. It's got magical powers.
+      Object: {fileID: 0}
+    - Language: French
+      Text: Caliburn, l'epee legendaire. Elle possede des pouvoirs magiques.
+      Object: {fileID: 0}
+  - Name: razorStoneClickRealText
+    Translations:
+    - Language: English
+      Text: Daddy's razor. That's all that's left of him here.
+      Object: {fileID: 0}
+    - Language: French
+      Text: Le rasoir de papa. C'est tout ce qu'il reste de lui ici.
+      Object: {fileID: 0}
+  - Name: razorStoneClickImaginaryText
+    Translations:
+    - Language: English
+      Text: Daddy's ultra-sharp Cutter 2000. He uses it on all of him adventures.
+      Object: {fileID: 0}
+    - Language: French
+      Text: La rasoir ultra-aiguise de papa, le Cutter 2000. Il l'utilise dans toutes
+        ses aventures.
+      Object: {fileID: 0}
+  - Name: bossKeyClickText
+    Translations:
+    - Language: English
+      Text: The house key! I can finally leave to join Daddy on his latest adventure.
+      Object: {fileID: 0}
+    - Language: French
+      Text: La cle de la maison! Je peux enfin quitter la maison pour rejoindre papa
+        dans ses dernieres aventures.
+      Object: {fileID: 0}
+  - Name: torchLightClickRealText
+    Translations:
+    - Language: English
+      Text: When mummy punishes me in the cupboard, I use this light to scare monsters
+        away.
+      Object: {fileID: 0}
+    - Language: French
+      Text: Quand maman me punit dans le placard, j'utilise la lumiere pour eloigner
+        les monstres.
+      Object: {fileID: 0}
+  - Name: torchLightClickImaginaryText
+    Translations:
+    - Language: English
+      Text: The light of Earendil. It will light my way in darkness places when all
+        other lights go out.
+      Object: {fileID: 0}
+    - Language: French
+      Text: La lumiere d'Earendil. Elle eclairera mon chemin dans les tenebres la
+        ou toutes les lumieres s'evanouissent.
+      Object: {fileID: 0}
+  - Name: teddyBearAddRealText
+    Translations:
+    - Language: English
+      Text: "Ma\xEFna! I'm so happy to see you. I thought you would leave me in that
+        dreaded toy-box forever."
+      Object: {fileID: 0}
+    - Language: French
+      Text: Maina! Je suis tellement heureux de te voir. Je pensais que tu me laisserai
+        pour toujours dans ce terrifiant coffre a jouets.
+      Object: {fileID: 0}
+  - Name: paperClipAddRealText
+    Translations:
+    - Language: English
+      Text: A paper clip? What is it doing here?
+      Object: {fileID: 0}
+    - Language: French
+      Text: Un trombonne? Qu'est-ce qu'il fait ici?
+      Object: {fileID: 0}
+  - Name: boxShipAddRealText
+    Translations:
+    - Language: English
+      Text: We moved after daddy left, and we still have cardboard boxes lying around.
+      Object: {fileID: 0}
+    - Language: French
+      Text: Nous avons demenage apres le depart de papa, et nous avons encore des
+        cartons qui trainent.
+      Object: {fileID: 0}
+  - Name: swordRulerAddRealText
+    Translations:
+    - Language: English
+      Text: My ruler! I never go anywhere without it.
+      Object: {fileID: 0}
+    - Language: French
+      Text: Ma regle! Je vais nulle part sans elle.
+      Object: {fileID: 0}
+  - Name: razorStoneAddRealText
+    Translations:
+    - Language: English
+      Text: Daddy's rasor. Why would he leave without it?
+      Object: {fileID: 0}
+    - Language: French
+      Text: Le rasoir a papa. Pourquoi partirait-il sans?
+      Object: {fileID: 0}
+  - Name: bossKeyAddRealText
+    Translations:
+    - Language: English
+      Text: The house keys! Quick, let's not wake Mummy up or she's be really mad.
+      Object: {fileID: 0}
+    - Language: French
+      Text: Les cles de la maison! Vite, ne reveillons pas maman ou bien elle sera
+        vraiment en colere.
+      Object: {fileID: 0}
+  - Name: torchLightAddRealText
+    Translations:
+    - Language: English
+      Text: Power of the light!
+      Object: {fileID: 0}
+    - Language: French
+      Text: Le pouvoir de la lumiere!
+      Object: {fileID: 0}
+  - Name: bedroomPerformActionRealText
+    Translations:
+    - Language: English
+      Text: Mummy locked the door to my room. I need to get out!
+      Object: {fileID: 0}
+    - Language: French
+      Text: Maman a ferme a cle la porte de ma chambre. Je dois sortir d'ici!
+      Object: {fileID: 0}
+  - Name: motherBedroomPerformActionRealText
+    Translations:
+    - Language: English
+      Text: Yeah! The key to freedom!
+      Object: {fileID: 0}
+    - Language: French
+      Text: Oui! La cle vers la liberte!
+      Object: {fileID: 0}
+  - Name: hiddenDoorPerformActionRealText
+    Translations:
+    - Language: English
+      Text: Darkness fades with the light and the monsters go away.
+      Object: {fileID: 0}
+    - Language: French
+      Text: "Les t\xE9n\xE8bres se dissipent avec la lumiere et les monstres s'enfuient."
+      Object: {fileID: 0}
+  - Name: hiddenDoorPerformActionRealNoTorchText
+    Translations:
+    - Language: English
+      Text: It is too dark here. I can't go alone!
+      Object: {fileID: 0}
+    - Language: French
+      Text: Il fait trop sombre ici. Je ne peux pas y aller!
+      Object: {fileID: 0}
+  - Name: lighthouseText
+    Translations:
+    - Language: English
+      Text: OUCH!! This light is much too bright to be picked up!
+      Object: {fileID: 0}
+    - Language: French
+      Text: OUCH!! Cette lumiere est bien trop brillante pour etre recuperee!
+      Object: {fileID: 0}
+  - Name: realMummyNameText
+    Translations:
+    - Language: English
+      Text: Mummy
+      Object: {fileID: 0}
+    - Language: French
+      Text: Maman
+      Object: {fileID: 0}
+  - Name: imaginaryMummyNameText
+    Translations:
+    - Language: English
+      Text: the witch
+      Object: {fileID: 0}
+    - Language: French
+      Text: la sorciere
+      Object: {fileID: 0}
+  - Name: motherBedroomDoorPartOneText
+    Translations:
+    - Language: English
+      Text: 'That''s the door to '
+      Object: {fileID: 0}
+    - Language: French
+      Text: 'C''est la porte vers la chambre de '
+      Object: {fileID: 0}
+  - Name: motherBedroomDoorPartTwoText
+    Translations:
+    - Language: English
+      Text: '''s bedroom where she''s sleeping. The keys to the house are in there,
+        but the door is locked!'
+      Object: {fileID: 0}
+    - Language: French
+      Text: ' ou elle dort. Les cles de la maison y sont, mais la porte est fermee
+        a cle!'
+      Object: {fileID: 0}
+  - Name: sofaPerformActionText
+    Translations:
+    - Language: English
+      Text: The sofa is in the way!
+      Object: {fileID: 0}
+    - Language: French
+      Text: Le canape bloque le passage!
+      Object: {fileID: 0}
+  - Name: swordRulerForestInteractionText
+    Translations:
+    - Language: English
+      Text: I need something to cut these exotic plants!
+      Object: {fileID: 0}
+    - Language: French
+      Text: J'ai besoin de quelque chose pour couper ces plantes exotiques!
+      Object: {fileID: 0}
+  - Name: bedroomLandingAreaText
+    Translations:
+    - Language: English
+      Text: I can't go further, I can't swim in the river!
+      Object: {fileID: 0}
+    - Language: French
+      Text: "Je ne peux pas aller plus loin, le courant de cette rivi\xE8re est trop
+        fort pour nager!"
+      Object: {fileID: 0}
+  - Name: bathroomRealNameText
+    Translations:
+    - Language: English
+      Text: bathroom
+      Object: {fileID: 0}
+    - Language: French
+      Text: salle de bain
+      Object: {fileID: 0}
+  - Name: bathroomImaginaryNameText
+    Translations:
+    - Language: English
+      Text: ice cave
+      Object: {fileID: 0}
+    - Language: French
+      Text: grotte de glace
+      Object: {fileID: 0}
+  - Name: bathroomDoorPartOneText
+    Translations:
+    - Language: English
+      Text: 'That''s the door to the '
+      Object: {fileID: 0}
+    - Language: French
+      Text: 'C''est la porte vers la '
+      Object: {fileID: 0}
+  - Name: bathroomDoorPartTwoText
+    Translations:
+    - Language: English
+      Text: ' but '
+      Object: {fileID: 0}
+    - Language: French
+      Text: ' mais '
+      Object: {fileID: 0}
+  - Name: bathroomDoorPartThreeText
+    Translations:
+    - Language: English
+      Text: ' locks it so I can''t go in.'
+      Object: {fileID: 0}
+    - Language: French
+      Text: ' la ferme a cle pour que je n''y rentre pas.'
+      Object: {fileID: 0}
+  - Name: washbasinFindText
+    Translations:
+    - Language: English
+      Text: Hello princess. Find me the razor stone and I will tell you where you
+        can find what you are looking for!
+      Object: {fileID: 0}
+    - Language: French
+      Text: Bonjour princesse. Trouve moi la pierre rasoir et je te dirai ou tu peux
+        trouver ce que tu cherches!
+      Object: {fileID: 0}
+  - Name: washbasinFoundText
+    Translations:
+    - Language: English
+      Text: 'Congratulations princess! Here is your clue: I am taller than the tallest
+        building, and my shining light warms out hearts and lights our path.'
+      Object: {fileID: 0}
+    - Language: French
+      Text: 'Felicitations princesse! Voici ton indice: je suis plus grand que le
+        plus grand batiment, et ma lumiere brillante rechauffe nos coeurs et eclaire
+        nos chemins.'
+      Object: {fileID: 0}
+  - Name: cantSwapReasonText
+    Translations:
+    - Language: English
+      Text: We can't leave now, we're in the middle of the river!
+      Object: {fileID: 0}
+    - Language: French
+      Text: Impossible pour nous de changer au milieu d'une riviere!
+      Object: {fileID: 0}

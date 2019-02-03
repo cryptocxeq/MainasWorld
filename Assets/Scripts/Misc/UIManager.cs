@@ -27,7 +27,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Image avatarImage = null;
     [SerializeField]
-    private TMP_Text dialogText = null;
+    private Text dialogText = null;
+    [SerializeField]
+    private TMP_Text dialogTMPText = null;
 
     private InventoryManager inventoryManager;
     private EventManager eventManager;
@@ -142,6 +144,7 @@ public class UIManager : MonoBehaviour
     public void CleanDialogText()
     {
         dialogText.text = "";
+        dialogTMPText.text = "";
     }
 
     public void UpdateDialog(DialogSpeaker dialogSpeaker, string text)
@@ -252,6 +255,7 @@ public class UIManager : MonoBehaviour
                 break;
         }
         dialogText.text = text;
+        dialogTMPText.SetText(text, true);
 
         ShowDialog();
     }

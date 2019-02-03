@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Lean.Localization;
+using UnityEngine;
 
 public class NoSwapArea : MonoBehaviour
 {
@@ -6,7 +7,9 @@ public class NoSwapArea : MonoBehaviour
     {
         if (collision.CompareTag("Player") && GameManager.Instance.swapper.CantSwapReason == null)
         {
-            GameManager.Instance.swapper.CantSwapReason = "We can't leave now, we're in the middle of the river!";
+            string text = "We can't leave now, we're in the middle of the river!";
+            text = LeanLocalization.GetTranslationText("cantSwapReasonText");
+            GameManager.Instance.swapper.CantSwapReason = text;
         }
     }
 

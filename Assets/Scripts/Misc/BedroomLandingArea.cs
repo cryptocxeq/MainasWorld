@@ -1,4 +1,6 @@
-﻿public class BedroomLandingArea : LandingArea
+﻿using Lean.Localization;
+
+public class BedroomLandingArea : LandingArea
 {
     protected override bool PerformAction()
     {
@@ -8,8 +10,9 @@
         }
         else
         {
-            GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA, 
-                "I can't go further, I can't swim in the river!");
+            string text = "I can't go further, I can't swim in the river!";
+            text = LeanLocalization.GetTranslationText("bedroomLandingAreaText");
+            GameManager.Instance.ui.UpdateDialog(UIManager.DialogSpeaker.MAINA, text);
             return false;
         }
     }
